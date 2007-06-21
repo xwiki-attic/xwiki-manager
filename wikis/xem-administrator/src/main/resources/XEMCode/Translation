@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<xwikidoc>
+<web>XEMCode</web>
+<name>Translation</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent></parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.nfournier</author>
+<customClass></customClass>
+<contentAuthor>XWiki.nfournier</contentAuthor>
+<creationDate>1180101342000</creationDate>
+<date>1180705072000</date>
+<contentUpdateDate>1180705072000</contentUpdateDate>
+<version>1.21</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<object>
+<class>
+<name>XWiki.TagClass</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<tags>
+<name>tags</name>
+<prettyName>Tags</prettyName>
+<unmodifiable>0</unmodifiable>
+<relationalStorage>1</relationalStorage>
+<displayType>input</displayType>
+<multiSelect>1</multiSelect>
+<size>30</size>
+<separator> </separator>
+<cache>0</cache>
+<separators> ,|</separators>
+<values></values>
+<number>1</number>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</tags>
+</class>
+<name>XEMCode.Translation</name>
+<number>0</number>
+<className>XWiki.TagClass</className>
+<property>
+<tags/>
+</property>
+</object>
+<content>createwiki=Create a new wiki
+wikiname=Wiki name (final)
+wikidesc=Description
+wikiadmin=Administrator
+wikitemplate=Template to apply
+wikivisibility=Visibility
+submitlabel=Validate
+checkall=Check all
+uncheckall=Uncheck all
+nouserforthisletter=There is nobody whose name starts with this letter
+addselectedusertolist=Add
+wikinameneeded=A name for the wiki is necessary
+wikidescneeded=A description for the wiki is necessary
+wikiadminneeded=A administrator for the wiki is necessary
+wikitemplateneeded=A template for the wiki is necessary
+wikivisibilityneeded=A visibility parameter for the wiki is necessary
+listwikiname=Name
+listwikirank=Rank
+listwikiadmin=Admin
+listwikicreation=Creation
+listwikistate=State
+listwikistatute=Statute
+listwikiactions=Actions
+listwikiactionspref=Pref
+listwikiactionsmembers=Members
+listwikiactionsrights=Rights
+listwikiactionsgroups=Groups
+listwikiactionsstat=Stat
+listwikiactionssuppr=Suppr
+listwikiempty=There are no open wikis.
+totalnumberofwiki=Total number of wiki
+search=Search
+createuser=Create a new user
+userfirstname=First name
+userlastname=Last name
+userlogin=User login
+useremail=e-Mail adress
+submitlabelcreateuser=Create user
+userfirstnameneeded=A user's first name is needed
+userlastnameneeded=A user's last name is needed
+userloginneeded=A user's login is needed
+useremailneeded=A user's e-Mail is needed
+
+</content></xwikidoc>
