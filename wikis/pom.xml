@@ -34,15 +34,6 @@
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Wikis - Parent POM</name>
   <description>XWiki Products - Enterprise Manager - Wikis - Parent POM</description>
-  <build>
-    <extensions>
-      <extension>
-        <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-build-xar-handlers</artifactId>
-        <version>1.1-SNAPSHOT</version>
-      </extension>
-    </extensions>
-  </build>
   <modules>
     <module>xem-administrator</module>
   </modules>
