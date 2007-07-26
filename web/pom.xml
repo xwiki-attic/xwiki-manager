@@ -41,6 +41,11 @@
       <type>war</type>
       <classifier>${xwiki.db}</classifier>
     </dependency>
+	<dependency>
+      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <artifactId>xwiki-plugin-multiwiki</artifactId>
+      <version>0.1-SNAPSHOT</version>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -60,6 +65,27 @@
             <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:1.2-SNAPSHOT</resourceBundle>
           </resourceBundles>
           <properties>
+		    <xwikiCfgPlugins>\
+                    com.xpn.xwiki.monitor.api.MonitorPlugin,\
+                    com.xpn.xwiki.plugin.calendar.CalendarPlugin,\
+                    com.xpn.xwiki.plugin.feed.FeedPlugin,\
+                    com.xpn.xwiki.plugin.ldap.LDAPPlugin,\
+                    com.xpn.xwiki.plugin.google.GooglePlugin,\
+                    com.xpn.xwiki.plugin.flickr.FlickrPlugin,\
+                    com.xpn.xwiki.plugin.mail.MailPlugin,\
+                    com.xpn.xwiki.plugin.packaging.PackagePlugin,\
+                    com.xpn.xwiki.plugin.query.QueryPlugin,\
+                    com.xpn.xwiki.plugin.svg.SVGPlugin,\
+                    com.xpn.xwiki.plugin.charts.ChartingPlugin,\
+                    com.xpn.xwiki.plugin.fileupload.FileUploadPlugin,\
+                    com.xpn.xwiki.plugin.image.ImagePlugin,\
+                    com.xpn.xwiki.plugin.captcha.CaptchaPlugin,\
+                    com.xpn.xwiki.plugin.userdirectory.UserDirectoryPlugin,\
+                    com.xpn.xwiki.plugin.usertools.XWikiUserManagementToolsImpl,\
+                    com.xpn.xwiki.plugin.zipexplorer.ZipExplorerPlugin,\
+                    com.xpn.xwiki.plugin.autotag.AutoTagPlugin,\
+                    com.xpn.xwiki.plugin.multiwiki.MultiWikiPlugin
+            </xwikiCfgPlugins>
             <xwikiCfgVirtual>1</xwikiCfgVirtual>
           </properties>
         </configuration>
@@ -80,6 +106,19 @@
             </goals>
           </execution>
         </executions>
+      </plugin>
+      <plugin>
+	  <!-- Run 'mvn org.mortbay.jetty:maven-jetty-plugin:run-war' to generate the WAR and
+             execute it in Jetty. Useful for testing
+             Note: You'll need a database set up and running. If you use the HSQLDB profile
+             the database is looked for in target/database so it's very likely you'll get an
+             empty wiki. -->
+        <groupId>org.mortbay.jetty</groupId>
+        <artifactId>maven-jetty-plugin</artifactId>
+        <configuration>
+          <contextPath>/xwiki</contextPath>
+          <webApp>${project.build.directory}/${project.build.finalName}-${xwiki.db}.war</webApp>
+        </configuration>
       </plugin>
     </plugins>
   </build>
