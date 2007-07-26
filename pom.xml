@@ -37,7 +37,7 @@
   <version>1.0-SNAPSHOT</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:svn://svn.forge.objectweb.org/svnroot/xwiki/xwiki-applications/xwiki-enterprise-manager/trunk</connection>
+    <connection>scm:svn:http://svnmirror.xwiki.org/svn/mirror/xwiki/xwiki-applications/xwiki-enterprise-manager/trunk</connection>
     <developerConnection>scm:svn:svn+ssh://svn.forge.objectweb.org/svnroot/xwiki/xwiki-applications/xwiki-enterprise-manager/trunk</developerConnection>
     <url>http://svn.forge.objectweb.org/cgi-bin/viewcvs.cgi/xwiki/xwiki-applications/xwiki-enterprise-manager/trunk</url>
   </scm>
