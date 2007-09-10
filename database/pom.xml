@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * Copyright 2007, XpertNet SARL, and individual contributors.
+ *
+ * This is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as
+ * published by the Free Software Foundation; either version 2.1 of
+ * the License, or (at your option) any later version.
+ *
+ * This software is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this software; if not, write to the Free
+ * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+ * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+ *
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.xpn.xwiki.products</groupId>
+    <artifactId>xwiki-enterprise-manager-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>xwiki-enterprise-manager-database</artifactId>
+  <name>XWiki Products - Enterprise Manager - Database</name>
+  <packaging>pom</packaging>
+  <description>XWiki Products - Enterprise Manager - Database</description>
+  <dependencies>
+    <dependency>
+      <groupId>com.xpn.xwiki.products</groupId>
+      <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+      <version>${version}</version>
+      <type>xar</type>
+    </dependency>
+  </dependencies>
+  <build>
+    <plugins>
+      <!-- Step 1: Copy and filter the Hibernate config file which will be used by the packager
+           plugin -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-remote-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>process</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <resourceBundles>
+            <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:1.5-SNAPSHOT</resourceBundle>
+          </resourceBundles>
+        </configuration>
+      </plugin>
+      <!-- Step 2: Expand the XAR file -->
+      <plugin>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-build-xar-plugin</artifactId>
+        <version>1.5-SNAPSHOT</version>
+        <configuration>
+          <groupId>com.xpn.xwiki.products</groupId>
+          <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+          <outputDirectory>${project.build.directory}/xar</outputDirectory>
+        </configuration>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>unxar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Step 3: Import the XAR content into the Database -->
+      <plugin>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-packager</artifactId>
+        <version>1.5-SNAPSHOT</version>
+        <configuration>
+          <sourceDirectory>${project.build.directory}/xar</sourceDirectory>
+          <hibernateConfig>${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml</hibernateConfig>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>${xwiki.db.jdbc.groupId}</groupId>
+            <artifactId>${xwiki.db.jdbc.artifactId}</artifactId>
+            <version>${xwiki.db.jdbc.version}</version>
+          </dependency>
+        </dependencies>
+        <executions>
+          <execution>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>import</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+  <profiles>
+    <profile>
+      <id>hsqldb</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <!-- Required for the exec:exec plugin execution.
+           Note/TODO: I have tried to remove the same dependencies added to the configuration of
+                      the xwiki-packager plugin but it didn't work. We need to find out why.
+      -->
+      <dependencies>
+        <dependency>
+          <groupId>hsqldb</groupId>
+          <artifactId>hsqldb</artifactId>
+          <version>1.8.0.7</version>
+        </dependency>
+      </dependencies>
+      <build>
+        <plugins>
+          <!-- Step 4: Zip the generated database -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+              <descriptors>
+                <descriptor>src/assemble/database.xml</descriptor>
+              </descriptors>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-remote-resources-plugin</artifactId>
+            <configuration>
+              <properties>
+                <xwikiDbConnectionUrl>jdbc:hsqldb:file:${project.build.directory}/database/xwiki_db;shutdown=true</xwikiDbConnectionUrl>
+              </properties>
+            </configuration>
+          </plugin>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <configuration>
+              <executable>java</executable>
+              <arguments>
+                <argument>-classpath</argument>
+                <!-- automatically creates the classpath using all project dependencies,
+                     also adding the project build directory -->
+                <classpath />
+                <argument>org.hsqldb.util.DatabaseManager</argument>
+                <argument>-driver</argument>
+                <argument>org.hsqldb.jdbcDriver</argument>
+                <argument>-url</argument>
+                <argument>jdbc:hsqldb:target/database/xwiki_db</argument>
+                <argument>-user</argument>
+                <argument>sa</argument>
+              </arguments>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>derby</id>
+      <build>
+        <plugins>
+          <!-- Step 4: Zip the generated database -->
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <configuration>
+              <descriptors>
+                <descriptor>src/assemble/database.xml</descriptor>
+              </descriptors>
+            </configuration>
+            <executions>
+              <execution>
+                <phase>package</phase>
+                <goals>
+                  <goal>single</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-remote-resources-plugin</artifactId>
+            <configuration>
+              <properties>
+                <xwikiDbConnectionUrl>jdbc:derby:${project.build.directory}/database;create=true</xwikiDbConnectionUrl>
+              </properties>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>pgsql</id>
+    </profile>
+    <profile>
+      <id>mysql</id>
+    </profile>
+  </profiles>
+</project>
