@@ -20,8 +20,9 @@
  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.xpn.xwiki.products</groupId>
@@ -41,9 +42,14 @@
       <type>war</type>
       <classifier>${xwiki.db}</classifier>
     </dependency>
-	<dependency>
+    <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-multiwiki</artifactId>
+      <version>1.0-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <artifactId>xwiki-plugin-application-manager</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
   </dependencies>
@@ -62,29 +68,31 @@
         </executions>
         <configuration>
           <resourceBundles>
-            <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:1.5-SNAPSHOT</resourceBundle>
+            <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:1.5-SNAPSHOT
+            </resourceBundle>
           </resourceBundles>
           <properties>
-		    <xwikiCfgPlugins>\
-                    com.xpn.xwiki.monitor.api.MonitorPlugin,\
-                    com.xpn.xwiki.plugin.calendar.CalendarPlugin,\
-                    com.xpn.xwiki.plugin.feed.FeedPlugin,\
-                    com.xpn.xwiki.plugin.ldap.LDAPPlugin,\
-                    com.xpn.xwiki.plugin.google.GooglePlugin,\
-                    com.xpn.xwiki.plugin.flickr.FlickrPlugin,\
-                    com.xpn.xwiki.plugin.mail.MailPlugin,\
-                    com.xpn.xwiki.plugin.packaging.PackagePlugin,\
-                    com.xpn.xwiki.plugin.query.QueryPlugin,\
-                    com.xpn.xwiki.plugin.svg.SVGPlugin,\
-                    com.xpn.xwiki.plugin.charts.ChartingPlugin,\
-                    com.xpn.xwiki.plugin.fileupload.FileUploadPlugin,\
-                    com.xpn.xwiki.plugin.image.ImagePlugin,\
-                    com.xpn.xwiki.plugin.captcha.CaptchaPlugin,\
-                    com.xpn.xwiki.plugin.userdirectory.UserDirectoryPlugin,\
-                    com.xpn.xwiki.plugin.usertools.XWikiUserManagementToolsImpl,\
-                    com.xpn.xwiki.plugin.zipexplorer.ZipExplorerPlugin,\
-                    com.xpn.xwiki.plugin.autotag.AutoTagPlugin,\
-                    com.xpn.xwiki.plugin.multiwiki.MultiWikiPlugin
+            <xwikiCfgPlugins>\
+              com.xpn.xwiki.monitor.api.MonitorPlugin,\
+              com.xpn.xwiki.plugin.calendar.CalendarPlugin,\
+              com.xpn.xwiki.plugin.feed.FeedPlugin,\
+              com.xpn.xwiki.plugin.ldap.LDAPPlugin,\
+              com.xpn.xwiki.plugin.google.GooglePlugin,\
+              com.xpn.xwiki.plugin.flickr.FlickrPlugin,\
+              com.xpn.xwiki.plugin.mail.MailPlugin,\
+              com.xpn.xwiki.plugin.packaging.PackagePlugin,\
+              com.xpn.xwiki.plugin.query.QueryPlugin,\
+              com.xpn.xwiki.plugin.svg.SVGPlugin,\
+              com.xpn.xwiki.plugin.charts.ChartingPlugin,\
+              com.xpn.xwiki.plugin.fileupload.FileUploadPlugin,\
+              com.xpn.xwiki.plugin.image.ImagePlugin,\
+              com.xpn.xwiki.plugin.captcha.CaptchaPlugin,\
+              com.xpn.xwiki.plugin.userdirectory.UserDirectoryPlugin,\
+              com.xpn.xwiki.plugin.usertools.XWikiUserManagementToolsImpl,\
+              com.xpn.xwiki.plugin.zipexplorer.ZipExplorerPlugin,\
+              com.xpn.xwiki.plugin.autotag.AutoTagPlugin,\
+              com.xpn.xwiki.plugin.multiwiki.MultiWikiPlugin,\
+              com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin
             </xwikiCfgPlugins>
             <xwikiCfgVirtual>1</xwikiCfgVirtual>
           </properties>
@@ -108,11 +116,11 @@
         </executions>
       </plugin>
       <plugin>
-	  <!-- Run 'mvn org.mortbay.jetty:maven-jetty-plugin:run-war' to generate the WAR and
-             execute it in Jetty. Useful for testing
-             Note: You'll need a database set up and running. If you use the HSQLDB profile
-             the database is looked for in target/database so it's very likely you'll get an
-             empty wiki. -->
+        <!-- Run 'mvn org.mortbay.jetty:maven-jetty-plugin:run-war' to generate the WAR and
+      execute it in Jetty. Useful for testing
+      Note: You'll need a database set up and running. If you use the HSQLDB profile
+      the database is looked for in target/database so it's very likely you'll get an
+      empty wiki. -->
         <groupId>org.mortbay.jetty</groupId>
         <artifactId>maven-jetty-plugin</artifactId>
         <configuration>
