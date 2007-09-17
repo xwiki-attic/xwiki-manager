@@ -32,7 +32,7 @@
   <artifactId>xwiki-enterprise-manager-web</artifactId>
   <name>XWiki Products - Enterprise Manager - Web</name>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
   <description>XWiki Products - Enterprise Manager - Web</description>
   <dependencies>
     <dependency>
@@ -40,7 +40,6 @@
       <artifactId>xwiki-web-standard</artifactId>
       <version>1.2-SNAPSHOT</version>
       <type>war</type>
-      <classifier>${xwiki.db}</classifier>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
@@ -55,12 +54,23 @@
   </dependencies>
   <build>
     <plugins>
-      <!-- Inject XWiki's configuration -->
+      <!-- Inject XWiki's configuration (only xwiki.cfg, not hibernate.cfg.xml) -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-remote-resources-plugin</artifactId>
         <executions>
           <execution>
+            <!-- The remote resources plugin adds its output directory as a resource directory
+                 so that the Maven resources plugin copies these resources to target/classes.
+                 However copying them to target/classes will make them appear in WEB-INF/classes
+                 in the generated WAR since the WAR plugin copies resources in target/classes in
+                 WEB-INF/classes. Thus to prevent this we're binding this execution to a phase
+                 that comes after the execution of the resources plugin (which executes in the
+                 process-resources phase). Thus this remote resources plugin will execute just
+                 after the resources plugin and the resources won't be copied, which is why we're
+                 adding a webResource configuration element below in the WAR plugin's
+                 configuration. -->
+            <phase>process-resources</phase>
             <goals>
               <goal>process</goal>
             </goals>
@@ -100,32 +110,17 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
+        <artifactId>maven-war-plugin</artifactId>
         <configuration>
-          <descriptors>
-            <descriptor>src/assemble/war.xml</descriptor>
-          </descriptors>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <!-- Run 'mvn org.mortbay.jetty:maven-jetty-plugin:run-war' to generate the WAR and
-      execute it in Jetty. Useful for testing
-      Note: You'll need a database set up and running. If you use the HSQLDB profile
-      the database is looked for in target/database so it's very likely you'll get an
-      empty wiki. -->
-        <groupId>org.mortbay.jetty</groupId>
-        <artifactId>maven-jetty-plugin</artifactId>
-        <configuration>
-          <contextPath>/xwiki</contextPath>
-          <webApp>${project.build.directory}/${project.build.finalName}-${xwiki.db}.war</webApp>
+          <webResources>
+            <resource>
+              <directory>${project.build.directory}/maven-shared-archive-resources</directory>
+              <targetPath>WEB-INF</targetPath>
+              <includes>
+                <include>xwiki.cfg</include>
+              </includes>
+            </resource>
+          </webResources>
         </configuration>
       </plugin>
     </plugins>
