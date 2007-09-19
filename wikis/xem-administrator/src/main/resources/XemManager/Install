@@ -62,14 +62,14 @@
 <tags/>
 </property>
 </object>
-<content>#set($Multiwiki = $xwiki.multiwiki)
-#set($Exception = $Multiwiki.DefaultException)
+<content>#set($WikiManager = $xwiki.wikimanager)
+#set($Exception = $WikiManager.DefaultException)
 
 #set($confirm = $request.getParameter("confirm"))
 
 ###############################################
 
-#set($templateList = $Multiwiki.getWikiTemplateList())
+#set($templateList = $WikiManager.getWikiTemplateList())
 
 #if($templateList.size() == 0)
 
@@ -78,7 +78,7 @@
   #set($result = $Appmanager.reloadAllApplications())
 
   #if($confirm &amp;&amp; $confirm == 1)
-    #set($result = $Multiwiki.createWikiTemplate("templatexe", "XWiki Entreprise (default xwiki)", "template-xe.xar"))
+    #set($result = $WikiManager.createWikiTemplate("templatexe", "XWiki Entreprise (default xwiki)", "template-xe.xar"))
     #if ($result == $Exception.ERROR_NOERROR)
       &lt;font color=green&gt;
         $msg.get("xem.install.success")

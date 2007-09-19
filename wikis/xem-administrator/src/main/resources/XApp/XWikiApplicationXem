@@ -201,7 +201,7 @@
 <className>XAppClasses.XWikiApplicationClass</className>
 <property>
 <applications>
-<value>multiwiki</value>
+<value>wikimanager</value>
 <value>xapp</value>
 </applications>
 </property>
