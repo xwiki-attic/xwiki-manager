@@ -49,7 +49,7 @@
     </dependency>
         <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
-      <artifactId>xwiki-application-multiwiki</artifactId>
+      <artifactId>xwiki-application-wiki-manager</artifactId>
       <version>1.0-SNAPSHOT</version>
       <type>xar</type>
     </dependency>

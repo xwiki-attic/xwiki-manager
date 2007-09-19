@@ -42,7 +42,7 @@
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-multiwiki</artifactId>
+      <artifactId>xwiki-plugin-wikimanager</artifactId>
       <version>1.0-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -99,7 +99,7 @@
               com.xpn.xwiki.plugin.usertools.XWikiUserManagementToolsImpl,\
               com.xpn.xwiki.plugin.zipexplorer.ZipExplorerPlugin,\
               com.xpn.xwiki.plugin.autotag.AutoTagPlugin,\
-              com.xpn.xwiki.plugin.multiwiki.MultiWikiPlugin,\
+              com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
               com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin
             </xwikiCfgPlugins>
             <xwikiCfgVirtual>1</xwikiCfgVirtual>
