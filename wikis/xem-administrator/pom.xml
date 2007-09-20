@@ -44,13 +44,13 @@
     <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-application-manager</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0-milestone-1</version>
       <type>xar</type>
     </dependency>
         <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-wiki-manager</artifactId>
-      <version>1.0-SNAPSHOT</version>
+      <version>1.0-milestone-1</version>
       <type>xar</type>
     </dependency>
   </dependencies>
