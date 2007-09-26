@@ -33,6 +33,9 @@
             </execution>
           </executions>
           <configuration>
+            <properties>
+              <xwikiCfgVirtual>1</xwikiCfgVirtual>
+            </properties>
             <resourceBundles>
               <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:${platform.tools.version}</resourceBundle>
             </resourceBundles>
