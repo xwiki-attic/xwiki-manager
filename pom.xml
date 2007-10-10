@@ -53,7 +53,7 @@
     <platform.core.version>1.1-SNAPSHOT</platform.core.version>
     <platform.web.version>1.1-SNAPSHOT</platform.web.version>
     <platform.panels.version>1.1-SNAPSHOT</platform.panels.version>
-    <product.xe.version>1.1-SNAPSHOT</product.xe.version>
+    <product.enterprise.version>1.1-SNAPSHOT</product.enterprise.version>
     <platform.plugin.applicationmanager.version>1.0-SNAPSHOT</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.0-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>

@@ -13,7 +13,7 @@
     <dependency>
       <groupId>com.xpn.xwiki.products</groupId>
       <artifactId>xwiki-enterprise-wiki</artifactId>
-      <version>${product.xe.version}</version>
+      <version>${product.enterprise.version}</version>
       <type>xar</type>
     </dependency>
     <dependency>
