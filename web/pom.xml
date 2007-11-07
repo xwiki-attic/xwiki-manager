@@ -98,6 +98,11 @@
                 <include>xwiki.cfg</include>
               </includes>
             </resource>
+            <resource>
+              <directory>${basedir}/src/main/webInfResources</directory>
+              <targetPath>WEB-INF</targetPath>
+              <filtering>true</filtering>
+            </resource>
           </webResources>
         </configuration>
       </plugin>
