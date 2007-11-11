@@ -55,22 +55,20 @@
 </object>
 <content>1 Welcome to your wiki administrator
 
-Welcome to the wiki administrator of your wiki farm! It is a space that will allow you to create as wiki as you want and manage it. Each wiki you will create is a shared workspace that will allow you to collaborate effectively with others. You will be able to use it for many purposes:
+Welcome to the wiki administrator of your wiki farm! It is a space that will allow you to create as many wikis as you want and manage them. Each wiki is a shared workspace that will allow you to collaborate effectively with others. You will be able to use it for many purposes:
 
 * Project Management
 * Collaborative Writing
 * Efficient Document Sharing
 * Knowledge Management
 
-... now combine all this uses and the possibility to create as wiki as you want and you have XWiki Entreprise Manager.
-
 1 One farm, 3 types of XWiki
 
-* Wiki administrator : you are on it, it's the wiki to manage your farm
-* Wiki templates : models of wikis used when you create a new wiki instance
-* Wiki instances : a wiki created from a wiki template and on which users will work !
+* Wiki administrator: this is the current wiki and it's used to manage your wiki farm
+* Wiki templates: models of wikis used when you create a new wiki instance
+* Wiki instances: a wiki created from a wiki template and on which users will work
 
-1 Informations
+1 News and information from your wikis
 
 #############################################################################
 
@@ -89,14 +87,14 @@ Welcome to the wiki administrator of your wiki farm! It is a space that will all
 
 1 How to start
 
-Because you are on the wiki administrator, the steps that you may want to go through are :
+Because you are on the wiki administrator, the steps that you may want to go through are:
 
-* Go to the [Installation&gt;XemManager.Install] page to check if all you need is correct.
-* Creating a new wiki on your farm by clicking on the [Create a new wiki&gt;WikiManager.CreateNewWiki] link
-* Managing the existing wikis of your farms by clicking on the [Wiki Farm&gt;WikiManager.WebHome] link
-* Changing your general farm settings by clicking on the "Administration" link
+* Go to the [Installation&gt;XemManager.Install] page to check if your installation is correct.
+* Create a new wiki on your farm by clicking on the [Create a new wiki&gt;WikiManager.CreateNewWiki] link
+* Manage the existing wikis of your farms by clicking on the [Wiki Farm&gt;WikiManager.WebHome] link
+* Change your general farm settings by clicking on the "Administration" link
 
-For more information you can visit the documentation on xwiki.org.
+For more information you can visit the documentation on [xwiki.org>http://xwiki.org].
 
 This XWiki is yours, we hope you'll enjoy it ...
 
