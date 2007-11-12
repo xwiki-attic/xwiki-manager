@@ -57,13 +57,13 @@
 xem.xem=XWiki Enterprise Manager
 
 # MESSAGES
-xem.install.success=Xem installation success.
-xem.install.error=Xem installation failed ({0}).
+xem.install.success=XWiki Enterprise Manager installation success.
+xem.install.error=XWiki Enterprise Manager installation failed ({0}).
 xem.install.noneed=No action needed.
 
 # ANSWERS
-xem.answer.install.title=Xem installation
-xem.answer.install.actions=To complete installation Xem will :\n
+xem.answer.install.title=XWiki Enterprise Manager installation
+xem.answer.install.actions=To complete installation XWiki Enterprise Manager will :\n
 xem.answer.install.actions.template=* Add default template
 {table}</content>
 </xwikidoc>
