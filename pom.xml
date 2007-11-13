@@ -43,6 +43,7 @@
   </scm>
   <modules>
     <module>web</module>
+    <module>web-database</module>
     <module>wikis</module>
     <module>database</module>
     <module>distribution</module>

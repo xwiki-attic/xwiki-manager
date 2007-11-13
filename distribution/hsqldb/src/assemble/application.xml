@@ -32,15 +32,10 @@
            not specified -->
       <outputFileNameMapping></outputFileNameMapping>
       <includes>
-        <include>com.xpn.xwiki.products:xwiki-enterprise-manager-web</include>
+        <include>com.xpn.xwiki.products:xwiki-enterprise-manager-web-${xwiki.db}</include>
       </includes>
       <outputDirectory>webapps/xwiki</outputDirectory>
       <unpack>true</unpack>
-      <unpackOptions>
-        <excludes>
-          <exclude>**/hibernate.cfg.xml</exclude>
-        </excludes>
-      </unpackOptions>
     </dependencySet>
     <!-- Copy sh files so that we can set their permissions. This is required since the
          Assembly plugin looses file permissions.
@@ -80,13 +75,6 @@
       </unpackOptions>
     </dependencySet>
     <dependencySet>
-      <includes>
-        <include>${xwiki.db.jdbc.groupId}:${xwiki.db.jdbc.artifactId}</include>
-      </includes>
-      <outputDirectory>webapps/xwiki/WEB-INF/lib</outputDirectory>
-      <unpack>false</unpack>
-    </dependencySet>
-    <dependencySet>
       <!-- This shouldn't be required but there's a bug in version 2.2-beta-1 of the Assembly
            plugin where the artifact name will be used instead of / if outputFileNameMapping is
            not specified -->
@@ -98,10 +86,4 @@
       <unpack>true</unpack>
     </dependencySet>
   </dependencySets>
-  <files>
-  	<file>
-    	<source>${basedir}/target/maven-shared-archive-resources/hibernate.cfg.xml</source>
-      <outputDirectory>webapps/xwiki/WEB-INF</outputDirectory>
-    </file>
-  </files>
 </assembly>
