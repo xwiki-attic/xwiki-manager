@@ -27,7 +27,7 @@
   <parent>
     <groupId>com.xpn.xwiki.platform</groupId>
     <artifactId>xwiki</artifactId>
-    <version>6</version>
+    <version>7-SNAPSHOT</version>
     <relativePath>../xwiki-platform-pom</relativePath>
   </parent>
   <groupId>com.xpn.xwiki.products</groupId>
@@ -49,13 +49,13 @@
   </modules>
   <properties>
     <!-- Versions of XWiki dependencies used in XEM modules -->
-    <platform.tools.version>1.7</platform.tools.version>
-    <platform.core.version>1.1.2</platform.core.version>
-    <platform.web.version>1.1.2</platform.web.version>
-    <platform.panels.version>1.1.2</platform.panels.version>
-    <product.enterprise.version>1.1.2</product.enterprise.version>
-    <platform.plugin.applicationmanager.version>1.0-milestone-2</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.0-milestone-2</platform.plugin.wikimanager.version>
+    <platform.tools.version>1.8-SNAPSHOT</platform.tools.version>
+    <platform.core.version>1.1-SNAPSHOT</platform.core.version>
+    <platform.web.version>1.1-SNAPSHOT</platform.web.version>
+    <platform.panels.version>1.1-SNAPSHOT</platform.panels.version>
+    <product.enterprise.version>1.1-SNAPSHOT</product.enterprise.version>
+    <platform.plugin.applicationmanager.version>1.0-SNAPSHOT</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.0-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
   <build>
     <extensions>
