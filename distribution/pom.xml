@@ -36,7 +36,7 @@
   <dependencies>
     <dependency>
       <groupId>com.xpn.xwiki.products</groupId>
-      <artifactId>xwiki-enterprise-manager-web-${xwiki.db}</artifactId>
+      <artifactId>xwiki-enterprise-manager-web</artifactId>
       <version>${pom.version}</version>
       <type>war</type>
     </dependency>
@@ -45,10 +45,35 @@
       <artifactId>xwiki-jetty-resources</artifactId>
       <version>${platform.tools.version}</version>
     </dependency>
+    <!-- Add the database JAR so that it's included in the expanded WAR since it's not included
+         by default in the Platform WAR. -->
+    <dependency>
+      <groupId>${xwiki.db.jdbc.groupId}</groupId>
+      <artifactId>${xwiki.db.jdbc.artifactId}</artifactId>
+      <version>${xwiki.db.jdbc.version}</version>
+      <scope>runtime</scope>
+    </dependency>
   </dependencies>
   <build>
     <pluginManagement>
       <plugins>
+        <!-- Inject Hibernate's configuration for the specified database -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-remote-resources-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>process</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <resourceBundles>
+              <resourceBundle>com.xpn.xwiki.platform:xwiki-configuration-resources:${platform.tools.version}</resourceBundle>
+            </resourceBundles>
+          </configuration>
+        </plugin>
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
