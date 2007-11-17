@@ -27,7 +27,7 @@
   <parent>
     <groupId>com.xpn.xwiki.products</groupId>
     <artifactId>xwiki-enterprise-manager-parent</artifactId>
-    <version>1.0-milestone-2</version>
+    <version>1.0-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-wikis</artifactId>
   <packaging>pom</packaging>
