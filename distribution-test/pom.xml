@@ -206,6 +206,6 @@
   </profiles>
   <modules>
     <module>xmlrpc-tests</module>
-    <!-- <module>selenium-tests</module> -->
+    <module>selenium-tests</module>
   </modules>
 </project>
