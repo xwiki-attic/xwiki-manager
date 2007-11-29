@@ -12,9 +12,9 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1187017247000</creationDate>
-<date>1196333921000</date>
-<contentUpdateDate>1196333921000</contentUpdateDate>
-<version>13.1</version>
+<date>1196340615000</date>
+<contentUpdateDate>1196340615000</contentUpdateDate>
+<version>16.1</version>
 <title></title>
 <template></template>
 <defaultTemplate></defaultTemplate>
@@ -83,10 +83,15 @@
       #error($msg.get("xem.install.error", [$context.lastexception]))
     #end
   #else
-    #set($fullmessage = $msg.get("xem.answer.install.actions"))
-    #set($fullmessage = $fullmessage+$xwiki.nl)
-    #set($fullmessage = $fullmessage+$msg.get("xem.answer.install.actions.template")+$xwiki.nl)
-    #xwikimessagebox($msg.get("xem.answer.install.title") $fullmessage $doc.getURL("view", "confirm=1") $doc.getURL("view") $msg.get("yes") $msg.get("no"))
+    #set($urlyes = $doc.getURL("view", "confirm=1"))
+    #set($urlno = $doc.getURL("view"))
+
+    #xwikimessageboxstart($msg.get("xem.answer.install.title") $msg.get("xem.answer.install.actions"))
+      $msg.get("xem.answer.install.actions.template")
+      &lt;div class="buttons"&gt;
+        &lt;a href="$urlyes"&gt;&lt;input type="button" class="button" value="$msg.get("yes")" onclick="location='$urlyes'; return false;"/&gt;&lt;/a&gt;&lt;a href="$urlno"&gt;&lt;input type="button" class="button" value="$msg.get("no")" onclick="location='$urlno'; return false;"/&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    #xwikimessageboxend()
   #end
 #else
   #info($msg.get("xem.install.noneed"))
