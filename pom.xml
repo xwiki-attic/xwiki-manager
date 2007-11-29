@@ -49,11 +49,28 @@
   </modules>
   <properties>
     <!-- Versions of XWiki dependencies used in XEM modules -->
+    <platform.core.version>1.2-SNAPSHOT</platform.core.version>
     <platform.tools.version>1.8-SNAPSHOT</platform.tools.version>
     <product.enterprise.version>1.2-SNAPSHOT</product.enterprise.version>
     <platform.plugin.applicationmanager.version>1.0-SNAPSHOT</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.0-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
+  <profiles>
+    <profile>
+      <id>ci</id>
+      <activation>
+        <!-- This property is automatically defined by the Maven release plugin when executing
+             a release. Thus this profile will be automatically enabled when releasing -->
+        <property>
+          <name>performRelease</name>
+        </property>
+      </activation>
+      <modules>
+        <!-- <module>installers</module> -->
+        <module>distribution-test</module>
+      </modules>
+    </profile>
+  </profiles>
   <build>
     <extensions>
       <extension>
