@@ -1,28 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!--
- *
- * See the NOTICE file distributed with this work for additional
- * information regarding copyright ownership.
- *
- * This is free software; you can redistribute it and/or modify it
- * under the terms of the GNU Lesser General Public License as
- * published by the Free Software Foundation; either version 2.1 of
- * the License, or (at your option) any later version.
- *
- * This software is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this software; if not, write to the Free
- * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
- * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
- *
+  *
+  * See the NOTICE file distributed with this work for additional
+  * information regarding copyright ownership.
+  *
+  * This is free software; you can redistribute it and/or modify it
+  * under the terms of the GNU Lesser General Public License as
+  * published by the Free Software Foundation; either version 2.1 of
+  * the License, or (at your option) any later version.
+  *
+  * This software is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  * Lesser General Public License for more details.
+  *
+  * You should have received a copy of the GNU Lesser General Public
+  * License along with this software; if not, write to the Free
+  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
+  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
+  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.xpn.xwiki.products</groupId>
@@ -34,7 +36,7 @@
   <packaging>pom</packaging>
   <description>XWiki Products - Enterprise Manager - Functional Tests</description>
   <dependencies>
-    <dependency>  
+    <dependency>
       <groupId>com.xpn.xwiki.platform</groupId>
       <artifactId>xwiki-shared-test</artifactId>
       <version>${platform.tools.version}</version>
@@ -45,8 +47,8 @@
     <testSourceDirectory>src/test/it</testSourceDirectory>
     <pluginManagement>
       <plugins>
-        <!--  Force compilation of tests as the packaging being pom tests won't be compiled
-              with the default pom lifecycle -->
+       <!--  Force compilation of tests as the packaging being pom tests won't be compiled
+          with the default pom lifecycle -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
@@ -59,7 +61,7 @@
           </executions>
         </plugin>
         <!--  Force copy of test resources file as the packaging being pom resource files won't
-              be copied with the default pom lifecycle -->
+          be copied with the default pom lifecycle -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-resources-plugin</artifactId>
@@ -68,6 +70,18 @@
               <!--phase>process-test-resources</phase-->
               <goals>
                 <goal>testResources</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
+        <!-- Create jar containing integration tests which will be installed -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <executions>
+            <execution>
+              <goals>
+                <goal>test-jar</goal>
               </goals>
             </execution>
           </executions>
@@ -98,9 +112,9 @@
           </executions>
         </plugin>
         <!-- Start XWiki, Execute the tests and Stop XWiki.
-             Note: To execute a single test case run mvn install -Dpattern=<test name>
-             For example: mvn install -Dpattern=DeletePageTest
-             For example: mvn install -Dpattern=.*Wysiwyg.*
+          Note: To execute a single test case run mvn install -Dpattern=<test name>
+          For example: mvn install -Dpattern=DeletePageTest
+          For example: mvn install -Dpattern=.*Wysiwyg.*
         -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -155,14 +169,14 @@
             </systemProperties>
           </configuration>
         </plugin>
-      </plugins>  
+      </plugins>
     </pluginManagement>
   </build>
   <properties>
     <!-- This is to allow users to override this property on the command line to choose what
-         test to run. For example to run only the DeletePageTest you would type:
-             mvn install -DPattern=DeletePageTest
-    -->    
+      test to run. For example to run only the DeletePageTest you would type:
+      mvn install -DPattern=DeletePageTest
+    -->
     <pattern>.*</pattern>
     <port>8080</port>
   </properties>
@@ -172,7 +186,7 @@
       <activation>
         <os>
           <family>unix</family>
-        </os>        
+        </os>
       </activation>
       <properties>
         <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port}</xwikiExecutionStartCommand>
@@ -184,7 +198,7 @@
       <activation>
         <os>
           <family>mac</family>
-        </os>        
+        </os>
       </activation>
       <properties>
         <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port}</xwikiExecutionStartCommand>
@@ -196,7 +210,7 @@
       <activation>
         <os>
           <family>windows</family>
-        </os>        
+        </os>
       </activation>
       <properties>
         <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port}</xwikiExecutionStartCommand>
