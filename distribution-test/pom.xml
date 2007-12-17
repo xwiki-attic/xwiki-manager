@@ -166,6 +166,10 @@
                 <name>pathToXWikiXar</name>
                 <value>com/xpn/xwiki/products/xwiki-enterprise-manager-wiki-administrator/${pom.version}/xwiki-enterprise-manager-wiki-administrator-${pom.version}.xar</value>
               </property>
+              <property>
+                <name>documentsToTest</name>
+                <value>Main\.WebHome|Panels\.QuickLinks|Xem.*|XApp.*|Wiki.*|XWiki\.XWikiServer.*</value>
+              </property>
             </systemProperties>
           </configuration>
         </plugin>
