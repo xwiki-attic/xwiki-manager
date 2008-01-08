@@ -2,7 +2,7 @@
 
 <xwikidoc>
 <web>XWiki</web>
-<name>XWikiServerXWiki</name>
+<name>XWikiServerXwiki</name>
 <language></language>
 <defaultLanguage></defaultLanguage>
 <translation>0</translation>
@@ -47,7 +47,7 @@
 <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
 </tags>
 </class>
-<name>XWiki.XWikiServerXWiki</name>
+<name>XWiki.XWikiServerXwiki</name>
 <number>0</number>
 <className>XWiki.TagClass</className>
 <property>
@@ -166,7 +166,7 @@
 <classType>com.xpn.xwiki.objects.classes.StringClass</classType>
 </wikiprettyname>
 </class>
-<name>XWiki.XWikiServerXWiki</name>
+<name>XWiki.XWikiServerXwiki</name>
 <number>0</number>
 <className>XWiki.XWikiServerClass</className>
 <property>
