@@ -61,14 +61,21 @@
       <activation>
         <!-- This property is automatically defined by the Maven release plugin when executing
              a release. Thus this profile will be automatically enabled when releasing -->
+        <!-- XEM releases are based on mysql on which integration tests can't be run.
         <property>
           <name>performRelease</name>
-        </property>
+        </property>-->
       </activation>
       <modules>
         <!-- <module>installers</module> -->
         <module>distribution-test</module>
       </modules>
+    </profile>
+    <profile>
+      <id>mysql</id>
+      <properties>
+        <xwiki.db.connection.url>jdbc:mysql://localhost/xwiki?useServerPrepStmts=false&amp;amp;amp;sessionVariables=sql_mode=''</xwiki.db.connection.url>
+      </properties>
     </profile>
   </profiles>
   <build>
