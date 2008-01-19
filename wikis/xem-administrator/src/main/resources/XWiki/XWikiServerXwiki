@@ -12,9 +12,9 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1199705103000</creationDate>
-<date>1199724224000</date>
-<contentUpdateDate>1199724224000</contentUpdateDate>
-<version>2.1</version>
+<date>1200767957000</date>
+<contentUpdateDate>1200767957000</contentUpdateDate>
+<version>12.1</version>
 <title></title>
 <template></template>
 <defaultTemplate></defaultTemplate>
@@ -170,10 +170,10 @@
 <number>0</number>
 <className>XWiki.XWikiServerClass</className>
 <property>
-<description></description>
+<description>Main wiki default descriptor</description>
 </property>
 <property>
-<homepage></homepage>
+<homepage>Main.WebHome</homepage>
 </property>
 <property>
 <language></language>
@@ -185,7 +185,7 @@
 <secure>0</secure>
 </property>
 <property>
-<server></server>
+<server>localhost</server>
 </property>
 <property>
 <state>active</state>
@@ -197,5 +197,5 @@
 <wikiprettyname>Main wiki</wikiprettyname>
 </property>
 </object>
-<content>#includeInContext("XWiki.XWikiServerClassTemplate")</content>
+<content>#includeForm("XWiki.XWikiServerClassTemplate")</content>
 </xwikidoc>

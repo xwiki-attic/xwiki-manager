@@ -12,9 +12,9 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1166007764000</creationDate>
-<date>1195043882000</date>
-<contentUpdateDate>1199724180000</contentUpdateDate>
-<version>1.1</version>
+<date>1200761403000</date>
+<contentUpdateDate>1200761403000</contentUpdateDate>
+<version>9.1</version>
 <title></title>
 <template></template>
 <defaultTemplate></defaultTemplate>
@@ -77,7 +77,7 @@ Welcome to the wiki administrator of your wiki farm! It is a space that will all
 #set($WikiManager = $xwiki.wikimanager)
 
 #set($nb = 5)
-#set($wikilist = $WikiManager.getWikiDocumentList())
+#set($wikilist = $WikiManager.getAllWikis())
 #sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
 
 #############################################################################
