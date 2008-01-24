@@ -27,7 +27,7 @@
   <parent>
     <groupId>com.xpn.xwiki.platform</groupId>
     <artifactId>xwiki</artifactId>
-    <version>9-SNAPSHOT</version>
+    <version>10-SNAPSHOT</version>
     <relativePath>../xwiki-platform-pom</relativePath>
   </parent>
   <groupId>com.xpn.xwiki.products</groupId>
@@ -70,12 +70,6 @@
         <!-- <module>installers</module> -->
         <module>distribution-test</module>
       </modules>
-    </profile>
-    <profile>
-      <id>mysql</id>
-      <properties>
-        <xwiki.db.connection.url>jdbc:mysql://localhost/xwiki?useServerPrepStmts=false&amp;amp;amp;sessionVariables=sql_mode=''</xwiki.db.connection.url>
-      </properties>
     </profile>
   </profiles>
   <build>
