@@ -26,8 +26,8 @@ import com.xpn.xwiki.it.selenium.framework.XWikiTestSuite;
 import junit.framework.Test;
 
 /**
- * Verify deletion of pages.
- *
+ * Minimum test that just try to access wiki.
+ * 
  * @version $Id: $
  */
 public class StartTest extends AbstractXWikiTestCase
@@ -38,7 +38,7 @@ public class StartTest extends AbstractXWikiTestCase
         suite.addTestSuite(StartTest.class, AlbatrossSkinExecutor.class);
         return suite;
     }
-    
+
     public void testStart()
     {
         open("/xwiki/bin/view/Main/");

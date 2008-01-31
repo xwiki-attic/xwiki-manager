@@ -30,10 +30,10 @@ import com.xpn.xwiki.test.XWikiTestSetup;
 
 /**
  * A class listing all the Selenium Functional tests to execute. We need such a class (rather than
- * letting the JUnit Runner discover the different TestCases classes by itself) because we want
- * to start/stop XWiki before and after the tests start (but only once).
- *
- * @version $Id: $ 
+ * letting the JUnit Runner discover the different TestCases classes by itself) because we want to
+ * start/stop XWiki before and after the tests start (but only once).
+ * 
+ * @version $Id: $
  */
 public class AllTests extends TestCase
 {
@@ -43,6 +43,13 @@ public class AllTests extends TestCase
     {
         TestSuite suite = new TestSuite();
 
+        // TODO: I don't like listing tests here as it means we can add a new TestCase class and
+        // forget to add it here and the tests won't be run but we'll not know about it and we'll
+        // think the tests are all running fine. I haven't found a simple solution to this yet
+        // (there are complex solutions like searching for all tests by parsing the source tree).
+        // I think there are TestSuite that do this out there but I haven't looked for them yet.
+
+        // Just try to access wiki ti see if it's starting correctly.
         addTestCase(suite, StartTest.class);
 
         return new XWikiTestSetup(suite);
