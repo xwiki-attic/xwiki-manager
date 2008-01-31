@@ -25,6 +25,7 @@ import junit.framework.TestCase;
 
 import java.lang.reflect.Method;
 
+import com.xpn.xwiki.it.selenium.xem.StartTest;
 import com.xpn.xwiki.test.XWikiTestSetup;
 
 /**
@@ -42,19 +43,7 @@ public class AllTests extends TestCase
     {
         TestSuite suite = new TestSuite();
 
-        // TODO: I don't like listing tests here as it means we can add a new TestCase class and
-        // forget to add it here and the tests won't be run but we'll not know about it and we'll
-        // think the tests are all running fine. I haven't found a simple solution to this yet
-        // (there are complex solutions like searching for all tests by parsing the source tree).
-        // I think there are TestSuite that do this out there but I haven't looked for them yet.
-        addTestCase(suite, DeletePageTest.class);
-        addTestCase(suite, LanguageTest.class);
-        addTestCase(suite, LoginTest.class);
-        addTestCase(suite, WikiEditorTest.class);
-        addTestCase(suite, WysiwygEditorFromWikiTest.class);
-        addTestCase(suite, WysiwygEditorTest.class);
-        addTestCase(suite, VelocityMacrosTest.class);
-        addTestCase(suite, BacklinksTest.class);
+        addTestCase(suite, StartTest.class);
 
         return new XWikiTestSetup(suite);
     }
