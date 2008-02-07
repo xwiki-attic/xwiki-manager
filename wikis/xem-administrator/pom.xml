@@ -84,8 +84,8 @@
       <!-- Step 2: Attach XE xar to XEM install page -->
       <plugin>
         <groupId>com.xpn.xwiki.platform</groupId>
-        <artifactId>xwiki-build-xmldoc-update-plugin</artifactId>
-        <version>${platform.tools.version}</version>
+        <artifactId>xwiki-xmldoc-update-plugin</artifactId>
+        <version>1.0-SNAPSHOT</version>
         <executions>
           <execution>
             <phase>generate-resources</phase>
