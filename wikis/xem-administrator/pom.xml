@@ -46,11 +46,60 @@
       <version>${platform.plugin.applicationmanager.version}</version>
       <type>xar</type>
     </dependency>
-        <dependency>
+    <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-wiki-manager</artifactId>
       <version>${platform.plugin.wikimanager.version}</version>
       <type>xar</type>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <!-- Step 1: Download XE xar -->
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>dependency-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- <phase>generate-sources</phase> -->
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>com.xpn.xwiki.products</groupId>
+                  <artifactId>xwiki-enterprise-wiki</artifactId>
+                  <version>${product.enterprise.version}</version>
+                  <type>xar</type>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/xe</outputDirectory>
+                  <destFileName>templatexe.xar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Step 2: Attach XE xar to XEM install page -->
+      <plugin>
+        <groupId>com.xpn.xwiki.platform</groupId>
+        <artifactId>xwiki-build-xmldoc-update-plugin</artifactId>
+        <version>${platform.tools.version}</version>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <id>attach-xe-xar</id>
+            <goals>
+              <goal>attach</goal>
+            </goals>
+            <configuration>
+              <file>${project.build.directory}/xe/templatexe.xar</file>
+              <sourceDocument>${basedir}/src/main/resources/XemManager/Install</sourceDocument>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 </project>
