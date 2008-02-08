@@ -83,7 +83,7 @@
       </plugin>
       <!-- Step 2: Attach XE xar to XEM install page -->
       <plugin>
-        <groupId>com.xpn.xwiki.platform</groupId>
+        <groupId>com.xpn.xwiki.platform.tools</groupId>
         <artifactId>xwiki-xmldoc-update-plugin</artifactId>
         <version>1.0-SNAPSHOT</version>
         <executions>
