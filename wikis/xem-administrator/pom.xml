@@ -57,8 +57,8 @@
     <plugins>
       <!-- Step 1: Download XE xar -->
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>dependency-maven-plugin</artifactId>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
             <!-- <phase>generate-sources</phase> -->
