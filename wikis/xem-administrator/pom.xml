@@ -94,7 +94,7 @@
               <goal>attach</goal>
             </goals>
             <configuration>
-              <file>${project.build.directory}/xe/templatexe.xar</file>
+              <file>${project.build.directory}/xe/template-xe.xar</file>
               <sourceDocument>${basedir}/src/main/resources/XemManager/Install</sourceDocument>
             </configuration>
           </execution>
