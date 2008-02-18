@@ -74,7 +74,7 @@
                   <type>xar</type>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/xe</outputDirectory>
-                  <destFileName>templatexe.xar</destFileName>
+                  <destFileName>template-xe.xar</destFileName>
                 </artifactItem>
               </artifactItems>
             </configuration>
