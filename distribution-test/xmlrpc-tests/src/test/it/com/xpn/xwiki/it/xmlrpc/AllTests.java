@@ -46,11 +46,6 @@ public class AllTests extends TestCase
         // (there are complex solutions like searching for all tests by parsing the source tree).
         // I think there are TestSuite that do this out there but I haven't looked for them yet.
 
-        addTestCase(suite, AnonymousAccessTest.class);
-        addTestCase(suite, SpacesTest.class);
-        addTestCase(suite, PagesTest.class);
-        addTestCase(suite, CommentsTest.class);
-        addTestCase(suite, AttachmentsTest.class);
         addTest(suite, XhtmlValidityTest.suite(), XhtmlValidityTest.class);
         addTest(suite, OrphanedPageTest.suite(), OrphanedPageTest.class);
 
