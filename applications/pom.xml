@@ -26,37 +26,15 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.xpn.xwiki.products</groupId>
-    <artifactId>xwiki-enterprise-manager</artifactId>
+    <artifactId>xwiki-enterprise-manager-parent</artifactId>
     <version>1.2-milestone-1</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-hsqldb</artifactId>
-  <name>XWiki Products - Enterprise Manager - Distribution - HSQLDB</name>
+  <artifactId>xwiki-enterprise-manager-applications</artifactId>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Distribution - HSQLDB</description>
-  <dependencies>
-    <dependency>
-      <groupId>com.xpn.xwiki.products</groupId>
-      <artifactId>xwiki-enterprise-manager-database-hsqldb</artifactId>
-      <version>${pom.version}</version>
-      <type>zip</type>
-    </dependency>
-  </dependencies>
-  <build>
-    <plugins>
-      <!-- Inject Hibernate's configuration for the specified database -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-remote-resources-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <descriptors>
-            <descriptor>src/assemble/application.xml</descriptor>
-          </descriptors>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  <name>XWiki Products - Enterprise Manager - Applications - Parent POM</name>
+  <description>XWiki Products - Enterprise Manager - Applications - Parent POM</description>
+  <modules>
+    <module>xem</module>
+  </modules>
 </project>
+
