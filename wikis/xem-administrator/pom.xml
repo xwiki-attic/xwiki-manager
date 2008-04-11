@@ -52,54 +52,11 @@
       <version>${platform.plugin.wikimanager.version}</version>
       <type>xar</type>
     </dependency>
+    <dependency>
+      <groupId>com.xpn.xwiki.products</groupId>
+      <artifactId>xwiki-enterprise-manager-application-xem</artifactId>
+      <version>${pom.version}</version>
+      <type>xar</type>
+    </dependency>
   </dependencies>
-  <build>
-    <plugins>
-      <!-- Step 1: Download XE xar -->
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-dependency-plugin</artifactId>
-        <executions>
-          <execution>
-            <!-- <phase>generate-sources</phase> -->
-            <goals>
-              <goal>copy</goal>
-            </goals>
-            <configuration>
-              <artifactItems>
-                <artifactItem>
-                  <groupId>com.xpn.xwiki.products</groupId>
-                  <artifactId>xwiki-enterprise-wiki</artifactId>
-                  <version>${product.enterprise.version}</version>
-                  <type>xar</type>
-                  <overWrite>true</overWrite>
-                  <outputDirectory>${project.build.directory}/xe</outputDirectory>
-                  <destFileName>template-xe.xar</destFileName>
-                </artifactItem>
-              </artifactItems>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <!-- Step 2: Attach XE xar to XEM install page -->
-      <plugin>
-        <groupId>com.xpn.xwiki.platform.tools</groupId>
-        <artifactId>xwiki-xmldoc-update-plugin</artifactId>
-        <version>${platform.tool.xmldoc.version}</version>
-        <executions>
-          <execution>
-            <phase>generate-resources</phase>
-            <id>attach-xe-xar</id>
-            <goals>
-              <goal>attach</goal>
-            </goals>
-            <configuration>
-              <file>${project.build.directory}/xe/template-xe.xar</file>
-              <sourceDocument>${basedir}/src/main/resources/XemManager/Install</sourceDocument>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
 </project>
