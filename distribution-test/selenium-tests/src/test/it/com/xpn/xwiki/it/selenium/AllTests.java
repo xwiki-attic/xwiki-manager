@@ -25,7 +25,7 @@ import junit.framework.TestCase;
 
 import java.lang.reflect.Method;
 
-import com.xpn.xwiki.it.selenium.xem.StartTest;
+import com.xpn.xwiki.it.selenium.xem.WikiManagementCreate;
 import com.xpn.xwiki.test.XWikiTestSetup;
 
 /**
@@ -49,17 +49,16 @@ public class AllTests extends TestCase
         // (there are complex solutions like searching for all tests by parsing the source tree).
         // I think there are TestSuite that do this out there but I haven't looked for them yet.
 
-        // Just try to access wiki ti see if it's starting correctly.
-        addTestCase(suite, StartTest.class);
+        addTestCase(suite, WikiManagementCreate.class);
 
         return new XWikiTestSetup(suite);
     }
 
-    private static void addTestCase(TestSuite suite, Class testClass) throws Exception
+    private static void addTestCase(TestSuite suite, Class< ? > testClass) throws Exception
     {
         if (testClass.getName().matches(PATTERN)) {
-            Method method = testClass.getMethod("suite", null);
-            suite.addTest((Test) method.invoke(null, null));
+            Method method = testClass.getMethod("suite");
+            suite.addTest((Test) method.invoke(null));
         }
     }
 
