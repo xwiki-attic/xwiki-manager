@@ -34,12 +34,12 @@
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.2-milestone-2</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/trunk</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/trunk</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/trunk</url>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/tags/xwiki-enterprise-manager-1.2-milestone-2</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/tags/xwiki-enterprise-manager-1.2-milestone-2</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/xwiki-products/xwiki-enterprise-manager/tags/xwiki-enterprise-manager-1.2-milestone-2</url>
   </scm>
   <modules>
     <module>web</module>
