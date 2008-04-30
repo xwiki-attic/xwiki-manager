@@ -82,6 +82,8 @@
                 <xwikiCfgPlugins>\
                   com.xpn.xwiki.monitor.api.MonitorPlugin,\
                   com.xpn.xwiki.plugin.calendar.CalendarPlugin,\
+                  com.xpn.xwiki.plugin.skinx.JsSkinExtensionPlugin,\
+                  com.xpn.xwiki.plugin.skinx.CssSkinExtensionPlugin,\
                   com.xpn.xwiki.plugin.feed.FeedPlugin,\
                   com.xpn.xwiki.plugin.ldap.LDAPPlugin,\
                   com.xpn.xwiki.plugin.google.GooglePlugin,\
