@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <xwikidoc>
-<web>XemManager</web>
+<web>XemResources</web>
 <name>WebPreferences</name>
 <language></language>
 <defaultLanguage>en</defaultLanguage>
 <translation>0</translation>
-<parent>XemManager.WebHome</parent>
+<parent>XemResources.WebHome</parent>
 <creator>XWiki.Admin</creator>
 <author>XWiki.Admin</author>
 <customClass></customClass>
@@ -47,7 +47,7 @@
 <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
 </tags>
 </class>
-<name>XemManager.WebPreferences</name>
+<name>XemResources.WebPreferences</name>
 <number>0</number>
 <className>XWiki.TagClass</className>
 <property>
@@ -116,7 +116,7 @@
 <classType>com.xpn.xwiki.objects.classes.UsersClass</classType>
 </users>
 </class>
-<name>XemManager.WebPreferences</name>
+<name>XemResources.WebPreferences</name>
 <number>0</number>
 <className>XWiki.XWikiGlobalRights</className>
 <property>
