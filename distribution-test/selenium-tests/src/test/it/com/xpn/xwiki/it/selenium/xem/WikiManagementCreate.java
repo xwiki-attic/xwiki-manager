@@ -80,6 +80,8 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
      */
     private void setWikiNameFieldValue()
     {
+        getSelenium().setSpeed("1000");
+        
         // Validate that an existing wiki name is invalid as wiki name
         setFieldValue("wikiname", "xwiki");
         getSelenium().keyUp("wikiname", "\\40");
