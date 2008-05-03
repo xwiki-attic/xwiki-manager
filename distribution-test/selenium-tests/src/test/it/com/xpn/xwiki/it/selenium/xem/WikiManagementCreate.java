@@ -89,7 +89,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         // Validate that "" is invalid as wiki name
         setFieldValue("wikiname", "");
         getSelenium().keyUp("wikiname", "\\40");
-        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('Identifier can't be empty') != -1;", "10000");
+        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('Identifier can\\'t be empty') != -1;", "10000");
         assertTextPresent("Identifier can't be empty");
 
         // Validate that a not existing wiki name is valid as wiki name
