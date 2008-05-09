@@ -110,7 +110,7 @@
 For Admins:
 * [Admin Center&gt;XWiki.WebHome]
 * [Applications&gt;XAppManager.WebHome]
-  #if($xwiki.isVirtual())
+  #if($xwiki.isVirtualMode())
     * [Wikis&gt;WikiManager.WebHome]
   #end
 
