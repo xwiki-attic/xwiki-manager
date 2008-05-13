@@ -49,24 +49,18 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
     {
         super.setUp();
         loginAsAdmin();
-    }
 
+        open("/xwiki/bin/WikiManager/CreateNewWiki");
+    }
+    
     /**
      * Validate empty wiki creation and all automated actions around it.
      */
     public void testCreateEmptyWiki()
     {
-        open("/xwiki/bin/WikiManager/CreateNewWiki");
-        setFieldValue("wikiname", "newemptywiki");
+        setWikiNameFieldValue();
         setFieldValue("XWiki.XWikiServerClass_0_description", "A new empty wiki");
         submit();
-
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
 
         // Validate creation finished with no error
         assertTextPresent("Your wiki \"newemptywiki\" has been created.");
@@ -79,5 +73,29 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         assertTextPresent("Newemptywiki");
         // Validate the correct domain is printed in the list
         assertTextPresent("newemptywiki.localdomain.com");
+    }
+    
+    /**
+     * Validate the ajax based wiki name validation.
+     */
+    private void setWikiNameFieldValue()
+    {
+        // Validate that an existing wiki name is invalid as wiki name
+        setFieldValue("wikiname", "xwiki");
+        getSelenium().keyUp("wikiname", "\\40");
+        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('This identifier is already used') != -1;", "10000");
+        assertTextPresent("This identifier is already used");
+
+        // Validate that "" is invalid as wiki name
+        setFieldValue("wikiname", "");
+        getSelenium().keyUp("wikiname", "\\40");
+        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('Identifier can\\'t be empty') != -1;", "10000");
+        assertTextPresent("Identifier can't be empty");
+
+        // Validate that a not existing wiki name is valid as wiki name
+        setFieldValue("wikiname", "newemptywiki");
+        getSelenium().keyUp("wikiname", "\\40");
+        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('You can use this name as new wiki identifier') != -1;", "10000");
+        assertTextPresent("You can use this name as new wiki identifier");
     }
 }
