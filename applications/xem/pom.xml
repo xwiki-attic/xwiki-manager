@@ -75,7 +75,7 @@
             </goals>
             <configuration>
               <file>${project.build.directory}/xe/template-xe.xar</file>
-              <sourceDocument>${basedir}/src/main/resources/XemManager/Install</sourceDocument>
+              <sourceDocument>${basedir}/src/main/resources/XemManager/Install.xml</sourceDocument>
             </configuration>
           </execution>
         </executions>
