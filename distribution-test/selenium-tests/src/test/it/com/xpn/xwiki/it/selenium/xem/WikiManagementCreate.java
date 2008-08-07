@@ -34,7 +34,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
 {
     public static Test suite()
     {
-        XWikiTestSuite suite = new XWikiTestSuite("Verify xem starting");
+        XWikiTestSuite suite = new XWikiTestSuite("Check some wiki management use cases");
         suite.addTestSuite(WikiManagementCreate.class, AlbatrossSkinExecutor.class);
         return suite;
     }
