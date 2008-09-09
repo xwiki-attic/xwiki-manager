@@ -33,7 +33,7 @@
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
-  <version>1.3-SNAPSHOT</version>
+  <version>1.3</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
     <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.3</connection>
