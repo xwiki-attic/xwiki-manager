@@ -25,13 +25,14 @@ import junit.framework.TestCase;
 
 import java.lang.reflect.Method;
 
+import com.xpn.xwiki.it.selenium.framework.XWikiSeleniumTestSetup;
 import com.xpn.xwiki.it.selenium.xem.WikiManagementCreate;
 import com.xpn.xwiki.test.XWikiTestSetup;
 
 /**
- * A class listing all the Selenium Functional tests to execute. We need such a class (rather than
- * letting the JUnit Runner discover the different TestCases classes by itself) because we want to
- * start/stop XWiki before and after the tests start (but only once).
+ * A class listing all the Selenium Functional tests to execute. We need such a class (rather than letting the JUnit
+ * Runner discover the different TestCases classes by itself) because we want to start/stop XWiki before and after the
+ * tests start (but only once).
  * 
  * @version $Id: $
  */
@@ -51,7 +52,7 @@ public class AllTests extends TestCase
 
         addTestCase(suite, WikiManagementCreate.class);
 
-        return new XWikiTestSetup(suite);
+        return new XWikiSeleniumTestSetup(new XWikiTestSetup(suite));
     }
 
     private static void addTestCase(TestSuite suite, Class< ? > testClass) throws Exception
