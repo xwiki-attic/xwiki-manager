@@ -60,7 +60,7 @@
     <platform.tool.xmldoc.version>1.3</platform.tool.xmldoc.version>
     <platform.core.version>1.6.1</platform.core.version>
     <product.enterprise.version>1.6.1</product.enterprise.version>
-    <platform.plugin.applicationmanager.version>1.4</platform.plugin.applicationmanager.version>
+    <platform.plugin.applicationmanager.version>1.5</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.5</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
