@@ -44,7 +44,7 @@
       <groupId>com.xpn.xwiki.products</groupId>
       <artifactId>xwiki-enterprise-test-xmlrpc</artifactId>
       <version>${product.enterprise.version}</version>
-      <classifier>tests</classifier>
+      <type>test-jar</type>
       <scope>test</scope>
     </dependency>
   </dependencies>
