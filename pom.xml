@@ -33,12 +33,12 @@
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
-  <version>1.5-SNAPSHOT</version>
+  <version>1.5.1</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.3</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.3</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.3</url>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.5.1</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.5.1</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-1.5.1</url>
   </scm>
   <modules>
     <module>web</module>
@@ -50,17 +50,17 @@
   <properties>
     <!-- Versions of XWiki dependencies used in XEM modules -->
     <platform.tool.xar-handler.version>1.8</platform.tool.xar-handler.version>
-    <platform.tool.xar-plugin.version>1.11</platform.tool.xar-plugin.version>
+    <platform.tool.xar-plugin.version>1.12</platform.tool.xar-plugin.version>
     <platform.tool.configuration.version>1.21</platform.tool.configuration.version>
-    <platform.tool.jetty.version>1.10</platform.tool.jetty.version>
+    <platform.tool.jetty.version>1.11</platform.tool.jetty.version>
     <!-- Shared-tests is not compatible with core 1.6 since 1.13 -->
     <platform.tool.test.version>1.14</platform.tool.test.version>
     <platform.tool.packager.version>1.11</platform.tool.packager.version>
     <platform.tool.xmldoc.version>1.3</platform.tool.xmldoc.version>
-    <platform.core.version>1.7.1</platform.core.version>
-    <product.enterprise.version>1.7.1</product.enterprise.version>
-    <platform.plugin.applicationmanager.version>1.5</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.6</platform.plugin.wikimanager.version>
+    <platform.core.version>1.7.2</platform.core.version>
+    <product.enterprise.version>1.7.2</product.enterprise.version>
+    <platform.plugin.applicationmanager.version>1.6</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.7</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
