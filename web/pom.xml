@@ -208,7 +208,7 @@ xwiki.work.dir=work
       </build>
     </profile>
     <profile>
-      <id>ci</id>
+      <id>release</id>
       <activation>
         <!-- This property is automatically defined by the Release profile in the top level POM when executing
              a release. Thus this profile will be automatically enabled when releasing -->
