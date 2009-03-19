@@ -226,7 +226,7 @@ xwiki.work.dir=work
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>buildnumber-maven-plugin</artifactId>
-            <version>1.0-beta-1</version>
+            <version>1.0-beta-2</version>
             <executions>
               <execution>
                 <phase>validate</phase>
