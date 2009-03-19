@@ -27,7 +27,7 @@
   <parent>
     <groupId>com.xpn.xwiki.products</groupId>
     <artifactId>xwiki-enterprise-manager-parent</artifactId>
-    <version>1.5-SNAPSHOT</version>
+    <version>1.6</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-web</artifactId>
   <name>XWiki Products - Enterprise Manager - Web</name>
@@ -208,7 +208,7 @@ xwiki.work.dir=work
       </build>
     </profile>
     <profile>
-      <id>ci</id>
+      <id>release</id>
       <activation>
         <!-- This property is automatically defined by the Release profile in the top level POM when executing
              a release. Thus this profile will be automatically enabled when releasing -->
@@ -226,7 +226,7 @@ xwiki.work.dir=work
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>buildnumber-maven-plugin</artifactId>
-            <version>1.0-beta-1</version>
+            <version>1.0-beta-2</version>
             <executions>
               <execution>
                 <phase>validate</phase>
