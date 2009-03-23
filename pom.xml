@@ -59,7 +59,7 @@
     <platform.core.version>1.8-SNAPSHOT</platform.core.version>
     <product.enterprise.version>1.8-SNAPSHOT</product.enterprise.version>
     <platform.plugin.applicationmanager.version>1.7-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.6-SNAPSHOT</platform.plugin.wikimanager.version>
+    <platform.plugin.wikimanager.version>1.8-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
