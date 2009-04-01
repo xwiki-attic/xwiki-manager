@@ -81,9 +81,10 @@
               <properties>
                 <xwikiCfgPlugins>\
                   com.xpn.xwiki.monitor.api.MonitorPlugin,\
-                  com.xpn.xwiki.plugin.calendar.CalendarPlugin,\
                   com.xpn.xwiki.plugin.skinx.JsSkinExtensionPlugin,\
+                  com.xpn.xwiki.plugin.skinx.JsSkinFileExtensionPlugin,\
                   com.xpn.xwiki.plugin.skinx.CssSkinExtensionPlugin,\
+                  com.xpn.xwiki.plugin.skinx.CssSkinFileExtensionPlugin,\
                   com.xpn.xwiki.plugin.feed.FeedPlugin,\
                   com.xpn.xwiki.plugin.ldap.LDAPPlugin,\
                   com.xpn.xwiki.plugin.google.GooglePlugin,\
@@ -106,11 +107,11 @@
                   com.xpn.xwiki.plugin.jodatime.JodaTimePlugin,\
                   com.xpn.xwiki.plugin.scheduler.SchedulerPlugin,\
                   com.xpn.xwiki.plugin.mailsender.MailSenderPlugin,\
-                  com.xpn.xwiki.plugin.watchlist.WatchListPlugin,\
+                  com.xpn.xwiki.plugin.watchlist.WatchListPlugin, \
+                  com.xpn.xwiki.wysiwyg.server.plugin.WysiwygPlugin, \
+                  com.xpn.xwiki.plugin.tag.TagPlugin,\
                   com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
-                  com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin,\
-                  com.xpn.xwiki.wysiwyg.server.plugin.WysiwygPlugin,\
-                  com.xpn.xwiki.plugin.tag.TagPlugin
+                  com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin
                 </xwikiCfgPlugins>
                 <xwikiCfgVirtual>1</xwikiCfgVirtual>
                 <xwikiCfgAdditionalProperties>
