@@ -39,24 +39,28 @@
       <artifactId>xwiki-enterprise-wiki</artifactId>
       <version>${product.enterprise.version}</version>
       <type>xar</type>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-application-manager</artifactId>
       <version>${platform.plugin.applicationmanager.version}</version>
       <type>xar</type>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-wiki-manager</artifactId>
       <version>${platform.plugin.wikimanager.version}</version>
       <type>xar</type>
+      <optional>true</optional>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.products</groupId>
       <artifactId>xwiki-enterprise-manager-application-xem</artifactId>
       <version>${pom.version}</version>
       <type>xar</type>
+      <optional>true</optional>
     </dependency>
   </dependencies>
 </project>
