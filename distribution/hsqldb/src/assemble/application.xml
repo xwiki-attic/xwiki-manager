@@ -26,6 +26,7 @@
   </formats>
   <includeBaseDirectory>true</includeBaseDirectory>
   <dependencySets>
+    <!-- XWiki webapp. -->
     <dependencySet>
       <!-- This shouldn't be required but there's a bug in version 2.2-beta-1 of the Assembly
            plugin where the artifact name will be used instead of / if outputFileNameMapping is
@@ -43,6 +44,20 @@
           <exclude>**/hibernate.cfg.xml</exclude>
         </excludes>
       </unpackOptions>
+    </dependencySet>
+    <!-- ROOT webapp, redirecting to /xwiki/ when no application is specified. -->
+    <dependencySet>
+      <!-- This shouldn't be required but there's a bug in version 2.2-beta-1 of the Assembly
+           plugin where the artifact name will be used instead of / if outputFileNameMapping is
+           not specified -->
+      <outputFileNameMapping></outputFileNameMapping>
+      <!-- Uncomment when we move to version 2.2 beta 3 of the Assembly plugin since it's not supported in 2.2 beta 1 (and not needed) -->
+      <!--useProjectArtifact>false</useProjectArtifact-->
+      <includes>
+        <include>com.xpn.xwiki.platform.tools:xwiki-rootwebapp</include>
+      </includes>
+      <outputDirectory>webapps/root</outputDirectory>
+      <unpack>true</unpack>
     </dependencySet>
     <!-- Unpack shell files to set the execute permissions (This is required since the Assembly plugin looses 
          file permissions. See http://jira.codehaus.org/browse/MASSEMBLY-238). -->
@@ -72,10 +87,12 @@
            plugin where the artifact name will be used instead of / if outputFileNameMapping is
            not specified -->
       <outputFileNameMapping></outputFileNameMapping>
+      <!-- Uncomment when we move to version 2.2 beta 3 of the Assembly plugin since it's not supported in 2.2 beta 1 (and not needed) -->
+      <!--useProjectArtifact>false</useProjectArtifact-->
       <includes>
         <include>com.xpn.xwiki.platform.tools:xwiki-jetty-resources</include>
       </includes>
-      <outputDirectory></outputDirectory>
+      <outputDirectory>/</outputDirectory>
       <unpack>true</unpack>
       <unpackOptions>
         <excludes>
@@ -108,7 +125,7 @@
     </dependencySet>
   </dependencySets>
   <files>
-  	<file>
+    <file>
       <source>${basedir}/target/maven-shared-archive-resources/hibernate.cfg.xml</source>
       <outputDirectory>webapps/xwiki/WEB-INF</outputDirectory>
     </file>
