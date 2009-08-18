@@ -58,8 +58,9 @@
     <platform.tool.rootwebapp.version>1.1</platform.tool.rootwebapp.version>
     <platform.core.version>1.9-SNAPSHOT</platform.core.version>
     <product.enterprise.version>1.9-SNAPSHOT</product.enterprise.version>
-    <platform.plugin.applicationmanager.version>1.9-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.13-SNAPSHOT</platform.plugin.wikimanager.version>
+    <!-- Lock down application/wiki manager version because 1.9 and superior needs Core 2.0RC1 at least -->
+    <platform.plugin.applicationmanager.version>1.8</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.12</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
