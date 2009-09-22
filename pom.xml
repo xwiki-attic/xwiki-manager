@@ -41,8 +41,8 @@
     <url>http://svn.xwiki.org/svnroot/xwiki/manager/trunk</url>
   </scm>
   <issueManagement>
-  	<system>jira</system>
-  	<url>http://jira.xwiki.org/jira/browse/XEM</url>
+    <system>jira</system>
+    <url>http://jira.xwiki.org/jira/browse/XEM</url>
   </issueManagement>
   <modules>
     <module>web</module>
