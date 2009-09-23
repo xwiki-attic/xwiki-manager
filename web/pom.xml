@@ -76,9 +76,10 @@
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>com.xpn.xwiki.platform.tools:xwiki-configuration-resources:${platform.tool.configuration.version}</resourceBundle>
+                <resourceBundle>org.xwiki.platform.tools:xwiki-configuration-resources:${platform.tool.configuration.version}</resourceBundle>
               </resourceBundles>
               <properties>
+                <xwikiDbHbmCommonExtraMappings>activitystream.hbm.xml</xwikiDbHbmCommonExtraMappings>
                 <xwikiCfgPlugins>\
                   com.xpn.xwiki.monitor.api.MonitorPlugin,\
                   com.xpn.xwiki.plugin.skinx.JsSkinExtensionPlugin,\
@@ -137,6 +138,7 @@ xwiki.work.dir=work
               <targetPath>WEB-INF</targetPath>
               <includes>
                 <include>xwiki.cfg</include>
+                <include>hibernate.cfg.xml</include>
               </includes>
             </resource>
             <resource>
