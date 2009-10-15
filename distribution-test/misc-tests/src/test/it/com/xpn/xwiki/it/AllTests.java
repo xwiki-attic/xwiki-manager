@@ -17,7 +17,7 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package com.xpn.xwiki.it.xmlrpc;
+package com.xpn.xwiki.it;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
@@ -30,7 +30,7 @@ import org.xwiki.test.XWikiTestSetup;
  * Runner discover the different TestCases classes by itself) because we want to start/stop XWiki before and after the
  * tests start (but only once).
  * 
- * @version $Id: $
+ * @version $Id$
  */
 public class AllTests extends TestCase
 {
@@ -46,7 +46,7 @@ public class AllTests extends TestCase
         // (there are complex solutions like searching for all tests by parsing the source tree).
         // I think there are TestSuite that do this out there but I haven't looked for them yet.
 
-        addTest(suite, OrphanedPageTest.suite(), OrphanedPageTest.class);
+        addTest(suite, XhtmlValidityTest.suite(), XhtmlValidityTest.class);
 
         return new XWikiTestSetup(suite);
     }
