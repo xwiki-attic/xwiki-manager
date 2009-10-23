@@ -139,6 +139,14 @@
                 <value>${port}</value>
               </property>
               <property>
+                <name>xwikiStopPort</name>
+                <value>${stopport}</value>
+              </property>
+              <property>
+                <name>seleniumPort</name>
+                <value>${seleniumPort}</value>
+              </property>
+              <property>
                 <name>xwikiExecutionDirectory</name>
                 <value>${basedir}/target/xwiki-enterprise-manager-${xwiki.db}-${pom.version}</value>
               </property>
@@ -171,17 +179,52 @@
             </systemProperties>
           </configuration>
         </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>selenium-maven-plugin</artifactId>
+          <version>1.0</version>
+          <executions>
+            <execution>
+              <id>start-selenium</id>
+              <phase>pre-integration-test</phase>
+              <goals>
+                <goal>start-server</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <background>true</background>
+            <multiWindow>true</multiWindow>
+            <port>4444</port>
+          </configuration>
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.seleniumhq.selenium.client-drivers</groupId>
+        <artifactId>selenium-java-client-driver</artifactId>
+        <version>1.0.1</version>
+        <scope>test</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.codehaus.plexus</groupId>
+        <artifactId>plexus-utils</artifactId>
+        <version>1.5.15</version>
+        <scope>test</scope>
+      </dependency> 
+    </dependencies>
+  </dependencyManagement>
   <properties>
-    <selenium.version>1.0-beta-2</selenium.version>
     <!-- This is to allow users to override this property on the command line to choose what
       test to run. For example to run only the DeletePageTest you would type:
       mvn install -DPattern=DeletePageTest
     -->
     <pattern>.*</pattern>
     <port>8080</port>
+    <stopport>8079</stopport>
     <seleniumPort>4444</seleniumPort>
   </properties>
   <profiles>
@@ -193,8 +236,8 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port}</xwikiExecutionStartCommand>
-        <xwikiExecutionStopCommand>sh -f stop_xwiki.sh</xwikiExecutionStopCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport}</xwikiExecutionStartCommand>
+        <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
     <profile>
@@ -205,8 +248,8 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port}</xwikiExecutionStartCommand>
-        <xwikiExecutionStopCommand>sh -f stop_xwiki.sh</xwikiExecutionStopCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport}</xwikiExecutionStartCommand>
+        <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
     <profile>
@@ -217,8 +260,8 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port}</xwikiExecutionStartCommand>
-        <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat</xwikiExecutionStopCommand>
+        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport}</xwikiExecutionStartCommand>
+        <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
   </profiles>
@@ -227,20 +270,4 @@
     <module>xmlrpc-tests</module>
     <module>selenium-tests</module>
   </modules>
-  <repositories>
-    <repository>
-      <id>openqa.org</id>
-      <name>Openqa Release Repository</name>
-      <url>http://archiva.openqa.org/repository/releases/</url>
-      <layout>default</layout>
-      <snapshots>
-        <enabled>true</enabled>
-        <updatePolicy>daily</updatePolicy>
-        <checksumPolicy>ignore</checksumPolicy>
-      </snapshots>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-    </repository>
-  </repositories>
 </project>
