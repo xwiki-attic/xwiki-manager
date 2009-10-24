@@ -83,7 +83,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         // Validate that an existing wiki name is invalid as wiki name
         setFieldValue("wikiname", "xwiki");
         getSelenium().keyUp("wikiname", "\\40");
-        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('This identifier is already used') != -1;",
+        getSelenium().waitForCondition("selenium.page().bodyText().indexOf('A wiki with this identifier already exists') != -1;",
             "10000");
         assertTextPresent("This identifier is already used");
 
