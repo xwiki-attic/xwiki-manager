@@ -19,11 +19,11 @@
  */
 package com.xpn.xwiki.it.selenium.xem;
 
-import com.xpn.xwiki.it.selenium.framework.AbstractXWikiTestCase;
-import com.xpn.xwiki.it.selenium.framework.AlbatrossSkinExecutor;
-import com.xpn.xwiki.it.selenium.framework.XWikiTestSuite;
-
 import junit.framework.Test;
+
+import com.xpn.xwiki.it.selenium.framework.AbstractXWikiTestCase;
+import com.xpn.xwiki.it.selenium.framework.ColibriSkinExecutor;
+import com.xpn.xwiki.it.selenium.framework.XWikiTestSuite;
 
 /**
  * Minimum test that just try to access wiki.
@@ -35,7 +35,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
     public static Test suite()
     {
         XWikiTestSuite suite = new XWikiTestSuite("Check some wiki management use cases");
-        suite.addTestSuite(WikiManagementCreate.class, AlbatrossSkinExecutor.class);
+        suite.addTestSuite(WikiManagementCreate.class, ColibriSkinExecutor.class);
         return suite;
     }
 
@@ -50,7 +50,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         super.setUp();
         loginAsAdmin();
 
-        open("/xwiki/bin/WikiManager/CreateNewWiki");
+        open("WikiManager", "CreateNewWiki");
     }
 
     /**
@@ -65,7 +65,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         // Validate creation finished with no error
         assertTextPresent("Your wiki \"newemptywiki\" has been created.");
 
-        open("/xwiki/bin/WikiManager/");
+        open("WikiManager", "WebHome");
 
         // Validate the new wiki is listed
         assertTextPresent("newemptywiki");
