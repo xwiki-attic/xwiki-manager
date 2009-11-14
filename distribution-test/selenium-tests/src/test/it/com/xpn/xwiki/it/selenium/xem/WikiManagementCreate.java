@@ -28,7 +28,7 @@ import com.xpn.xwiki.it.selenium.framework.XWikiTestSuite;
 /**
  * Minimum test that just try to access wiki.
  * 
- * @version $Id: $
+ * @version $Id$
  */
 public class WikiManagementCreate extends AbstractXWikiTestCase
 {
