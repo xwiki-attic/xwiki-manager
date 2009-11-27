@@ -41,7 +41,7 @@
       <type>xar</type>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform.applications</groupId>
+      <groupId>org.xwiki.platform.applications</groupId>
       <artifactId>xwiki-application-application-manager</artifactId>
       <version>${platform.plugin.applicationmanager.version}</version>
       <type>xar</type>
