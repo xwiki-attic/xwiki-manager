@@ -58,6 +58,7 @@
     <platform.tool.configuration.version>1.37-SNAPSHOT</platform.tool.configuration.version>
     <platform.tool.jetty.version>1.18-SNAPSHOT</platform.tool.jetty.version>
     <platform.tool.packager.version>1.16-SNAPSHOT</platform.tool.packager.version>
+    <platform.tool.standards-validator.version>1.1-SNAPSHOT</platform.tool.standards-validator.version>
     <platform.tool.xmldoc.version>1.5-SNAPSHOT</platform.tool.xmldoc.version>
     <platform.tool.rootwebapp.version>1.4-SNAPSHOT</platform.tool.rootwebapp.version>
     <platform.core.version>2.1-SNAPSHOT</platform.core.version>
