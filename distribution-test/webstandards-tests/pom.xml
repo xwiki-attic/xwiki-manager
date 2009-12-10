@@ -36,16 +36,22 @@
   <dependencies>
     <dependency>
       <groupId>com.xpn.xwiki.products</groupId>
-      <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
-      <version>${pom.version}</version>
-      <type>xar</type>
+      <artifactId>xwiki-enterprise-test-webstandards</artifactId>
+      <version>${product.enterprise.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.xpn.xwiki.platform</groupId>
+      <artifactId>xwiki-core</artifactId>
+      <version>${platform.core.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.products</groupId>
-      <artifactId>xwiki-enterprise-test-webstandards</artifactId>
-      <version>${product.enterprise.version}</version>
-      <type>test-jar</type>
+      <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+      <version>${pom.version}</version>
+      <type>xar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -63,6 +69,10 @@
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
     </dependency>
   </dependencies>
   <build>
