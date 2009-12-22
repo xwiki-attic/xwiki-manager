@@ -61,8 +61,8 @@
     <platform.tool.standards-validator.version>1.0</platform.tool.standards-validator.version>
     <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
     <platform.tool.rootwebapp.version>1.3</platform.tool.rootwebapp.version>
-    <platform.core.version>2.1.1</platform.core.version>
-    <product.enterprise.version>2.1.1</product.enterprise.version>
+    <platform.core.version>2.1-SNAPSHOT</platform.core.version>
+    <product.enterprise.version>2.1-SNAPSHOT</product.enterprise.version>
     <platform.plugin.applicationmanager.version>1.11</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.16</platform.plugin.wikimanager.version>
   </properties>
