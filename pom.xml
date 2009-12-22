@@ -53,7 +53,7 @@
   </modules>
   <properties>
     <!-- Versions of XWiki dependencies used in XEM modules -->
-    <platform.tool.xar-handler.version>1.19</platform.tool.xar-handler.version>
+    <platform.tool.xar-handler.version>1.9</platform.tool.xar-handler.version>
     <platform.tool.xar-plugin.version>1.13</platform.tool.xar-plugin.version>
     <platform.tool.configuration.version>1.36</platform.tool.configuration.version>
     <platform.tool.jetty.version>1.17</platform.tool.jetty.version>
