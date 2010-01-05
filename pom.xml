@@ -57,10 +57,10 @@
     <platform.tool.xar-plugin.version>1.13</platform.tool.xar-plugin.version>
     <platform.tool.configuration.version>1.36</platform.tool.configuration.version>
     <platform.tool.jetty.version>1.17</platform.tool.jetty.version>
+    <platform.tool.rootwebapp.version>1.3</platform.tool.rootwebapp.version>
     <platform.tool.packager.version>1.15</platform.tool.packager.version>
     <platform.tool.standards-validator.version>1.0</platform.tool.standards-validator.version>
     <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
-    <platform.tool.rootwebapp.version>1.3</platform.tool.rootwebapp.version>
     <platform.core.version>2.1-SNAPSHOT</platform.core.version>
     <product.enterprise.version>2.1-SNAPSHOT</product.enterprise.version>
     <platform.plugin.applicationmanager.version>1.11</platform.plugin.applicationmanager.version>
