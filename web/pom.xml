@@ -41,12 +41,12 @@
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <groupId>org.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-application-manager</artifactId>
       <version>${platform.plugin.applicationmanager.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <groupId>org.xwiki.platform.plugins</groupId>
       <artifactId>xwiki-plugin-wiki-manager</artifactId>
       <version>${platform.plugin.wikimanager.version}</version>
     </dependency>
