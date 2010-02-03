@@ -27,6 +27,8 @@ import org.xwiki.test.XWikiTestSetup;
 import org.xwiki.validator.DutchWebGuidelinesValidator;
 import org.xwiki.validator.XHTMLValidator;
 
+import com.xpn.xwiki.it.framework.CustomDutchWebGuidelinesValidator;
+
 /**
  * A class listing all the Functional tests to execute. We need such a class (rather than letting the JUnit Runner
  * discover the different TestCases classes by itself) because we want to start/stop XWiki before and after the tests
@@ -50,7 +52,7 @@ public class AllTests extends TestCase
 
         XHTMLValidator xhtmlValidator = new XHTMLValidator();
         addTest(suite, XHTMLValidationTest.suite(XHTMLValidationTest.class, xhtmlValidator), XHTMLValidationTest.class);
-        DutchWebGuidelinesValidator DWGValidator = new DutchWebGuidelinesValidator();
+        CustomDutchWebGuidelinesValidator DWGValidator = new CustomDutchWebGuidelinesValidator();
         addTest(suite, DutchWebGuidelinesValidationTest.suite(DutchWebGuidelinesValidationTest.class, DWGValidator),
             DutchWebGuidelinesValidationTest.class);
 
