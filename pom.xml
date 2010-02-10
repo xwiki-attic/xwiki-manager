@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.platform</groupId>
     <artifactId>xwiki</artifactId>
-    <version>28</version>
+    <version>29</version>
   </parent>
   <groupId>com.xpn.xwiki.products</groupId>
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
@@ -61,10 +61,10 @@
     <platform.tool.packager.version>1.15</platform.tool.packager.version>
     <platform.tool.standards-validator.version>1.0</platform.tool.standards-validator.version>
     <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
-    <platform.core.version>2.1-SNAPSHOT</platform.core.version>
-    <product.enterprise.version>2.1-SNAPSHOT</product.enterprise.version>
-    <platform.plugin.applicationmanager.version>1.12-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.17-SNAPSHOT</platform.plugin.wikimanager.version>
+    <platform.core.version>2.1.2</platform.core.version>
+    <product.enterprise.version>2.1.2</product.enterprise.version>
+    <platform.plugin.applicationmanager.version>1.11</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.17</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
