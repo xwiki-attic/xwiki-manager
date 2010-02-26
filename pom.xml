@@ -33,12 +33,12 @@
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
-  <version>2.2-SNAPSHOT</version>
+  <version>2.2.1</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-2.2</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-2.2</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-2.2</url>
+    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-2.2.1</connection>
+    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-2.2.1</developerConnection>
+    <url>http://svn.xwiki.org/svnroot/xwiki/manager/tags/xwiki-enterprise-manager-2.2.1</url>
   </scm>
   <issueManagement>
     <system>jira</system>
@@ -53,20 +53,20 @@
   </modules>
   <properties>
     <!-- Versions of XWiki dependencies used in XEM modules -->
-    <platform.tool.configuration.version>1.37-SNAPSHOT</platform.tool.configuration.version>
-    <platform.tool.jetty.version>1.18-SNAPSHOT</platform.tool.jetty.version>
-    <platform.tool.packager.version>1.16-SNAPSHOT</platform.tool.packager.version>
-    <platform.tool.rootwebapp.version>1.4-SNAPSHOT</platform.tool.rootwebapp.version>
-    <platform.tool.standards-validator.version>1.2-SNAPSHOT</platform.tool.standards-validator.version>
-    <platform.tool.xar-handler.version>1.10-SNAPSHOT</platform.tool.xar-handler.version>
-    <platform.tool.xar-plugin.version>1.14-SNAPSHOT</platform.tool.xar-plugin.version>
-    <platform.tool.xmldoc.version>1.5-SNAPSHOT</platform.tool.xmldoc.version>
+    <platform.tool.configuration.version>1.36</platform.tool.configuration.version>
+    <platform.tool.jetty.version>1.17</platform.tool.jetty.version>
+    <platform.tool.packager.version>1.15</platform.tool.packager.version>
+    <platform.tool.rootwebapp.version>1.3</platform.tool.rootwebapp.version>
+    <platform.tool.standards-validator.version>1.1</platform.tool.standards-validator.version>
+    <platform.tool.xar-handler.version>1.9</platform.tool.xar-handler.version>
+    <platform.tool.xar-plugin.version>1.13</platform.tool.xar-plugin.version>
+    <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
 
-    <platform.core.version>2.2-SNAPSHOT</platform.core.version>
-    <product.enterprise.version>2.2-SNAPSHOT</product.enterprise.version>
+    <platform.core.version>2.2</platform.core.version>
+    <product.enterprise.version>2.2</product.enterprise.version>
 
-    <platform.plugin.applicationmanager.version>1.12-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.18-SNAPSHOT</platform.plugin.wikimanager.version>
+    <platform.plugin.applicationmanager.version>1.11</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.17</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
