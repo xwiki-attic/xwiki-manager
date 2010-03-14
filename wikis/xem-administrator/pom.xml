@@ -59,4 +59,23 @@
       <type>xar</type>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.xwiki.platform.tools</groupId>
+        <artifactId>xwiki-xar-plugin</artifactId>
+        <configuration>
+          <excludes>
+            <exclude>**/META-INF/**</exclude>
+            <!-- Exclude XE translated pages not yet translated in XEM -->
+            <exclude>**/Main/WebHome.de.xml</exclude>
+            <exclude>**/Main/WebHome.fr.xml</exclude>
+            <exclude>**/Main/WebHome.lv.xml</exclude>
+            <exclude>**/Main/WebHome.sv.xml</exclude>
+            <exclude>**/Main/WebHome.zh.xml</exclude>
+          </excludes>
+        </configuration>      
+      </plugin>
+    </plugins>
+  </build>
 </project>
