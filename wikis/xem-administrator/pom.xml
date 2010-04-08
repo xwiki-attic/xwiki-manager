@@ -67,14 +67,19 @@
         <configuration>
           <excludes>
             <exclude>**/META-INF/**</exclude>
-            <!-- Exclude XE translated pages not yet translated in XEM -->
+            <!-- Exclude XE translated pages not yet translated in XEM  -->
+            <exclude>**/Main/WebHome.ca.xml</exclude>
             <exclude>**/Main/WebHome.de.xml</exclude>
             <exclude>**/Main/WebHome.fr.xml</exclude>
+            <exclude>**/Main/WebHome.it.xml</exclude>
             <exclude>**/Main/WebHome.lv.xml</exclude>
+            <exclude>**/Main/WebHome.nl.xml</exclude>
+            <exclude>**/Main/WebHome.ro.xml</exclude>
             <exclude>**/Main/WebHome.sv.xml</exclude>
             <exclude>**/Main/WebHome.zh.xml</exclude>
+            <exclude>**/Main/WebHome.zh_TW.xml</exclude>
           </excludes>
-        </configuration>      
+        </configuration>
       </plugin>
     </plugins>
   </build>
