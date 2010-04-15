@@ -62,8 +62,8 @@
     <platform.tool.xar-plugin.version>1.14-SNAPSHOT</platform.tool.xar-plugin.version>
     <platform.tool.xmldoc.version>1.5-SNAPSHOT</platform.tool.xmldoc.version>
 
-    <platform.core.version>2.3-SNAPSHOT</platform.core.version>
-    <product.enterprise.version>2.3-SNAPSHOT</product.enterprise.version>
+    <platform.core.version>2.4-SNAPSHOT</platform.core.version>
+    <product.enterprise.version>2.4-SNAPSHOT</product.enterprise.version>
 
     <platform.plugin.applicationmanager.version>1.12-SNAPSHOT</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.18-SNAPSHOT</platform.plugin.wikimanager.version>
