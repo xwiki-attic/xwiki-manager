@@ -28,6 +28,7 @@ import org.xwiki.validator.XHTMLValidator;
 import org.xwiki.validator.XWikiValidator;
 
 import com.xpn.xwiki.it.framework.CustomDutchWebGuidelinesValidator;
+import com.xpn.xwiki.it.framework.DefaultValidationTest;
 
 /**
  * A class listing all the Functional tests to execute. We need such a class (rather than letting the JUnit Runner
