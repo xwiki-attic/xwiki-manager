@@ -27,7 +27,6 @@ import org.xwiki.test.XWikiTestSetup;
 import org.xwiki.validator.XHTMLValidator;
 import org.xwiki.validator.XWikiValidator;
 
-import com.xpn.xwiki.it.framework.CustomDutchWebGuidelinesValidator;
 import com.xpn.xwiki.it.framework.DefaultValidationTest;
 
 /**
@@ -56,8 +55,8 @@ public class AllTests extends TestCase
             DefaultValidationTest.class);
 
         CustomDutchWebGuidelinesValidator DWGValidator = new CustomDutchWebGuidelinesValidator();
-        addTest(suite, DefaultValidationTest.suite(DefaultValidationTest.class, DWGValidator),
-            DefaultValidationTest.class);
+        addTest(suite, CustomDutchWebGuidelinesValidationTest.suite(CustomDutchWebGuidelinesValidationTest.class,
+            DWGValidator), DefaultValidationTest.class);
 
         XWikiValidator xwikiValidator = new XWikiValidator();
         addTest(suite, DefaultValidationTest.suite(DefaultValidationTest.class, xwikiValidator),
