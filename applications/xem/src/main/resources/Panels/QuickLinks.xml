@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
-
+<?xml version="1.0" encoding="UTF-8"?>
 <xwikidoc>
 <web>Panels</web>
 <name>QuickLinks</name>
@@ -12,8 +11,8 @@
 <customClass></customClass>
 <contentAuthor>XWiki.Admin</contentAuthor>
 <creationDate>1184164385000</creationDate>
-<date>1195738636000</date>
-<contentUpdateDate>1204211840000</contentUpdateDate>
+<date>1278337283000</date>
+<contentUpdateDate>1278337283000</contentUpdateDate>
 <version>1.1</version>
 <title></title>
 <template></template>
@@ -21,6 +20,8 @@
 <validationScript></validationScript>
 <comment></comment>
 <minorEdit>false</minorEdit>
+<syntaxId>xwiki/1.0</syntaxId>
+<hidden>false</hidden>
 <object>
 <class>
 <name>Panels.PanelClass</name>
@@ -33,6 +34,7 @@
 <validationScript></validationScript>
 <category>
 <cache>0</cache>
+<disabled>0</disabled>
 <displayType>select</displayType>
 <multiSelect>0</multiSelect>
 <name>category</name>
@@ -47,6 +49,7 @@
 <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
 </category>
 <content>
+<disabled>0</disabled>
 <editor>Text</editor>
 <name>content</name>
 <number>4</number>
@@ -57,6 +60,7 @@
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </content>
 <description>
+<disabled>0</disabled>
 <editor>Text</editor>
 <name>description</name>
 <number>3</number>
@@ -67,6 +71,7 @@
 <classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
 </description>
 <name>
+<disabled>0</disabled>
 <name>name</name>
 <number>1</number>
 <prettyName>Name</prettyName>
@@ -76,6 +81,7 @@
 </name>
 <type>
 <cache>0</cache>
+<disabled>0</disabled>
 <displayType>select</displayType>
 <multiSelect>0</multiSelect>
 <name>type</name>
@@ -93,14 +99,15 @@
 <name>Panels.QuickLinks</name>
 <number>0</number>
 <className>Panels.PanelClass</className>
+<guid>54a8424e-44e0-4f90-9200-51019bfb1b27</guid>
 <property>
 <category>Information</category>
 </property>
 <property>
 <content>#panelheader($msg.get("xe.panels.quicklinks"))
-* [$msg.get("xe.panels.quicklinks.dashboard")&gt;Main.WebHome]
+* [$msg.get("xe.panels.quicklinks.dashboard")&gt;Main.Dashboard] &lt;a href="$xwiki.getURL('Main.WebRss', 'view', 'xpage=plain')"&gt;&lt;img src="$xwiki.getSkinFile('icons/xwiki/rss-medium.png')" alt="(RSS)" title="RSS feed for wiki updates" class="icon rss"/&gt;&lt;/a&gt;
 * [$msg.get("xe.panels.quicklinks.index")&gt;Main.AllDocs]
-* [$msg.get("xe.panels.quicklinks.blog")&gt;Blog.WebHome]
+* [$msg.get("xe.panels.quicklinks.blog")&gt;Blog.WebHome] &lt;a href="$xwiki.getURL('Blog.GlobalBlogRss', 'view', 'xpage=plain')"&gt;&lt;img src="$xwiki.getSkinFile('icons/xwiki/rss-medium.png')" alt="(RSS)" title="RSS feed for blog posts" class="icon rss"/&gt;&lt;/a&gt;
 * [$msg.get("xe.panels.quicklinks.sandbox")&gt;Sandbox.WebHome]
 #if ($xwiki.hasAdminRights())
 For Admins:
@@ -109,7 +116,7 @@ For Admins:
     * [Wikis&gt;WikiManager.WebHome]
   #end
 
-&lt;p style="font-size:0.75em;padding-left:8px;"&gt;&lt;a href="$xwiki.getDocument("Panels.QuickLinks").getURL("inline")"&gt;$msg.get("xe.panels.edit")&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="$xwiki.getDocument("Panels.QuickLinks").getURL("inline")"&gt;$msg.get("xe.panels.edit")&lt;/a&gt;&lt;/p&gt;
 #end
 #panelfooter()</content>
 </property>
@@ -117,7 +124,7 @@ For Admins:
 <description>Important Navigation Links</description>
 </property>
 <property>
-<name>QuickLinks</name>
+<name>Quick Links</name>
 </property>
 <property>
 <type>view</type>
@@ -135,14 +142,15 @@ For Admins:
 <validationScript></validationScript>
 <tags>
 <cache>0</cache>
+<disabled>0</disabled>
 <displayType>input</displayType>
 <multiSelect>1</multiSelect>
 <name>tags</name>
 <number>1</number>
 <prettyName>Tags</prettyName>
 <relationalStorage>1</relationalStorage>
-<separator> </separator>
-<separators> ,|</separators>
+<separator>|</separator>
+<separators>|,</separators>
 <size>30</size>
 <unmodifiable>0</unmodifiable>
 <values></values>
@@ -152,9 +160,9 @@ For Admins:
 <name>Panels.QuickLinks</name>
 <number>0</number>
 <className>XWiki.TagClass</className>
+<guid>1357d366-c537-44a0-8fb0-da5dd20f61d0</guid>
 <property>
 <tags/>
 </property>
 </object>
-<content>#includeForm("Panels.PanelSheet")</content>
-</xwikidoc>
+<content>#includeForm("Panels.PanelSheet")</content></xwikidoc>
