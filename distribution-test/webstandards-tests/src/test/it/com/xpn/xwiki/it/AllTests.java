@@ -54,9 +54,9 @@ public class AllTests extends TestCase
         addTest(suite, DefaultValidationTest.suite(DefaultValidationTest.class, xhtmlValidator),
             DefaultValidationTest.class);
 
-        CustomDutchWebGuidelinesValidator DWGValidator = new CustomDutchWebGuidelinesValidator();
+        CustomDutchWebGuidelinesValidator dwgValidator = new CustomDutchWebGuidelinesValidator();
         addTest(suite, CustomDutchWebGuidelinesValidationTest.suite(CustomDutchWebGuidelinesValidationTest.class,
-            DWGValidator), DefaultValidationTest.class);
+            dwgValidator), DefaultValidationTest.class);
 
         XWikiValidator xwikiValidator = new XWikiValidator();
         addTest(suite, DefaultValidationTest.suite(DefaultValidationTest.class, xwikiValidator),
