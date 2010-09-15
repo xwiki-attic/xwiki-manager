@@ -151,7 +151,7 @@ xwiki.work.dir=work
   </build>
   <profiles>
     <profile>
-      <id>jettyrun</id>      
+      <id>jettyrun</id>
       <build>
         <plugins>
           <!-- Run 'mvn install -Pjettyrun' to execute xwiki in Jetty. Useful for testing.
