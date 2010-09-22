@@ -62,11 +62,11 @@
     <platform.tool.xar-plugin.version>1.14-SNAPSHOT</platform.tool.xar-plugin.version>
     <platform.tool.xmldoc.version>1.5-SNAPSHOT</platform.tool.xmldoc.version>
 
-    <platform.core.version>2.5-SNAPSHOT</platform.core.version>
-    <product.enterprise.version>2.5-SNAPSHOT</product.enterprise.version>
+    <platform.core.version>${project.version}</platform.core.version>
+    <product.enterprise.version>${project.version}</product.enterprise.version>
 
-    <platform.plugin.applicationmanager.version>1.13-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.19-SNAPSHOT</platform.plugin.wikimanager.version>
+    <platform.plugin.applicationmanager.version>1.14-SNAPSHOT</platform.plugin.applicationmanager.version>
+    <platform.plugin.wikimanager.version>1.20-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
