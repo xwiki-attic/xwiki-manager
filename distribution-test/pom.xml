@@ -25,7 +25,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.xpn.xwiki.products</groupId>
+    <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-enterprise-manager-parent</artifactId>
     <version>2.6-SNAPSHOT</version>
   </parent>
@@ -98,9 +98,9 @@
               <configuration>
                 <artifactItems>
                   <artifactItem>
-                    <groupId>com.xpn.xwiki.products</groupId>
+                    <groupId>${project.groupId}</groupId>
                     <artifactId>xwiki-enterprise-manager-${xwiki.db}</artifactId>
-                    <version>${pom.version}</version>
+                    <version>${project.version}</version>
                     <type>zip</type>
                   </artifactItem>
                 </artifactItems>
@@ -170,7 +170,7 @@
               <!-- Used only in xml-rpc tests -->
               <property>
                 <name>pathToXWikiXar</name>
-                <value>com/xpn/xwiki/products/xwiki-enterprise-manager-wiki-administrator/${pom.version}/xwiki-enterprise-manager-wiki-administrator-${pom.version}.xar</value>
+                <value>org/xwiki/manager/xwiki-enterprise-manager-wiki-administrator/${pom.version}/xwiki-enterprise-manager-wiki-administrator-${pom.version}.xar</value>
               </property>
               <property>
                 <name>documentsToTest</name>
