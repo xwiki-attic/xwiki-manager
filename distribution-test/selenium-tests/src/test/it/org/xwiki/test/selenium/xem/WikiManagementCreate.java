@@ -19,12 +19,11 @@
  */
 package org.xwiki.test.selenium.xem;
 
+import junit.framework.Test;
+
 import org.xwiki.test.selenium.framework.AbstractXWikiTestCase;
 import org.xwiki.test.selenium.framework.ColibriSkinExecutor;
 import org.xwiki.test.selenium.framework.XWikiTestSuite;
-
-import junit.framework.Test;
-
 
 /**
  * Minimum test that just try to access wiki.

@@ -19,11 +19,11 @@
  */
 package org.xwiki.test.selenium;
 
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import junit.framework.TestCase;
-
 import java.lang.reflect.Method;
+
+import junit.framework.Test;
+import junit.framework.TestCase;
+import junit.framework.TestSuite;
 
 import org.xwiki.test.XWikiTestSetup;
 import org.xwiki.test.selenium.framework.XWikiSeleniumTestSetup;
