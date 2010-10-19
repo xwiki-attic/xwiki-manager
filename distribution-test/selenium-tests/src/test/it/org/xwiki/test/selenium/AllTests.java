@@ -17,13 +17,17 @@
  * Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA
  * 02110-1301 USA, or see the FSF site: http://www.fsf.org.
  */
-package com.xpn.xwiki.it.xmlrpc;
+package org.xwiki.test.selenium;
 
 import junit.framework.Test;
-import junit.framework.TestCase;
 import junit.framework.TestSuite;
+import junit.framework.TestCase;
+
+import java.lang.reflect.Method;
 
 import org.xwiki.test.XWikiTestSetup;
+import org.xwiki.test.selenium.framework.XWikiSeleniumTestSetup;
+import org.xwiki.test.selenium.xem.WikiManagementCreate;
 
 /**
  * A class listing all the Selenium Functional tests to execute. We need such a class (rather than letting the JUnit
@@ -46,22 +50,17 @@ public class AllTests extends TestCase
         // (there are complex solutions like searching for all tests by parsing the source tree).
         // I think there are TestSuite that do this out there but I haven't looked for them yet.
 
-        addTest(suite, OrphanedPageTest.suite(), OrphanedPageTest.class);
+        addTestCase(suite, WikiManagementCreate.class);
 
-        return new XWikiTestSetup(suite);
+        return new XWikiSeleniumTestSetup(new XWikiTestSetup(suite));
     }
 
     private static void addTestCase(TestSuite suite, Class< ? > testClass) throws Exception
     {
         if (testClass.getName().matches(PATTERN)) {
-            suite.addTest(new TestSuite(testClass));
+            Method method = testClass.getMethod("suite");
+            suite.addTest((Test) method.invoke(null));
         }
     }
 
-    private static void addTest(TestSuite suite, Test test, Class< ? > testClass) throws Exception
-    {
-        if (testClass.getName().matches(PATTERN)) {
-            suite.addTest(test);
-        }
-    }
 }
