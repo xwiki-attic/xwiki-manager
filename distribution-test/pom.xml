@@ -148,7 +148,7 @@
               </property>
               <property>
                 <name>xwikiExecutionDirectory</name>
-                <value>${basedir}/target/xwiki-enterprise-manager-${xwiki.db}-${pom.version}</value>
+                <value>${basedir}/target/xwiki-enterprise-manager-${xwiki.db}-${project.version}</value>
               </property>
               <property>
                 <name>xwikiExecutionStartCommand</name>
@@ -170,7 +170,7 @@
               <!-- Used only in xml-rpc tests -->
               <property>
                 <name>pathToXWikiXar</name>
-                <value>org/xwiki/manager/xwiki-enterprise-manager-wiki-administrator/${pom.version}/xwiki-enterprise-manager-wiki-administrator-${pom.version}.xar</value>
+                <value>org/xwiki/manager/xwiki-enterprise-manager-wiki-administrator/${project.version}/xwiki-enterprise-manager-wiki-administrator-${project.version}.xar</value>
               </property>
               <property>
                 <name>documentsToTest</name>
