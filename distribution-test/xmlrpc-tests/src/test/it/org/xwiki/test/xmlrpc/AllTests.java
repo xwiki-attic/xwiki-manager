@@ -25,7 +25,7 @@ import junit.framework.TestSuite;
 
 import org.xwiki.test.XWikiTestSetup;
 
-import com.xpn.xwiki.it.xmlrpc.OrphanedPageTest;
+import org.xwiki.test.xmlrpc.confluence.OrphanedPageTest;
 
 /**
  * A class listing all the Selenium Functional tests to execute. We need such a class (rather than letting the JUnit
