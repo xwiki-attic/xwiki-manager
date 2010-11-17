@@ -108,7 +108,6 @@
                     com.xpn.xwiki.plugin.mailsender.MailSenderPlugin,\
                     com.xpn.xwiki.plugin.activitystream.plugin.ActivityStreamPlugin, \
                     com.xpn.xwiki.plugin.watchlist.WatchListPlugin, \
-                    com.xpn.xwiki.wysiwyg.server.plugin.WysiwygPlugin, \
                     com.xpn.xwiki.plugin.tag.TagPlugin,\
                     com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
                     com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin
