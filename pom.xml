@@ -64,8 +64,8 @@
     <platform.tool.xar-plugin.version>1.13</platform.tool.xar-plugin.version>
     <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
 
-    <platform.core.version>${project.version}</platform.core.version>
-    <product.enterprise.version>${project.version}</product.enterprise.version>
+    <platform.core.version>2.6</platform.core.version>
+    <product.enterprise.version>2.6</product.enterprise.version>
 
     <platform.plugin.applicationmanager.version>1.16</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.22</platform.plugin.wikimanager.version>
