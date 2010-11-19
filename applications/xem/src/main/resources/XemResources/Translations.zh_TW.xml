@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+<web>XemResources</web>
+<name>Translations</name>
+<language>zh_TW</language>
+<defaultLanguage>en</defaultLanguage>
+<translation>1</translation>
+<parent>XemResources.WebHome</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1188318798000</creationDate>
+<date>1278346211000</date>
+<contentUpdateDate>1278346211000</contentUpdateDate>
+<version>1.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment></comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.0</syntaxId>
+<hidden>false</hidden>
+<content>## XWiki Translation for language zh_TW generated from http://www.l10n.xwiki.org
+xem.answer.install.actions.template=* \u65B0\u589E\u9810\u8A2D\u6A21\u677F
+xem.answer.install.title=XWiki Enterprise Manager \u5B89\u88DD
+xem.install.error=XWiki Enterprise Manager \u5B89\u88DD\u5931\u6557 ({0})\u3002
+xem.install.success=XWiki Enterprise Manager \u5B89\u88DD\u6210\u529F\u3002
+xem.xem=XWiki Enterprise Manager
+</content></xwikidoc>
