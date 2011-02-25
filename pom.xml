@@ -66,7 +66,7 @@
     <product.enterprise.version>2.7.1</product.enterprise.version>
 
     <platform.plugin.applicationmanager.version>1.18</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.24</platform.plugin.wikimanager.version>
+    <platform.plugin.wikimanager.version>1.25</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
