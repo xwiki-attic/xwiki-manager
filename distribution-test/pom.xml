@@ -35,9 +35,21 @@
   <description>XWiki Products - Enterprise Manager - Functional Tests</description>
   <dependencies>
     <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-core-shared-tests</artifactId>
-      <version>${platform.core.version}</version>
+      <groupId>org.xwiki.commons</groupId>
+      <artifactId>xwiki-commons-tests</artifactId>
+      <version>${commons.core.version}</version>
+      <scope>test</scope>
+      <!-- Make sure to exclude junit-dep since it conflicts with the junit dependency we're using. -->
+      <exclusions>
+        <exclusion>
+          <groupId>junit</groupId>
+          <artifactId>junit-dep</artifactId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
       <scope>test</scope>
     </dependency>
   </dependencies>
@@ -182,7 +194,7 @@
         <plugin>
           <groupId>org.codehaus.mojo</groupId>
           <artifactId>selenium-maven-plugin</artifactId>
-          <version>1.0</version>
+          <version>1.0.1</version>
           <executions>
             <execution>
               <id>start-selenium</id>
@@ -206,7 +218,7 @@
       <dependency>
         <groupId>org.seleniumhq.selenium.client-drivers</groupId>
         <artifactId>selenium-java-client-driver</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
         <scope>test</scope>
       </dependency>
       <dependency>
@@ -229,6 +241,21 @@
   </properties>
   <profiles>
     <profile>
+      <id>ci</id>
+      <activation>
+        <!-- This property is automatically defined by the Maven release plugin when executing
+             a release. Thus this profile will be automatically enabled when releasing -->
+        <property>
+          <name>performRelease</name>
+        </property>
+      </activation>
+      <modules>
+        <!-- The wysiwyg-tests module is activated only in ci profile because it requires to
+             to give the focus to the selenium browser window during the execution -->
+        <module>wysiwyg-tests</module>
+      </modules>
+    </profile>
+    <profile>
       <id>unix</id>
       <activation>
         <os>
@@ -236,7 +263,9 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport}</xwikiExecutionStartCommand>
+        <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
+             http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -248,7 +277,36 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport}</xwikiExecutionStartCommand>
+        <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
+             http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
+      </properties>
+    </profile>
+    <!-- This profile must come after the "mac" profile so that it overrides it when it's active.
+         Note: You must define the ${profilePath} property in your settings.xml file or in a
+         profiles.xml one. For example in settings.xml:
+         
+           <settings>
+             <profiles>
+               <profile>
+                 <id>xwiki</id>
+                 <properties>
+                   <profilerPath>/Applications/YourKit Java Profiler 7.0.11.app/bin/mac</profilerPath>
+                 </properties>
+                 <repositories>
+                   <repository>
+             [...]
+             <activeProfiles>
+               <activeProfile>xwiki</activeProfile>
+             [...]
+    -->    
+    <profile>
+      <id>macprofiler</id>
+      <properties>
+        <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
+             http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
+        <xwikiExecutionStartCommand>sh -f start_xwiki_debug.sh ${port} ${stopport} profiler "${profilerPath}" -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -260,9 +318,51 @@
         </os>
       </activation>
       <properties>
-        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport}</xwikiExecutionStartCommand>
+        <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
+             http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
+        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
+    </profile>
+    <!-- This profile must come after the "windows" profile so that it overrides it when it's active.
+         Note: You must define the ${profilePath} property in your settings.xml file or in a
+         profiles.xml one. No spaces are allowed in this path, 8.3 DOS path format should be used.
+         Use the "dir /X" command (in command prompt) within a directory to get 8.3 DOS path.
+         For example (win32) in settings.xml:
+           <settings>
+             <profiles>
+               <profile>
+                 <id>xwiki</id>
+                 <properties>
+                   <profilerPath>C:\PROGRA~1\YOURKI~1.11\bin\win32</profilerPath>                   
+                 </properties>
+                 <repositories>
+                   <repository>
+             [...]
+             <activeProfiles>
+               <activeProfile>xwiki</activeProfile>
+             [...]
+    -->    
+    <profile>
+      <id>winprofiler</id>
+      <properties>
+        <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
+             http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
+        <xwikiExecutionStartCommand>cmd /c start_xwiki_debug.bat ${port} ${stopport} profiler ${profilerPath} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
+      </properties>
+    </profile>
+    <profile>
+      <!-- Make sure we add the Clover JAR to the test classpath since instrumented code will need it -->
+      <id>clover</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.cenqua.clover</groupId>
+          <artifactId>clover</artifactId>
+          <version>3.0.2</version>
+          <scope>test</scope>
+        </dependency>
+      </dependencies>
     </profile>
   </profiles>
   <modules>
