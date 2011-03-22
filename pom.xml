@@ -57,7 +57,7 @@
     <product.enterprise.version>${project.version}</product.enterprise.version>
 
     <platform.plugin.applicationmanager.version>1.19-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.25-SNAPSHOT</platform.plugin.wikimanager.version>
+    <platform.plugin.wikimanager.version>1.26-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
