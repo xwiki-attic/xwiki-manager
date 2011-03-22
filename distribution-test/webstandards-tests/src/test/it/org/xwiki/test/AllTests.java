@@ -23,6 +23,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
+import org.xwiki.test.integration.XWikiTestSetup;
 import org.xwiki.test.webstandards.CustomDutchWebGuidelinesValidationTest;
 import org.xwiki.test.webstandards.CustomDutchWebGuidelinesValidator;
 import org.xwiki.test.webstandards.framework.DefaultValidationTest;
