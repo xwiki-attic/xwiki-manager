@@ -25,7 +25,7 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-import org.xwiki.test.XWikiTestSetup;
+import org.xwiki.test.integration.XWikiTestSetup;
 import org.xwiki.test.selenium.framework.XWikiSeleniumTestSetup;
 import org.xwiki.test.selenium.xem.WikiManagementCreate;
 
