@@ -159,19 +159,5 @@
         <module>derby</module>
       </modules>
     </profile>
-    <profile>
-      <id>pgsql</id>
-      <!-- Disable as it's useless and can break database usually used for development tests.
-      <modules>
-        <module>pgsql</module>
-      </modules> -->
-    </profile>
-    <profile>
-      <id>mysql</id>
-      <!-- Disable as it's useless and can break database usually used for development tests.
-      <modules>
-        <module>mysql</module>
-      </modules> -->
-    </profile>
   </profiles>
 </project>
