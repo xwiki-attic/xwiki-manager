@@ -3,7 +3,7 @@
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
-<language>it</language>
+<language>ru</language>
 <defaultLanguage>en</defaultLanguage>
 <translation>1</translation>
 <parent>XemResources.WebHome</parent>
@@ -23,12 +23,5 @@
 <minorEdit>false</minorEdit>
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
-<content>## XWiki Translation for language it generated from http://www.l10n.xwiki.org
-xem.answer.install.actions=Per completare l'installazione XWiki Enterprise Manager deve\:
-xem.answer.install.actions.template=* Aggiungi modello di default
-xem.answer.install.title=Installazione di XWiki Enterprise Manager
-xem.install.error=Installazione di XWiki Enterprise Manager fallita ({0}).
-xem.install.noneed=Nessuna azione richiesta
-xem.install.success=Installazione di XWiki Enterprise Manager completata con successo.
-xem.xem=XWiki Enterprise Manager
+<content>## XWiki Translation for language ru generated from http://www.l10n.xwiki.org
 </content></xwikidoc>
