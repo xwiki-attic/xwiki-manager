@@ -146,6 +146,9 @@
   <profiles>
     <profile>
       <id>hsqldb</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
       <modules>
         <module>hsqldb</module>
       </modules>
