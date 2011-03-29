@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-enterprise-manager</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <version>3.0</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-mysql</artifactId>
   <name>XWiki Products - Enterprise Manager - Distribution - MySQL</name>
