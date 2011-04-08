@@ -61,7 +61,7 @@
                   <xwikiCfgVirtual>1</xwikiCfgVirtual>
                 </properties>
                 <resourceBundles>
-                  <resourceBundle>org.xwiki.platform.tools:xwiki-configuration-resources:${platform.tool.configuration.version}</resourceBundle>
+                  <resourceBundle>org.xwiki.platform.tools:xwiki-configuration-resources:${platform.version}</resourceBundle>
                 </resourceBundles>
               </configuration>
             </execution>
@@ -71,7 +71,7 @@
         <plugin>
           <groupId>org.xwiki.platform.tools</groupId>
           <artifactId>xwiki-xar-plugin</artifactId>
-          <version>${platform.tool.xar-plugin.version}</version>
+          <version>${platform.version}</version>
           <configuration>
             <groupId>${project.groupId}</groupId>
             <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
@@ -92,7 +92,7 @@
         <plugin>
           <groupId>org.xwiki.platform.tools</groupId>
           <artifactId>xwiki-packager-plugin</artifactId>
-          <version>${platform.tool.packager.version}</version>
+          <version>${platform.version}</version>
           <configuration>
             <sourceDirectory>${project.build.directory}/xar</sourceDirectory>
             <hibernateConfig>${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml</hibernateConfig>

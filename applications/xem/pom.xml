@@ -65,7 +65,7 @@
       <plugin>
         <groupId>org.xwiki.platform.tools</groupId>
         <artifactId>xwiki-xmldoc-update-plugin</artifactId>
-        <version>${platform.tool.xmldoc.version}</version>
+        <version>${platform.version}</version>
         <executions>
           <execution>
             <phase>generate-resources</phase>

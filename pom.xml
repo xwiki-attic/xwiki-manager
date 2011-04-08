@@ -53,12 +53,7 @@
     <module>distribution</module>
   </modules>
   <properties>
-    <platform.tool.xmldoc.version>1.5-SNAPSHOT</platform.tool.xmldoc.version>
-
     <product.enterprise.version>${project.version}</product.enterprise.version>
-
-    <platform.plugin.applicationmanager.version>1.20-SNAPSHOT</platform.plugin.applicationmanager.version>
-    <platform.plugin.wikimanager.version>1.27-SNAPSHOT</platform.plugin.wikimanager.version>
   </properties>
   <profiles>
     <profile>
