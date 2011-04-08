@@ -42,12 +42,12 @@
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-application-manager</artifactId>
+      <artifactId>xwiki-platform-application-manager-api</artifactId>
       <version>${platform.version}</version>
     </dependency>
     <dependency>
       <groupId>com.xpn.xwiki.platform.plugins</groupId>
-      <artifactId>xwiki-plugin-wiki-manager</artifactId>
+      <artifactId>xwiki-platform-wiki-manager-api</artifactId>
       <version>${platform.version}</version>
     </dependency>
   </dependencies>
