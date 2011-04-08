@@ -41,12 +41,12 @@
       <type>war</type>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-application-manager-api</artifactId>
       <version>${platform.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.xpn.xwiki.platform.plugins</groupId>
+      <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-wiki-manager-api</artifactId>
       <version>${platform.version}</version>
     </dependency>
@@ -76,7 +76,7 @@
             </goals>
             <configuration>
               <resourceBundles>
-                <resourceBundle>org.xwiki.platform.tools:xwiki-configuration-resources:${platform.version}</resourceBundle>
+                <resourceBundle>org.xwiki.platform:xwiki-platform-tool-configuration-resources:${platform.version}</resourceBundle>
               </resourceBundles>
               <properties>
                 <xwikiDbHbmCommonExtraMappings>activitystream.hbm.xml</xwikiDbHbmCommonExtraMappings>
