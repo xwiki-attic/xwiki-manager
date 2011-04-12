@@ -37,8 +37,8 @@
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/trunk</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/trunk</developerConnection>
+    <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki/xwiki-manager.git</developerConnection>
     <url>http://svn.xwiki.org/svnroot/xwiki/manager/trunk</url>
   </scm>
   <issueManagement>
