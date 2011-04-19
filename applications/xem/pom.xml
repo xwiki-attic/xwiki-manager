@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-application-xem</artifactId>
-  <name>XWiki Products - Enterprise Manager - Applications - XEM</name>
+  <name>XWiki Enterprise Manager - Applications - XEM</name>
   <packaging>xar</packaging>
-  <description>XWiki Products - Enterprise Manager - Applications - XEM</description>
+  <description>XWiki Enterprise Manager - Applications - XEM</description>
   <build>
     <plugins>
       <!-- Step 1: Download XE xar -->

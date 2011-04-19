@@ -22,17 +22,18 @@
  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-parent</artifactId>
+    <artifactId>xwiki-enterprise-manager</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-test</artifactId>
-  <name>XWiki Products - Enterprise Manager - Functional Tests</name>
+  <name>XWiki Enterprise Manager - Functional Tests</name>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Functional Tests</description>
+  <description>XWiki Enterprise Manager - Functional Tests</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.commons</groupId>
@@ -51,7 +52,7 @@
     <testSourceDirectory>src/test/it</testSourceDirectory>
     <pluginManagement>
       <plugins>
-       <!--  Force compilation of tests as the packaging being pom tests won't be compiled
+        <!--  Force compilation of tests as the packaging being pom tests won't be compiled
           with the default pom lifecycle -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
@@ -176,7 +177,9 @@
               <!-- Used only in xml-rpc tests -->
               <property>
                 <name>pathToXWikiXar</name>
-                <value>org/xwiki/manager/xwiki-enterprise-manager-wiki-administrator/${project.version}/xwiki-enterprise-manager-wiki-administrator-${project.version}.xar</value>
+                <value>
+                  org/xwiki/manager/xwiki-enterprise-manager-wiki-administrator/${project.version}/xwiki-enterprise-manager-wiki-administrator-${project.version}.xar
+                </value>
               </property>
               <property>
                 <name>documentsToTest</name>
@@ -220,7 +223,7 @@
         <artifactId>plexus-utils</artifactId>
         <version>1.5.15</version>
         <scope>test</scope>
-      </dependency> 
+      </dependency>
     </dependencies>
   </dependencyManagement>
   <properties>
@@ -244,7 +247,8 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true
+        </xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -258,7 +262,8 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true
+        </xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -279,13 +284,15 @@
              <activeProfiles>
                <activeProfile>xwiki</activeProfile>
              [...]
-    -->    
+    -->
     <profile>
       <id>macprofiler</id>
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki_debug.sh ${port} ${stopport} profiler "${profilerPath}" -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki_debug.sh ${port} ${stopport} profiler "${profilerPath}"
+          -Djava.net.preferIPv4Stack=true
+        </xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -299,7 +306,8 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport} -Djava.net.preferIPv4Stack=true
+        </xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -321,13 +329,15 @@
              <activeProfiles>
                <activeProfile>xwiki</activeProfile>
              [...]
-    -->    
+    -->
     <profile>
       <id>winprofiler</id>
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>cmd /c start_xwiki_debug.bat ${port} ${stopport} profiler ${profilerPath} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>cmd /c start_xwiki_debug.bat ${port} ${stopport} profiler ${profilerPath}
+          -Djava.net.preferIPv4Stack=true
+        </xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>

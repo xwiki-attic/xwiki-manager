@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-test-selenium</artifactId>
-  <name>XWiki Products - Enterprise Manager - Functional Selenium Tests</name>
+  <name>XWiki Enterprise Manager - Functional Selenium Tests</name>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Functional Selenium Tests</description>
+  <description>XWiki Enterprise Manager - Functional Selenium Tests</description>
   <dependencies>
     <dependency>
       <groupId>org.seleniumhq.selenium.client-drivers</groupId>

@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-database-derby</artifactId>
-  <name>XWiki Products - Enterprise Manager - Database - Derby</name>
+  <name>XWiki Enterprise Manager - Database - Derby</name>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Database - Derby</description>
+  <description>XWiki Enterprise Manager - Database - Derby</description>
   <build>
     <plugins>
       <!-- Step 1: Copy and filter the Hibernate config file which will be used by the packager

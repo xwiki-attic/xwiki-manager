@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
-  <name>XWiki Products - Enterprise Manager - Wikis - Administrator</name>
+  <name>XWiki Enterprise Manager - Wikis - Administrator</name>
   <packaging>xar</packaging>
-  <description>XWiki Products - Enterprise Manager - Wikis - Administrator</description>
+  <description>XWiki Enterprise Manager - Wikis - Administrator</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>

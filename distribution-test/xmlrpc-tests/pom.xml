@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-test-xmlrpc</artifactId>
-  <name>XWiki Products - Enterprise Manager - Functional XMLRPC Tests</name>
+  <name>XWiki Enterprise Manager - Functional XMLRPC Tests</name>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Functional XMLRPC Tests</description>
+  <description>XWiki Enterprise Manager - Functional XMLRPC Tests</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.platform</groupId>

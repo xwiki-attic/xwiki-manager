@@ -22,17 +22,18 @@
  *
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-parent</artifactId>
+    <artifactId>xwiki-enterprise-manager</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-database</artifactId>
-  <name>XWiki Products - Enterprise Manager - Database - Parent POM</name>
+  <name>XWiki Enterprise Manager - Database - Parent POM</name>
   <packaging>pom</packaging>
-  <description>XWiki Products - Enterprise Manager - Database - Parent POM</description>
+  <description>XWiki Enterprise Manager - Database - Parent POM</description>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
@@ -61,7 +62,8 @@
                   <xwikiCfgVirtual>1</xwikiCfgVirtual>
                 </properties>
                 <resourceBundles>
-                  <resourceBundle>org.xwiki.platform:xwiki-platform-tool-configuration-resources:${platform.version}</resourceBundle>
+                  <resourceBundle>org.xwiki.platform:xwiki-platform-tool-configuration-resources:${platform.version}
+                  </resourceBundle>
                 </resourceBundles>
               </configuration>
             </execution>
@@ -95,7 +97,8 @@
           <version>${platform.version}</version>
           <configuration>
             <sourceDirectory>${project.build.directory}/xar</sourceDirectory>
-            <hibernateConfig>${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml</hibernateConfig>
+            <hibernateConfig>${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml
+            </hibernateConfig>
           </configuration>
           <dependencies>
             <dependency>
