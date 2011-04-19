@@ -35,7 +35,7 @@
   <name>XWiki Enterprise Manager - Wikis - Parent POM</name>
   <description>XWiki Enterprise Manager - Wikis - Parent POM</description>
   <modules>
-    <module>xem-administrator</module>
+    <module>xwiki-manager-wiki-administrator</module>
   </modules>
   <build>
     <extensions>
