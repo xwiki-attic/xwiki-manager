@@ -31,9 +31,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-manager-test</artifactId>
-  <name>XWiki Enterprise Manager - Functional Tests</name>
+  <name>XWiki Enterprise Manager - Functional Tests - Parent POM</name>
   <packaging>pom</packaging>
-  <description>XWiki Enterprise Manager - Functional Tests</description>
+  <description>XWiki Enterprise Manager - Functional Tests - Parent POM</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.commons</groupId>
@@ -355,8 +355,8 @@
     </profile>
   </profiles>
   <modules>
-    <module>webstandards-tests</module>
-    <module>xmlrpc-tests</module>
-    <module>selenium-tests</module>
+    <module>xwiki-manager-test-webstandards</module>
+    <module>xwiki-manager-test-xmlrpc</module>
+    <module>xwiki-manager-test-selenium</module>
   </modules>
 </project>

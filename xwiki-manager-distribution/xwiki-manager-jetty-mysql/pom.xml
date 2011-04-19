@@ -29,10 +29,10 @@
     <artifactId>xwiki-manager-distribution</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-manager-mysql</artifactId>
-  <name>XWiki Enterprise Manager - Distribution - MySQL</name>
+  <artifactId>xwiki-manager-jetty-mysql</artifactId>
+  <name>XWiki Enterprise Manager - Distribution - Jetty - MySQL</name>
   <packaging>pom</packaging>
-  <description>XWiki Enterprise Manager - Distribution - MySQL</description>
+  <description>XWiki Enterprise Manager - Distribution - Jetty - MySQL</description>
   <build>
     <plugins>
       <!-- Inject Hibernate's configuration for the specified database -->

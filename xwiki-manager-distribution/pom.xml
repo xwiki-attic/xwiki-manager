@@ -113,25 +113,25 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
-        <module>hsqldb</module>
+        <module>xwiki-manager-jetty-hsqldb</module>
       </modules>
     </profile>
     <profile>
       <id>derby</id>
       <modules>
-        <module>derby</module>
+        <module>xwiki-manager-jetty-derby</module>
       </modules>
     </profile>
     <profile>
       <id>pgsql</id>
       <modules>
-        <module>pgsql</module>
+        <module>xwiki-manager-jetty-pgsql</module>
       </modules>
     </profile>
     <profile>
       <id>mysql</id>
       <modules>
-        <module>mysql</module>
+        <module>xwiki-manager-jetty-mysql</module>
       </modules>
     </profile>
   </profiles>

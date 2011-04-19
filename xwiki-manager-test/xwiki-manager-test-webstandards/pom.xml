@@ -30,9 +30,9 @@
     <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-manager-test-webstandards</artifactId>
-  <name>XWiki Enterprise Manager - Web Standards Functional Tests</name>
+  <name>XWiki Enterprise Manager - Functional Tests - Web Standards</name>
   <packaging>pom</packaging>
-  <description>XWiki Enterprise Manager - Web Standards Functional Tests</description>
+  <description>XWiki Enterprise Manager - Functional Tests - Web Standards</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>

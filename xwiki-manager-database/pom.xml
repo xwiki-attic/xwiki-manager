@@ -150,13 +150,13 @@
     <profile>
       <id>hsqldb</id>
       <modules>
-        <module>hsqldb</module>
+        <module>xwiki-manager-database-hsqldb</module>
       </modules>
     </profile>
     <profile>
       <id>derby</id>
       <modules>
-        <module>derby</module>
+        <module>xwiki-manager-database-derby</module>
       </modules>
     </profile>
   </profiles>
