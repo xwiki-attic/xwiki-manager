@@ -71,9 +71,9 @@
         </plugin>
         <!-- Step 2: Expand the XAR file -->
         <plugin>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-tool-xar-plugin</artifactId>
-          <version>${platform.version}</version>
+          <groupId>org.xwiki.commons</groupId>
+          <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
+          <version>${commons.version}</version>
           <configuration>
             <groupId>${project.groupId}</groupId>
             <artifactId>xwiki-manager-wiki-administrator</artifactId>
