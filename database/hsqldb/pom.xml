@@ -26,10 +26,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-database</artifactId>
+    <artifactId>xwiki-manager-database</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-database-hsqldb</artifactId>
+  <artifactId>xwiki-manager-database-hsqldb</artifactId>
   <name>XWiki Enterprise Manager - Database - HSQLDB</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Database - HSQLDB</description>

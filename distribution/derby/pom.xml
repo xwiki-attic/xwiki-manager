@@ -26,17 +26,17 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-distribution</artifactId>
+    <artifactId>xwiki-manager-distribution</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-derby</artifactId>
+  <artifactId>xwiki-manager-derby</artifactId>
   <name>XWiki Enterprise Manager - Distribution - Derby</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Distribution - Derby</description>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-enterprise-manager-database-derby</artifactId>
+      <artifactId>xwiki-manager-database-derby</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
       <optional>true</optional>

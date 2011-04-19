@@ -26,10 +26,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-test</artifactId>
+    <artifactId>xwiki-manager-test</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-test-xmlrpc</artifactId>
+  <artifactId>xwiki-manager-test-xmlrpc</artifactId>
   <name>XWiki Enterprise Manager - Functional XMLRPC Tests</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Functional XMLRPC Tests</description>

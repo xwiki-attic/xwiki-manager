@@ -30,14 +30,14 @@
     <artifactId>xwiki-enterprise-manager</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-database</artifactId>
+  <artifactId>xwiki-manager-database</artifactId>
   <name>XWiki Enterprise Manager - Database - Parent POM</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Database - Parent POM</description>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+      <artifactId>xwiki-manager-wiki-administrator</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
       <optional>true</optional>
@@ -76,7 +76,7 @@
           <version>${platform.version}</version>
           <configuration>
             <groupId>${project.groupId}</groupId>
-            <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+            <artifactId>xwiki-manager-wiki-administrator</artifactId>
             <outputDirectory>${project.build.directory}/xar</outputDirectory>
           </configuration>
           <executions>

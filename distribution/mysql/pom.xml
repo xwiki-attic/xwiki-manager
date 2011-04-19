@@ -26,10 +26,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-distribution</artifactId>
+    <artifactId>xwiki-manager-distribution</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-mysql</artifactId>
+  <artifactId>xwiki-manager-mysql</artifactId>
   <name>XWiki Enterprise Manager - Distribution - MySQL</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Distribution - MySQL</description>

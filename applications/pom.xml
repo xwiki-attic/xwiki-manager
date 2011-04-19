@@ -30,7 +30,7 @@
     <artifactId>xwiki-enterprise-manager</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-applications</artifactId>
+  <artifactId>xwiki-manager-applications</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Enterprise Manager - Applications - Parent POM</name>
   <description>XWiki Enterprise Manager - Applications - Parent POM</description>

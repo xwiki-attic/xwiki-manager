@@ -30,7 +30,7 @@
     <artifactId>xwiki-enterprise-manager</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-web</artifactId>
+  <artifactId>xwiki-manager-web</artifactId>
   <name>XWiki Enterprise Manager - Web</name>
   <packaging>war</packaging>
   <description>XWiki Enterprise Manager - Web</description>

@@ -26,10 +26,10 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-enterprise-manager-wikis</artifactId>
+    <artifactId>xwiki-manager-wikis</artifactId>
     <version>3.1-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-enterprise-manager-wiki-administrator</artifactId>
+  <artifactId>xwiki-manager-wiki-administrator</artifactId>
   <name>XWiki Enterprise Manager - Wikis - Administrator</name>
   <packaging>xar</packaging>
   <description>XWiki Enterprise Manager - Wikis - Administrator</description>
@@ -54,7 +54,7 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-enterprise-manager-application-xem</artifactId>
+      <artifactId>xwiki-manager-application-xem</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
     </dependency>
