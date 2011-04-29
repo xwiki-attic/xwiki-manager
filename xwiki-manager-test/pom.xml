@@ -72,7 +72,6 @@
           <artifactId>maven-resources-plugin</artifactId>
           <executions>
             <execution>
-              <!--phase>process-test-resources</phase-->
               <goals>
                 <goal>testResources</goal>
               </goals>
@@ -117,8 +116,8 @@
           </executions>
         </plugin>
         <!-- Start XWiki, Execute the tests and Stop XWiki.
-          Note: To execute a single test case run mvn install -Dpattern=<test name>
-          For example: mvn install -Dpattern=DeletePageTest
+          Note: To execute a single test case run mvn install -Dpattern=<test class name> -DpatternMethod=<test method name>
+          For example: mvn install -Dpattern=DeletePageTest -DpatternMethod=testDeletePageCanDoRedirect
           For example: mvn install -Dpattern=.*Wysiwyg.*
         -->
         <plugin>
@@ -140,6 +139,10 @@
               <property>
                 <name>pattern</name>
                 <value>${pattern}</value>
+              </property>
+              <property>
+                <name>patternMethod</name>
+                <value>${patternMethod}</value>
               </property>
               <property>
                 <name>xwikiPort</name>
@@ -247,8 +250,7 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true
-        </xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -262,8 +264,7 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true
-        </xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki.sh ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -290,9 +291,7 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>sh -f start_xwiki_debug.sh ${port} ${stopport} profiler "${profilerPath}"
-          -Djava.net.preferIPv4Stack=true
-        </xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>sh -f start_xwiki_debug.sh ${port} ${stopport} profiler "${profilerPath}" -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>sh -f stop_xwiki.sh ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -306,8 +305,7 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport} -Djava.net.preferIPv4Stack=true
-        </xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>cmd /c start_xwiki.bat ${port} ${stopport} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
@@ -335,9 +333,7 @@
       <properties>
         <!-- Force IPv4 usage. This is for the Cluster tests only and is caused by a bug in JGroups. See
              http://xwiki.markmail.org/thread/hcswfhh7w4isayuy -->
-        <xwikiExecutionStartCommand>cmd /c start_xwiki_debug.bat ${port} ${stopport} profiler ${profilerPath}
-          -Djava.net.preferIPv4Stack=true
-        </xwikiExecutionStartCommand>
+        <xwikiExecutionStartCommand>cmd /c start_xwiki_debug.bat ${port} ${stopport} profiler ${profilerPath} -Djava.net.preferIPv4Stack=true</xwikiExecutionStartCommand>
         <xwikiExecutionStopCommand>cmd /c stop_xwiki.bat ${stopport}</xwikiExecutionStopCommand>
       </properties>
     </profile>
