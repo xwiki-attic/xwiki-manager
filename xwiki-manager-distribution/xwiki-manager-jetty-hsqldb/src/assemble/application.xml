@@ -27,10 +27,10 @@
   </formats>
   <includeBaseDirectory>true</includeBaseDirectory>
   <dependencySets>
-    <!-- XWiki webapp. -->
+    <!-- "xwiki" webapp. -->
     <dependencySet>
       <includes>
-        <include>org.xwiki.manager:xwiki-enterprise-manager-web</include>
+        <include>org.xwiki.manager:xwiki-manager-web</include>
       </includes>
       <outputDirectory>webapps/xwiki</outputDirectory>
       <unpack>true</unpack>
@@ -43,7 +43,7 @@
     <!-- ROOT webapp, redirecting to /xwiki/ when no application is specified. -->
     <dependencySet>
       <includes>
-        <include>org.xwiki.platform.tools:xwiki-rootwebapp</include>
+        <include>org.xwiki.platform:xwiki-platform-tool-rootwebapp</include>
       </includes>
       <outputDirectory>webapps/root</outputDirectory>
       <unpack>true</unpack>
@@ -51,7 +51,7 @@
     <!-- Unpack Jetty files -->
     <dependencySet>
       <includes>
-        <include>org.xwiki.platform.tools:xwiki-jetty-resources</include>
+        <include>org.xwiki.platform:xwiki-platform-tool-jetty-resources</include>
       </includes>
       <outputDirectory>/</outputDirectory>
       <unpack>true</unpack>
@@ -64,22 +64,24 @@
       <outputDirectory>webapps/xwiki/WEB-INF/lib</outputDirectory>
       <unpack>false</unpack>
     </dependencySet>
+    <!-- Unpack the database files to package it in the distribution -->
     <dependencySet>
       <includes>
-        <include>org.xwiki.manager:xwiki-enterprise-manager-database-${xwiki.db}</include>
+        <include>org.xwiki.manager:xwiki-manager-database-${xwiki.db}</include>
       </includes>
       <outputDirectory>/database</outputDirectory>
       <unpack>true</unpack>
     </dependencySet>
   </dependencySets>
+  <!-- Add Hibernate configuration file -->
   <files>
     <file>
       <source>${basedir}/target/maven-shared-archive-resources/hibernate.cfg.xml</source>
       <outputDirectory>webapps/xwiki/WEB-INF</outputDirectory>
     </file>
   </files>
+  <!-- Add License/Notice files -->
   <fileSets>
-    <!-- Add License/Notice files -->
     <fileSet>
       <directory>${basedir}/target/maven-shared-archive-resources/META-INF</directory>
       <outputDirectory>META-INF</outputDirectory>

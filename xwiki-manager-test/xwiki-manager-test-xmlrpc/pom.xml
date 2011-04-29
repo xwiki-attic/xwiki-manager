@@ -35,6 +35,13 @@
   <description>XWiki Enterprise Manager - Functional Tests - XMLRPC</description>
   <dependencies>
     <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>xwiki-manager-wiki-administrator</artifactId>
+      <version>${project.version}</version>
+      <type>xar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-oldcore</artifactId>
       <version>${platform.version}</version>
