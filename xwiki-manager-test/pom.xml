@@ -235,6 +235,7 @@
       mvn install -DPattern=DeletePageTest
     -->
     <pattern>.*</pattern>
+    <patternMethod>.*</patternMethod>
     <port>8080</port>
     <stopport>8079</stopport>
     <seleniumPort>4444</seleniumPort>
