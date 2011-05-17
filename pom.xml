@@ -33,7 +33,7 @@
   <artifactId>xwiki-enterprise-manager-parent</artifactId>
   <packaging>pom</packaging>
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
-  <version>2.7-SNAPSHOT</version>
+  <version>2.7.2</version>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
     <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
