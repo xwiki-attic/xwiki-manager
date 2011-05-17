@@ -207,41 +207,5 @@ xwiki.work.dir=work
         </plugins>
       </build>
     </profile>
-    <profile>
-      <id>release</id>
-      <activation>
-        <!-- This property is automatically defined by the Release profile in the top level POM when executing
-             a release. Thus this profile will be automatically enabled when releasing -->
-        <property>
-          <name>performRelease</name>
-          <value>true</value>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <!-- Use the build number plugin to add the SVN revision number to XWiki's
-               version.properties file so that it's included when displaying XWiki's version.
-               Note: This plugin works by making the buildNumber property available. We then filter
-               the version.properties file so that the property is replaced by its value. -->
-          <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>buildnumber-maven-plugin</artifactId>
-            <version>1.0-beta-2</version>
-            <executions>
-              <execution>
-                <phase>validate</phase>
-                <goals>
-                  <goal>create</goal>
-                </goals>
-              </execution>
-            </executions>
-            <configuration>
-              <doCheck>true</doCheck>
-              <doUpdate>true</doUpdate>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
   </profiles>
 </project>
