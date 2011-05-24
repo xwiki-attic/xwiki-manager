@@ -50,7 +50,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>xwiki-manager-wiki-administrator</artifactId>
-      <version>${project.version}</version>
+      <version>3.1-milestone-2</version>
       <type>xar</type>
       <scope>test</scope>
     </dependency>

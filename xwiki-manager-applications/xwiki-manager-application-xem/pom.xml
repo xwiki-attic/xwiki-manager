@@ -105,7 +105,7 @@
               <parameters>
                 <parameter>
                   <name>appversion</name>
-                  <value>${project.version}</value>
+                  <value>3.1-milestone-2</value>
                 </parameter>
               </parameters>
             </transformationSet>
