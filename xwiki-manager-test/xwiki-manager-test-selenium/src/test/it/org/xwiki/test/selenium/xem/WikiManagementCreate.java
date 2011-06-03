@@ -21,7 +21,6 @@ package org.xwiki.test.selenium.xem;
 
 import junit.framework.Test;
 
-import org.junit.Ignore;
 import org.xwiki.test.selenium.framework.AbstractXWikiTestCase;
 import org.xwiki.test.selenium.framework.ColibriSkinExecutor;
 import org.xwiki.test.selenium.framework.XWikiTestSuite;
@@ -57,8 +56,8 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
     /**
      * Validate empty wiki creation and all automated actions around it.
      */
-    // TODO: put back when using a supported database
-    @Ignore
+    // "@Ignored" because of http://jira.xwiki.org/jira/browse/XEM-189
+    /*
     public void testCreateEmptyWiki()
     {
         setWikiNameFieldValue();
@@ -77,6 +76,7 @@ public class WikiManagementCreate extends AbstractXWikiTestCase
         // Validate the correct domain is printed in the list
         assertTextPresent("newemptywiki.localdomain.com");
     }
+    */
 
     /**
      * Validate the ajax based wiki name validation.
