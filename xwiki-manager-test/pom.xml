@@ -186,7 +186,8 @@
               </property>
               <property>
                 <name>documentsToTest</name>
-                <value>Main\.WebHome|Panels\.QuickLinks|Xem.*|XApp.*|Wiki.*|XWiki\.XWikiServer.*</value>
+                <!-- Main.WebHome is being @Ignore'd because of http://jira.xwiki.org/jira/browse/XEM-188 -->
+                <value><!--Main\.WebHome|-->Panels\.QuickLinks|Xem.*|XApp.*|Wiki.*|XWiki\.XWikiServer.*</value>
               </property>
             </systemProperties>
           </configuration>
