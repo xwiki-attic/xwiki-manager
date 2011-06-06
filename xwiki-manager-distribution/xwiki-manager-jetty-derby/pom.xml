@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-distribution</artifactId>
-    <version>3.1-rc-1</version>
+    <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-manager-jetty-derby</artifactId>
   <name>XWiki Enterprise Manager - Distribution - Jetty - Derby</name>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>xwiki-manager-database-derby</artifactId>
-      <version>3.1-rc-1</version>
+      <version>3.1-SNAPSHOT</version>
       <type>zip</type>
       <optional>true</optional>
     </dependency>

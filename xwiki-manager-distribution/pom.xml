@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager</artifactId>
-    <version>3.1-rc-1</version>
+    <version>3.1-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-manager-distribution</artifactId>
   <name>XWiki Enterprise Manager - Distribution - Parent POM</name>
@@ -37,7 +37,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>xwiki-manager-web</artifactId>
-      <version>3.1-rc-1</version>
+      <version>3.1-SNAPSHOT</version>
       <type>war</type>
       <optional>true</optional>
     </dependency>
