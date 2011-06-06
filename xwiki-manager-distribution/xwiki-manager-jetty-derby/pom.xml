@@ -37,7 +37,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>xwiki-manager-database-derby</artifactId>
-      <version>${project.version}</version>
+      <version>3.1-rc-1</version>
       <type>zip</type>
       <optional>true</optional>
     </dependency>
