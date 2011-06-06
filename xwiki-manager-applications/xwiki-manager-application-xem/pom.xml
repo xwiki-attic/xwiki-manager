@@ -105,7 +105,7 @@
               <parameters>
                 <parameter>
                   <name>appversion</name>
-                  <value>3.1-rc-1</value>
+                  <value>${project.version}</value>
                 </parameter>
               </parameters>
             </transformationSet>
