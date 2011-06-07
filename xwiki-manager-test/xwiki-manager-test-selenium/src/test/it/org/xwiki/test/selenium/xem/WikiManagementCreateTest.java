@@ -30,12 +30,12 @@ import org.xwiki.test.selenium.framework.XWikiTestSuite;
  * 
  * @version $Id$
  */
-public class WikiManagementCreate extends AbstractXWikiTestCase
+public class WikiManagementCreateTest extends AbstractXWikiTestCase
 {
     public static Test suite()
     {
         XWikiTestSuite suite = new XWikiTestSuite("Check some wiki management use cases");
-        suite.addTestSuite(WikiManagementCreate.class, ColibriSkinExecutor.class);
+        suite.addTestSuite(WikiManagementCreateTest.class, ColibriSkinExecutor.class);
         return suite;
     }
 

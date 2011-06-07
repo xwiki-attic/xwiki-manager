@@ -27,7 +27,7 @@ import junit.framework.TestSuite;
 
 import org.xwiki.test.integration.XWikiTestSetup;
 import org.xwiki.test.selenium.framework.XWikiSeleniumTestSetup;
-import org.xwiki.test.selenium.xem.WikiManagementCreate;
+import org.xwiki.test.selenium.xem.WikiManagementCreateTest;
 
 /**
  * A class listing all the Selenium Functional tests to execute. We need such a class (rather than letting the JUnit
@@ -50,7 +50,7 @@ public class AllTests extends TestCase
         // (there are complex solutions like searching for all tests by parsing the source tree).
         // I think there are TestSuite that do this out there but I haven't looked for them yet.
 
-        addTestCase(suite, WikiManagementCreate.class);
+        addTestCase(suite, WikiManagementCreateTest.class);
 
         return new XWikiSeleniumTestSetup(new XWikiTestSetup(suite));
     }
