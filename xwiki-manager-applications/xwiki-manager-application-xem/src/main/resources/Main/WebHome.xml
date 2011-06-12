@@ -78,7 +78,7 @@ Welcome to the wiki administrator of your wiki farm! It is a space that will all
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
-#sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
+#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
 
 #############################################################################
 

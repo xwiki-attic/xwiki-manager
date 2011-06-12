@@ -47,7 +47,7 @@ Benvinguts al vostre administrador wiki de la vostra granja wiki! Aquest és un 
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
-#sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
+#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
 
 #############################################################################
 
