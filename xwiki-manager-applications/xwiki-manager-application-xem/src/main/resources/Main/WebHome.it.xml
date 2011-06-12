@@ -47,7 +47,7 @@ Benvenuto nel wiki dell'Amministrazione della vostra fattoria di wiki! È uno sp
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
-#sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
+#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
 
 #############################################################################
 
