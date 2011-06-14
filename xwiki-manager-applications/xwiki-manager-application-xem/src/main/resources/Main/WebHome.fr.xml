@@ -49,7 +49,7 @@ Vous pouvez utiliser des wikis pour :
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
-#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
+#sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
 
 #############################################################################
 

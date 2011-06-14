@@ -47,7 +47,7 @@ Sveicināti jūsu viki saimniecības pārvaldniekā! Tā ir vieta, kas jauj jums
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
-#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
+#sortDocumentByCreationDate($wikilist $creationsortedwikilist false)
 
 #############################################################################
 
