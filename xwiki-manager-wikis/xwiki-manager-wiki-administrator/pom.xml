@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-wikis</artifactId>
-    <version>3.1-SNAPSHOT</version>
+    <version>3.1</version>
   </parent>
   <artifactId>xwiki-manager-wiki-administrator</artifactId>
   <name>XWiki Enterprise Manager - Wikis - Administrator</name>
