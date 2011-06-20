@@ -144,11 +144,6 @@
                 <include>xwiki.cfg</include>
               </includes>
             </resource>
-            <resource>
-              <directory>${basedir}/src/main/webInfResources</directory>
-              <targetPath>WEB-INF</targetPath>
-              <filtering>true</filtering>
-            </resource>
           </webResources>
           <!-- - Make sure we exclude JCL and LOGJ4 since we want all logging to go through SLF4J
                - Excluded to prevent conflict in the patched version of Rhino used by yuicompressor used for JSX.
