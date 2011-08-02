@@ -37,9 +37,9 @@
   <name>XWiki Products - Enterprise Manager - Parent POM</name>
   <description>XWiki Products - Enterprise Manager - Parent POM</description>
   <scm>
-    <connection>scm:svn:http://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-3.0</connection>
-    <developerConnection>scm:svn:https://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-3.0</developerConnection>
-    <url>http://svn.xwiki.org/svnroot/xwiki/manager/branches/xwiki-enterprise-manager-3.0</url>
+    <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
+    <developerConnection>scm:git:git@github.com:xwiki/xwiki-manager.git</developerConnection>
+    <url>https://github.com/xwiki/xwiki-manager</url>
   </scm>
   <issueManagement>
     <system>jira</system>
@@ -54,9 +54,7 @@
   </modules>
   <properties>
     <platform.tool.xmldoc.version>1.4</platform.tool.xmldoc.version>
-  
     <product.enterprise.version>${project.version}</product.enterprise.version>
-
     <platform.plugin.applicationmanager.version>1.19</platform.plugin.applicationmanager.version>
     <platform.plugin.wikimanager.version>1.26</platform.plugin.wikimanager.version>
   </properties>
