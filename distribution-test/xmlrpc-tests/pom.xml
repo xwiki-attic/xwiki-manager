@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-enterprise-manager-test</artifactId>
-    <version>3.0-SNAPSHOT</version>
+    <version>3.0.1</version>
   </parent>
   <artifactId>xwiki-enterprise-manager-test-xmlrpc</artifactId>
   <name>XWiki Products - Enterprise Manager - Functional XMLRPC Tests</name>
