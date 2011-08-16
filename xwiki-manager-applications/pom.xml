@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager</artifactId>
-    <version>3.2-SNAPSHOT</version>
+    <version>3.2-milestone-2</version>
   </parent>
   <artifactId>xwiki-manager-applications</artifactId>
   <packaging>pom</packaging>
