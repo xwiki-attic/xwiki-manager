@@ -50,7 +50,7 @@
                 <artifactItem>
                   <groupId>org.xwiki.enterprise</groupId>
                   <artifactId>xwiki-enterprise-wiki</artifactId>
-                  <version>${product.enterprise.version}</version>
+                  <version>${enterprise.version}</version>
                   <type>xar</type>
                   <overWrite>true</overWrite>
                   <outputDirectory>${project.build.directory}/xe</outputDirectory>

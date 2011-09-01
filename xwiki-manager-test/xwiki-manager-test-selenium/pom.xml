@@ -41,7 +41,7 @@
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>
       <artifactId>xwiki-enterprise-test-selenium</artifactId>
-      <version>${product.enterprise.version}</version>
+      <version>${enterprise.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
