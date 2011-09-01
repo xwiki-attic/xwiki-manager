@@ -37,7 +37,7 @@
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>
       <artifactId>xwiki-enterprise-wiki</artifactId>
-      <version>${product.enterprise.version}</version>
+      <version>${enterprise.version}</version>
       <type>xar</type>
     </dependency>
     <dependency>

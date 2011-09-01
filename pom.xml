@@ -32,10 +32,13 @@
   </parent>
   <groupId>org.xwiki.manager</groupId>
   <artifactId>xwiki-manager</artifactId>
-  <version>3.2-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>XWiki Enterprise Manager - Parent POM</name>
   <description>XWiki Enterprise Manager - Parent POM</description>
+  <properties>
+    <!-- Useful for Manager extensions -->
+    <manager.version>${enterprise.version}</manager.version>
+  </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki/xwiki-manager.git</developerConnection>
@@ -52,9 +55,6 @@
     <module>xwiki-manager-database</module>
     <module>xwiki-manager-distribution</module>
   </modules>
-  <properties>
-    <product.enterprise.version>${project.version}</product.enterprise.version>
-  </properties>
   <profiles>
     <profile>
       <id>ci</id>
