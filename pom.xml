@@ -28,7 +28,6 @@
     <groupId>org.xwiki.enterprise</groupId>
     <artifactId>xwiki-enterprise</artifactId>
     <version>3.2-SNAPSHOT</version>
-    <relativePath>../xwiki-enterprise/</relativePath>
   </parent>
   <groupId>org.xwiki.manager</groupId>
   <artifactId>xwiki-manager</artifactId>
