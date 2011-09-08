@@ -40,13 +40,13 @@
     <manager.version>${enterprise.version}</manager.version>
     
     <!-- Configuration -->
-    <xwikiCfgVirtual>1</xwikiCfgVirtual>
-    <xem.xwikiCfgPlugins>${xe.xwikiCfgPlugins},\
+    <xwiki.cfg.virtual>1</xwiki.cfg.virtual>
+    <xem.xwiki.cfg.plugins>${xe.xwiki.cfg.plugins},\
   com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
   com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin\
-    </xem.xwikiCfgPlugins>
-    <xwikiCfgPlugins>${xem.xwikiCfgPlugins}
-    </xwikiCfgPlugins>
+    </xem.xwiki.cfg.plugins>
+    <xwiki.cfg.plugins>${xem.xwiki.cfg.plugins}
+    </xwiki.cfg.plugins>
   </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
