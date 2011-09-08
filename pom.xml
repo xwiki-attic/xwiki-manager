@@ -38,6 +38,15 @@
   <properties>
     <!-- Useful for Manager extensions -->
     <manager.version>${enterprise.version}</manager.version>
+    
+    <!-- Configuration -->
+    <xem.xwikiCfgPlugins>${xe.xwikiCfgPlugins},\
+  com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
+  com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin\
+    </xem.xwikiCfgPlugins>
+    <xwikiCfgPlugins>${xem.xwikiCfgPlugins}
+    </xwikiCfgPlugins>
+    <xwikiCfgVirtual>1</xwikiCfgVirtual>
   </properties>
   <scm>
     <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
