@@ -85,6 +85,7 @@
                 <xwikiCfgPlugins>${xwikiCfgPlugins}</xwikiCfgPlugins>
                 <xwikiCfgDefaultSkin>${xwikiCfgDefaultSkin}</xwikiCfgDefaultSkin>
                 <xwikiCfgDefaultBaseSkin>${xwikiCfgDefaultBaseSkin}</xwikiCfgDefaultBaseSkin>
+                <xwikiCfgAdditionalProperties>${xwikiCfgAdditionalProperties}</xwikiCfgAdditionalProperties>
               </properties>
             </configuration>
           </execution>

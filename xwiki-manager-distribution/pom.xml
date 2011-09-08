@@ -84,7 +84,7 @@
                   </resourceBundle>
                 </resourceBundles>
                 <properties>
-                  <xwikiDbHbmCommonExtraMappings>activitystream.hbm.xml</xwikiDbHbmCommonExtraMappings>
+                  <xwikiDbHbmCommonExtraMappings>${xwikiDbHbmCommonExtraMappings}</xwikiDbHbmCommonExtraMappings>
                 </properties>
               </configuration>
             </execution>
