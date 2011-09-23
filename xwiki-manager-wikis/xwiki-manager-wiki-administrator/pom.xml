@@ -39,24 +39,28 @@
       <artifactId>xwiki-enterprise-wiki</artifactId>
       <version>${enterprise.version}</version>
       <type>xar</type>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-application-manager-ui</artifactId>
       <version>${platform.version}</version>
       <type>xar</type>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-wiki-manager-ui</artifactId>
       <version>${platform.version}</version>
       <type>xar</type>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>xwiki-manager-application-xem</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
@@ -70,12 +74,14 @@
             <!-- Exclude XE translated pages not yet translated in XEM  -->
             <exclude>**/Main/WebHome.ca.xml</exclude>
             <exclude>**/Main/WebHome.de.xml</exclude>
+            <exclude>**/Main/WebHome.es.xml</exclude>
             <exclude>**/Main/WebHome.fr.xml</exclude>
             <exclude>**/Main/WebHome.it.xml</exclude>
             <exclude>**/Main/WebHome.lv.xml</exclude>
             <exclude>**/Main/WebHome.nl.xml</exclude>
             <exclude>**/Main/WebHome.ro.xml</exclude>
             <exclude>**/Main/WebHome.sv.xml</exclude>
+            <exclude>**/Main/WebHome.uk.xml</exclude>
             <exclude>**/Main/WebHome.zh.xml</exclude>
             <exclude>**/Main/WebHome.zh_TW.xml</exclude>
           </excludes>
