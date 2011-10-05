@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,9 +23,10 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language zh_TW generated from http://www.l10n.xwiki.org
-xem.answer.install.actions.template=* \u65B0\u589E\u9810\u8A2D\u6A21\u677F
-xem.answer.install.title=XWiki Enterprise Manager \u5B89\u88DD
-xem.install.error=XWiki Enterprise Manager \u5B89\u88DD\u5931\u6557 ({0})\u3002
-xem.install.success=XWiki Enterprise Manager \u5B89\u88DD\u6210\u529F\u3002
+#Wed Oct 05 19:00:36 CEST 2011
+xem.answer.install.actions.template=* 新增預設模板
+xem.answer.install.title=XWiki Enterprise Manager 安裝
+xem.install.error=XWiki Enterprise Manager 安裝失敗 ({0})。
+xem.install.success=XWiki Enterprise Manager 安裝成功。
 xem.xem=XWiki Enterprise Manager
 </content></xwikidoc>

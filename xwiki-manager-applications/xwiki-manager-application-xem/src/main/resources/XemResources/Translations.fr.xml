@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,11 +23,12 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language fr generated from http://www.l10n.xwiki.org
+#Wed Oct 05 19:00:14 CEST 2011
 xem.answer.install.actions=Afin de finir l'installation, XWiki Enterprise Manager va effectuer les actions suivantes \:
-xem.answer.install.actions.template=* Ajouter un template par d\u00E9faut
+xem.answer.install.actions.template=* Ajouter un template par défaut
 xem.answer.install.title=Installation de XWiki Enterprise Manager
-xem.install.error=L''installation de XWiki Enterprise Manager a \u00E9chou\u00E9 ({0}).
+xem.install.error=L''installation de XWiki Enterprise Manager a échoué ({0}).
 xem.install.noneed=Pas d'action requise.
-xem.install.success=XWiki Enterprise Manager a \u00E9t\u00E9 install\u00E9 avec succ\u00E8s.
+xem.install.success=XWiki Enterprise Manager a été installé avec succès.
 xem.xem=XWiki Enterprise Manager
 </content></xwikidoc>

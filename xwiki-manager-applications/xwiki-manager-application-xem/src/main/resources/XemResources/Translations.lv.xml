@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,11 +23,12 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language lv generated from http://www.l10n.xwiki.org
-xem.answer.install.actions=Lai pabeigtu uzst\u0101d\u012B\u0161anu Xwiki Uz\u0146\u0113muma p\u0101rvaldnieks veiks\:
-xem.answer.install.actions.template=* Pievienot noklus\u0113to veidni
-xem.answer.install.title=XWiki Uz\u0146\u0113muma p\u0101rvaldnieka uzst\u0101d\u012B\u0161ana
-xem.install.error=XWiki Uz\u0146\u0113muma p\u0101rvaldnieka uzst\u0101d\u012Bt neizdev\u0101s ({0}).
-xem.install.noneed=Darb\u012Bbas nav nepiecie\u0161amas.
-xem.install.success=XWiki Uz\u0146\u0113muma p\u0101rvaldnieka uzst\u0101d\u012B\u0161ana pabeigta veiksm\u012Bgi
-xem.xem=XWiki Uz\u0146\u0113muma p\u0101rvaldnieks
+#Wed Oct 05 19:00:19 CEST 2011
+xem.answer.install.actions=Lai pabeigtu uzstādīšanu Xwiki Uzņēmuma pārvaldnieks veiks\:
+xem.answer.install.actions.template=* Pievienot noklusēto veidni
+xem.answer.install.title=XWiki Uzņēmuma pārvaldnieka uzstādīšana
+xem.install.error=XWiki Uzņēmuma pārvaldnieka uzstādīt neizdevās ({0}).
+xem.install.noneed=Darbības nav nepieciešamas.
+xem.install.success=XWiki Uzņēmuma pārvaldnieka uzstādīšana pabeigta veiksmīgi
+xem.xem=XWiki Uzņēmuma pārvaldnieks
 </content></xwikidoc>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,11 +23,12 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language ca generated from http://www.l10n.xwiki.org
-xem.answer.install.actions=Per a completar la instal\u00B7laci\u00F3 del gestor empresarial XWiki haureu de \:
+#Wed Oct 05 19:00:10 CEST 2011
+xem.answer.install.actions=Per a completar la instal·lació del gestor empresarial XWiki haureu de \:
 xem.answer.install.actions.template=* Afegir la plantilla predeterminada
-xem.answer.install.title=Instal\u00B7laci\u00F3 del gestor empresarial XWiki
-xem.install.error=Error en instal\u00B7lar el gestor empresarial XWiki ({0}).
-xem.install.noneed=No es requereix cap acci\u00F3.
-xem.install.success=Instal\u00B7laci\u00F3 correcta del gestor empresarial XWiki.
+xem.answer.install.title=Instal·lació del gestor empresarial XWiki
+xem.install.error=Error en instal·lar el gestor empresarial XWiki ({0}).
+xem.install.noneed=No es requereix cap acció.
+xem.install.success=Instal·lació correcta del gestor empresarial XWiki.
 xem.xem=Gestor empresarial XWiki
 </content></xwikidoc>

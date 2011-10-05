@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,11 +23,12 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language sv generated from http://www.l10n.xwiki.org
-xem.answer.install.actions=F\u00F6r att f\u00E4rdigst\u00E4lla installationen skall XWiki Enterprise Manager\:
-xem.answer.install.actions.template=* L\u00E4gg till standardmall
+#Wed Oct 05 19:00:33 CEST 2011
+xem.answer.install.actions=För att färdigställa installationen skall XWiki Enterprise Manager\:
+xem.answer.install.actions.template=* Lägg till standardmall
 xem.answer.install.title=XWiki Enterprise Manager-installation
 xem.install.error=Installationen av XWiki Enterprise Manager misslyckades ({0}).
-xem.install.noneed=Ingen \u00E5tg\u00E4rd beh\u00F6vs.
+xem.install.noneed=Ingen åtgärd behövs.
 xem.install.success=Installationen av XWiki Enterprise Manager lyckades.
 xem.xem=XWiki Enterprise Manager
 </content></xwikidoc>

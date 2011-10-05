@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <xwikidoc>
 <web>XemResources</web>
 <name>Translations</name>
@@ -24,6 +23,7 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language it generated from http://www.l10n.xwiki.org
+#Wed Oct 05 19:00:18 CEST 2011
 xem.answer.install.actions=Per completare l'installazione XWiki Enterprise Manager deve\:
 xem.answer.install.actions.template=* Aggiungi modello di default
 xem.answer.install.title=Installazione di XWiki Enterprise Manager
