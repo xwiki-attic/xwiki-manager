@@ -8,7 +8,7 @@
   <artifactId>xwiki-manager-ui-all</artifactId>
   <name>XWiki Enterprise Manager - UI All</name>
   <packaging>xar</packaging>
-  <description>All in one XWiki Enterprise Manager XAR package/description>
+  <description>All in one XWiki Enterprise Manager XAR package</description>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.manager</groupId>
