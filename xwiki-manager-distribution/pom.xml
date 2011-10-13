@@ -93,6 +93,9 @@
       </plugins>
     </pluginManagement>
   </build>
+  <modules>
+    <module>xwiki-manager-ui-all</module>
+  </modules>
   <profiles>
     <profile>
       <id>hsqldb</id>

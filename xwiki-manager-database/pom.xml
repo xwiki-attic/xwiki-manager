@@ -40,7 +40,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-wiki-administrator</artifactId>
+      <artifactId>xwiki-manager-ui-all</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
       <optional>true</optional>
@@ -58,7 +58,7 @@
           <version>${commons.version}</version>
           <configuration>
             <groupId>${project.groupId}</groupId>
-            <artifactId>xwiki-manager-wiki-administrator</artifactId>
+            <artifactId>xwiki-manager-ui-all</artifactId>
             <outputDirectory>${project.build.directory}/xar</outputDirectory>
           </configuration>
           <executions>

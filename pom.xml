@@ -60,7 +60,7 @@
   <modules>
     <module>xwiki-manager-web</module>
     <module>xwiki-manager-applications</module>
-    <module>xwiki-manager-wikis</module>
+    <module>xwiki-manager-ui</module>
     <module>xwiki-manager-database</module>
     <module>xwiki-manager-distribution</module>
   </modules>

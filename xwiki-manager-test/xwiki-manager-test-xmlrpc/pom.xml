@@ -36,7 +36,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-wiki-administrator</artifactId>
+      <artifactId>xwiki-manager-ui-all</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
       <scope>test</scope>

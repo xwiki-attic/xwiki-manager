@@ -180,7 +180,7 @@
               <property>
                 <name>pathToXWikiXar</name>
                 <value>
-                  org/xwiki/manager/xwiki-manager-wiki-administrator/${project.version}/xwiki-manager-wiki-administrator-${project.version}.xar
+                  org/xwiki/manager/xwiki-manager-ui-all/${project.version}/xwiki-manager-ui-all-${project.version}.xar
                 </value>
               </property>
               <property>
