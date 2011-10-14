@@ -48,7 +48,7 @@
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-application-manager</artifactId>
+      <artifactId>xwiki-platform-application-manager-ui</artifactId>
       <version>${platform.version}</version>
       <type>xar</type>
     </dependency>
