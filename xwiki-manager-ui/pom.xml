@@ -47,15 +47,60 @@
       <type>xar</type>
     </dependency>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-application-xem</artifactId>
-      <version>${project.version}</version>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-application-manager</artifactId>
+      <version>${platform.version}</version>
       <type>xar</type>
     </dependency>
   </dependencies>
   <build>
     <plugins>
-      <!-- For applicatiosn based on ApplicationManager, ensure application version in applications descriptors page is correct -->
+      <!-- Step 1: Download XE xar -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <!-- <phase>generate-sources</phase> -->
+            <goals>
+              <goal>copy</goal>
+            </goals>
+            <configuration>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.xwiki.enterprise</groupId>
+                  <artifactId>xwiki-enterprise-ui-all</artifactId>
+                  <version>${enterprise.version}</version>
+                  <type>xar</type>
+                  <overWrite>true</overWrite>
+                  <outputDirectory>${project.build.directory}/xe</outputDirectory>
+                  <destFileName>template-xe.xar</destFileName>
+                </artifactItem>
+              </artifactItems>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- Step 2: Attach XE xar to XEM install page -->
+      <plugin>
+        <groupId>org.xwiki.platform</groupId>
+        <artifactId>xwiki-platform-tool-xmldoc-update-plugin</artifactId>
+        <version>${platform.version}</version>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <id>attach-xe-xar</id>
+            <goals>
+              <goal>attach</goal>
+            </goals>
+            <configuration>
+              <file>${project.build.directory}/xe/template-xe.xar</file>
+              <sourceDocument>${basedir}/src/main/resources/XemManager/Install.xml</sourceDocument>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- For applications based on ApplicationManager, ensure application version in applications descriptors page is correct -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>xml-maven-plugin</artifactId>
