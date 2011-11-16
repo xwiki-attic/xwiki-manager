@@ -42,7 +42,7 @@ Sveicināti jūsu viki saimniecības pārvaldniekā! Tā ir vieta, kas jauj jums
 #############################################################################
 
 #includeMacros("WikiCode.Macros")
-#set($WikiManager = $xwiki.wikimanager)
+#set($WikiManager = $services.wikimanager)
 
 #set($nb = 5)
 #set($wikilist = $WikiManager.getAllWikis())
