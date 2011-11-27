@@ -22,4 +22,6 @@
 <minorEdit>true</minorEdit>
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
-<content>{{include document='Dashboard.WebHome' context='new' /}}</content></xwikidoc>
+<content>{{include document='WorkspaceManager.Install' context='new'/}}
+
+{{include document='Dashboard.WebHome' context='new' /}}</content></xwikidoc>
