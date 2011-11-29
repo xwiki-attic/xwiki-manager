@@ -41,6 +41,7 @@
     
     <!-- Configuration -->
     <xwiki.cfg.virtual>1</xwiki.cfg.virtual>
+    <xwiki.cfg.virtual.usepath>1</xwiki.cfg.virtual.usepath>
     <xem.xwiki.cfg.plugins>${xe.xwiki.cfg.plugins},\
   com.xpn.xwiki.plugin.wikimanager.WikiManagerPlugin,\
   com.xpn.xwiki.plugin.applicationmanager.ApplicationManagerPlugin\
