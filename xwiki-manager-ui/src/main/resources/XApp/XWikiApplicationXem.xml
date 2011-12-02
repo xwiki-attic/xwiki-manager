@@ -250,7 +250,8 @@
 </property>
 <property>
 <docstoinclude>
-<value>[Xem%]</value>
+<value>[XemManager.%]</value>
+<value>[XemResources.Web%]</value>
 <value>[Panels.%]</value>
 </docstoinclude>
 </property>
@@ -259,7 +260,10 @@
 </property>
 <property>
 <documents>
+<value>WikiManager.Dashboard</value>
 <value>Main.WebHome</value>
+<value>Main.Welcome</value>
+<value>Dashboard.WebHome</value>
 <value>[XemManager.%]</value>
 <value>[XemResources.%]</value>
 <value>Panels.QuickLinks</value>
