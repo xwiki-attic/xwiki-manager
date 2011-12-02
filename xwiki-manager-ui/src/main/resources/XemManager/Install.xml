@@ -68,11 +68,20 @@
 
 ###############################################
 
+#set($templateName = "templatexe")
+
 #set($templateList = $WikiManager.getWikiTemplateList())
 
-#if($templateList.size() == 0)
+#set($templateExists = false)
+#foreach($template in $templateList)
+  #if($template.wikiName == $templateName)
+    #set($templateExists = true)
+  #end
+#end
+
+#if($templateExists == false)
   #if($confirm &amp;&amp; $confirm == 1)
-    #set($result = $WikiManager.createWikiTemplate("templatexe", "XWiki Entreprise (default xwiki)", "template-xe.xar"))
+    #set($result = $WikiManager.createWikiTemplate($templateName, "XWiki Entreprise (default xwiki)", "template-xe.xar"))
     #if ($result == $Exception.ERROR_NOERROR)
       #info($msg.get("xem.install.success"))
     #elseif ($result == $Exception.ERROR_XWIKI_ACCESS_DENIED)
