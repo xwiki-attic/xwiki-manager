@@ -40,4 +40,7 @@ xem.answer.install.actions.template=* Add default template
 manager.dashboard.welcome=What is a workspace?
 manager.dashboard.workspaces=Workspaces
 manager.homepage.title=Main wiki
+manager.homepage.installCheck.notYetComplete=The installation process is not yet complete.\n\
+\n\
+In order to finish the installation process, please log in as Admin and go to the page [[{0}&gt;&gt;{0}]]. 
 }}}</content></xwikidoc>
