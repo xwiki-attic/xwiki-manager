@@ -23,5 +23,12 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language cs generated from http://www.l10n.xwiki.org
-#Wed Oct 05 19:00:11 CEST 2011
+#Fri Dec 16 04:49:44 CET 2011
+xem.answer.install.actions=Pro dokončení instalace XWiki Enterprise Manager \:
+xem.answer.install.actions.template=* Přidat výchozí šablonu
+xem.answer.install.title=Instalace XWiki Enterprise Manager
+xem.install.error=Instalace XWiki Enterprise Manager selhala ({0}).
+xem.install.noneed=Není nutná žádná akce.
+xem.install.success=XWiki Enterprise Manager instalován úspěšně
+xem.xem=XWiki Enterprise Manager
 </content></xwikidoc>

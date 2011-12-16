@@ -23,8 +23,8 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language uk generated from http://www.l10n.xwiki.org
-#Wed Oct 05 19:00:34 CEST 2011
-xem.answer.install.actions=Щоб завершити розгортання, XWiki Enterprise Manager збирається\:
+#Fri Dec 16 04:50:00 CET 2011
+xem.answer.install.actions=Щоб завершити розгортання, XWiki Enterprise Manager збирається зробити наступне\:
 xem.answer.install.actions.template=* Додати шаблон за замовчуванням
 xem.answer.install.title=Розгортання XWiki Enterprise Manager
 xem.install.error=Невдала спроба розгорнути XWiki Enterprise Manager ({0}).
