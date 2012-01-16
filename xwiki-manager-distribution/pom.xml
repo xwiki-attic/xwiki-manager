@@ -33,38 +33,6 @@
   <name>XWiki Enterprise Manager - Distribution - Parent POM</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Distribution - Parent POM</description>
-  <dependencies>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-web</artifactId>
-      <version>${project.version}</version>
-      <type>war</type>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-tool-rootwebapp</artifactId>
-      <version>${platform.version}</version>
-      <type>war</type>
-      <optional>true</optional>
-    </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-tool-jetty-resources</artifactId>
-      <version>${platform.version}</version>
-      <type>zip</type>
-      <optional>true</optional>
-    </dependency>
-    <!-- Add the database JAR so that it's included in the expanded WAR since it's not included
-         by default in the Platform WAR. -->
-    <dependency>
-      <groupId>${xwiki.db.jdbc.groupId}</groupId>
-      <artifactId>${xwiki.db.jdbc.artifactId}</artifactId>
-      <version>${xwiki.db.jdbc.version}</version>
-      <scope>runtime</scope>
-      <optional>true</optional>
-    </dependency>
-  </dependencies>
   <build>
     <pluginManagement>
       <plugins>
@@ -95,34 +63,6 @@
   </build>
   <modules>
     <module>xwiki-manager-ui-all</module>
+    <module>xwiki-manager-jetty</module>
   </modules>
-  <profiles>
-    <profile>
-      <id>hsqldb</id>
-      <activation>
-        <activeByDefault>true</activeByDefault>
-      </activation>
-      <modules>
-        <module>xwiki-manager-jetty-hsqldb</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>derby</id>
-      <modules>
-        <module>xwiki-manager-jetty-derby</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>pgsql</id>
-      <modules>
-        <module>xwiki-manager-jetty-pgsql</module>
-      </modules>
-    </profile>
-    <profile>
-      <id>mysql</id>
-      <modules>
-        <module>xwiki-manager-jetty-mysql</module>
-      </modules>
-    </profile>
-  </profiles>
 </project>
