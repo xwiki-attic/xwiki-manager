@@ -29,7 +29,7 @@
     <artifactId>xwiki-manager-distribution</artifactId>
     <version>3.4-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-manager-distribution-jetty</artifactId>
+  <artifactId>xwiki-manager-jetty</artifactId>
   <name>XWiki Enterprise Manager - Distribution - Jetty</name>
   <packaging>pom</packaging>
   <description>XWiki Enterprise Manager - Distribution - Jetty</description>

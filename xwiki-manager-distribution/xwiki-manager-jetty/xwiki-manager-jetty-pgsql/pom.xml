@@ -26,7 +26,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>org.xwiki.manager</groupId>
-    <artifactId>xwiki-manager-distribution</artifactId>
+    <artifactId>xwiki-manager-jetty</artifactId>
     <version>3.4-SNAPSHOT</version>
   </parent>
   <artifactId>xwiki-manager-jetty-pgsql</artifactId>
