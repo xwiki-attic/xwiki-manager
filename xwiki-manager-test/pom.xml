@@ -186,8 +186,7 @@
               <property>
                 <name>documentsToTest</name>
                 <!-- WikiManager.Dashboard is being @Ignore'd because of http://jira.xwiki.org/jira/browse/XEM-188 -->
-                <!-- TODO: Add WorkspaceManager.* to the list after http://jira.xwiki.org/browse/XWIKI-7194 is fixed. -->
-                <value>Panels\.QuickLinks|Xem.*|XApp.*|Wiki(?!Manager\.Dashboard).+|XWiki\.XWikiServer.*</value>
+                <value>Panels\.QuickLinks|Xem.*|XApp.*|Wiki(?!Manager\.Dashboard).+|XWiki\.XWikiServer.*|WorkspaceManager.*</value>
               </property>
             </systemProperties>
           </configuration>
