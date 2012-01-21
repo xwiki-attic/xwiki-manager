@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-applications</artifactId>
-    <version>3.2-SNAPSHOT</version>
+    <version>3.2.1</version>
   </parent>
   <artifactId>xwiki-manager-application-xem</artifactId>
   <name>XWiki Enterprise Manager - Applications - XEM</name>
