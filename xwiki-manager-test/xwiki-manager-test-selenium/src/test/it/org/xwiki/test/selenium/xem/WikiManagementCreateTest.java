@@ -39,11 +39,6 @@ public class WikiManagementCreateTest extends AbstractXWikiTestCase
         return suite;
     }
 
-    /**
-     * {@inheritDoc}
-     * 
-     * @see com.xpn.xwiki.it.selenium.framework.AbstractXWikiTestCase#setUp()
-     */
     @Override
     public void setUp() throws Exception
     {
