@@ -23,7 +23,6 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language es generated from http://www.l10n.xwiki.org
-#Wed Oct 05 19:00:13 CEST 2011
 xem.answer.install.actions=Para completar la instalación XWiki Enterprise Manager \:\n
 xem.answer.install.actions.template=* Añadir plantilla por defecto
 xem.answer.install.title=Instalación de XWiki Enterprise Manager

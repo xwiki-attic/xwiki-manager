@@ -23,7 +23,6 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language lv generated from http://www.l10n.xwiki.org
-#Wed Oct 05 19:00:19 CEST 2011
 xem.answer.install.actions=Lai pabeigtu uzstādīšanu Xwiki Uzņēmuma pārvaldnieks veiks\:
 xem.answer.install.actions.template=* Pievienot noklusēto veidni
 xem.answer.install.title=XWiki Uzņēmuma pārvaldnieka uzstādīšana
