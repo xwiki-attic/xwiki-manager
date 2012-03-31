@@ -171,7 +171,6 @@
                 <name>debug</name>
                 <value>${debug}</value>
               </property>
-              <!-- TODO: Find way to have maven merge properties and move this to the selenium-tests module -->
               <property>
                 <name>browser</name>
                 <value>${browser}</value>
@@ -214,6 +213,9 @@
     <port>8080</port>
     <stopport>8079</stopport>
     <seleniumPort>4444</seleniumPort>
+    <!-- Run tests on Firefox by default. You can use a different browser by activating the corresponding profile,
+         e.g. -Pchrome -->
+    <browser>*firefox</browser>
   </properties>
   <profiles>
     <profile>
@@ -318,10 +320,33 @@
         <dependency>
           <groupId>com.cenqua.clover</groupId>
           <artifactId>clover</artifactId>
-          <version>3.0.2</version>
           <scope>test</scope>
         </dependency>
       </dependencies>
+    </profile>
+    <!-- Browser profiles for both Selenium 1 and Selenium 2 tests. -->
+    <profile>
+      <id>firefox</id>
+      <!-- Not necessary to define the browser property since it's defined to be firefox by default. We keep this
+           profile simply to be symmetrical with other profiles -->
+    </profile>
+    <profile>
+      <id>iexplore</id>
+      <properties>
+        <browser>*iexplore</browser>
+      </properties>
+    </profile>
+    <profile>
+      <id>chrome</id>
+      <properties>
+        <browser>*chrome</browser>
+      </properties>
+    </profile>
+    <profile>
+      <id>otherbrowser</id>
+      <properties>
+        <browser>*custom ${browserPath}</browser>
+      </properties>
     </profile>
   </profiles>
   <modules>

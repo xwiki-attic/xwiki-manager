@@ -59,14 +59,15 @@
     <url>http://jira.xwiki.org/jira/browse/XEM</url>
   </issueManagement>
   <modules>
-    <module>xwiki-manager-web</module>
-    <module>xwiki-manager-ui</module>
+    <!-- Sorted Alphabetically -->
     <module>xwiki-manager-database</module>
     <module>xwiki-manager-distribution</module>
+    <module>xwiki-manager-ui</module>
+    <module>xwiki-manager-web</module>
   </modules>
   <profiles>
     <profile>
-      <id>ci</id>
+      <id>integration-tests</id>
       <modules>
         <module>xwiki-manager-test</module>
       </modules>
