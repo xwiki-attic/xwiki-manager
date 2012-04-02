@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xwikidoc>
-<web>WikiManager</web>
-<name>Dashboard</name>
-<language>ca</language>
-<defaultLanguage>en</defaultLanguage>
-<translation>1</translation>
-<parent>Main.WebHome</parent>
-<creator>XWiki.Admin</creator>
-<author>XWiki.Admin</author>
-<customClass></customClass>
-<contentAuthor>XWiki.Admin</contentAuthor>
-<creationDate>1166007764000</creationDate>
-<date>1204110875000</date>
-<contentUpdateDate>1204211840000</contentUpdateDate>
-<version>1.1</version>
-<title></title>
-<template></template>
-<defaultTemplate></defaultTemplate>
-<validationScript></validationScript>
-<comment></comment>
-<minorEdit>false</minorEdit>
-<syntaxId>xwiki/1.0</syntaxId>
-<hidden>false</hidden>
-<content>1 Benvinguts al vostre administrador wiki
+  <web>WikiManager</web>
+  <name>Dashboard</name>
+  <language>ca</language>
+  <defaultLanguage/>
+  <translation>1</translation>
+  <parent>Main.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1166007764000</creationDate>
+  <date>1204110875000</date>
+  <contentUpdateDate>1204211840000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <template/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>1 Benvinguts al vostre administrador wiki
 
 Benvinguts al vostre administrador wiki de la vostra granja wiki! Aquest és un espai que us permetrà crear tantes wikis com  desitgeu i gestionar-les. Cada wiki és un espai de treball compartit que us permetrà col·laborar de forma eficaç amb altres persones. Podreu utilitzar-ho per a diversos propòsits:
 
@@ -69,4 +70,5 @@ Per a més informació, doneu un cop d'ull a la documentació de [xwiki.org&gt;h
 Aquesta XWiki és vostra, esperem que la gaudiu ...
 
 Enhorabona,
-L'equip XWiki</content></xwikidoc>
+L'equip XWiki</content>
+</xwikidoc>
