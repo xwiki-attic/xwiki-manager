@@ -146,5 +146,15 @@
         <module>xwiki-manager-database-derby</module>
       </modules>
     </profile>
+    <profile>
+      <!-- Note: Even though this profile doesn't do much it's required to allow not activating the HSQLDB profile
+           when building for MySQL -->
+      <id>mysql</id>
+    </profile>
+    <profile>
+      <!-- Note: Even though this profile doesn't do much it's required to allow not activating the HSQLDB profile
+           when building for PostgreSQL -->
+      <id>pgsql</id>
+    </profile>
   </profiles>
 </project>
