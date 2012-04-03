@@ -351,7 +351,6 @@
   </profiles>
   <modules>
     <module>xwiki-manager-test-webstandards</module>
-    <module>xwiki-manager-test-xmlrpc</module>
     <module>xwiki-manager-test-selenium</module>
   </modules>
 </project>
