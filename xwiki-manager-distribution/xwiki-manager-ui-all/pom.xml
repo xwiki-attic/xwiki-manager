@@ -17,13 +17,6 @@
       <type>xar</type>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-workspace-ui</artifactId>
-      <version>${platform.version}</version>
-      <type>xar</type>
-      <scope>provided</scope>
-    </dependency>
   </dependencies>
   <build>
     <pluginManagement>
