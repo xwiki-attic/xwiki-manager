@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-jetty</artifactId>
-    <version>3.5-SNAPSHOT</version>
+    <version>3.5.1</version>
   </parent>
   <artifactId>xwiki-manager-jetty-hsqldb</artifactId>
   <name>XWiki Enterprise Manager - Distribution - Jetty - HSQLDB</name>

@@ -3,7 +3,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-distribution</artifactId>
-    <version>3.5-SNAPSHOT</version>
+    <version>3.5.1</version>
   </parent>
   <artifactId>xwiki-manager-ui-all</artifactId>
   <name>XWiki Enterprise Manager - UI All</name>
