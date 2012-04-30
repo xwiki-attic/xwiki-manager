@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager</artifactId>
-    <version>4.0-SNAPSHOT</version>
+    <version>4.0</version>
   </parent>
   <artifactId>xwiki-manager-database</artifactId>
   <name>XWiki Enterprise Manager - Database - Parent POM</name>
