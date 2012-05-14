@@ -6,10 +6,10 @@
 <defaultLanguage></defaultLanguage>
 <translation>1</translation>
 <parent>XemResources.WebHome</parent>
-<creator>XWiki.Admin</creator>
-<author>XWiki.Admin</author>
+<creator>xwiki:XWiki.Admin</creator>
+<author>xwiki:XWiki.Admin</author>
 <customClass></customClass>
-<contentAuthor>XWiki.Admin</contentAuthor>
+<contentAuthor>xwiki:XWiki.Admin</contentAuthor>
 <creationDate>1188318798000</creationDate>
 <date>1278346211000</date>
 <contentUpdateDate>1278346211000</contentUpdateDate>
