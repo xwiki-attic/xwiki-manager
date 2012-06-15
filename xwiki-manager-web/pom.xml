@@ -34,7 +34,7 @@
   <packaging>war</packaging>
   <description>XWiki Enterprise Manager - Web</description>
   <properties>
-    <!-- XWiki Enterprise Manager ebbed XWiki Enterprise -->
+    <!-- XWiki Enterprise Manager embeds XWiki Enterprise -->
     <xwiki.extension.features>org.xwiki.enterprise:xwiki-enterprise-web</xwiki.extension.features>
   </properties>
   <dependencies>
@@ -102,6 +102,13 @@
             WEB-INF/lib/commons-logging-*.jar,
             %regex[WEB-INF/lib/log4j-(?!over-slf4j).*.jar]
           </packagingExcludes>
+          <!-- Make some project related informations easier to find at runtime. -->
+          <!-- FIXME: ideally this should be located in xwiki-enterprise root pom in <pluginManagement> but I can't make it work -->
+          <archive>
+            <manifestEntries>
+              <XWiki-Extension-Id>${project.groupId}:${project.artifactId}</XWiki-Extension-Id>
+            </manifestEntries>
+          </archive>
         </configuration>
       </plugin>
     </plugins>
