@@ -33,6 +33,10 @@
   <name>XWiki Enterprise Manager - Web</name>
   <packaging>war</packaging>
   <description>XWiki Enterprise Manager - Web</description>
+  <properties>
+    <!-- XWiki Enterprise Manager ebbed XWiki Enterprise -->
+    <xwiki.extension.features>org.xwiki.enterprise:xwiki-enterprise-web</xwiki.extension.features>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>
