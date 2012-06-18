@@ -23,4 +23,15 @@
 <syntaxId>xwiki/2.0</syntaxId>
 <hidden>false</hidden>
 <content>## XWiki Translation for language da generated from http://www.l10n.xwiki.org
+manager.dashboard.welcome=Hvad er et arbejdsområde
+manager.dashboard.workspaces=Arbejdsområder
+manager.homepage.installCheck.notYetComplete=Instllationsprocessen er ikke færdig endnu.\n\nFor at gøre installationsprocessen færdig, log ind som Admin og gå til side [[{0}&gt;&gt;{0}]]. 
+manager.homepage.title=Hovedwiki
+xem.answer.install.actions=For at færdiggøre installationen, XWiki Enterprise Manager ønsker at\:
+xem.answer.install.actions.template=* Tilføj standardskema
+xem.answer.install.title=XWiki Enterprise Manager installation
+xem.install.error=Installation af XWiki Enterprise Manager fejlede ({0})
+xem.install.noneed=Ingen handling nødvendig
+xem.install.success=XWiki Enterprise Manager installation gik godt.
+xem.xem=XWiki Enterprise Manager
 </content></xwikidoc>
