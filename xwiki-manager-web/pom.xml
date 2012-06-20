@@ -34,6 +34,9 @@
   <packaging>war</packaging>
   <description>XWiki Enterprise Manager - Web</description>
   <properties>
+    <!-- By default we don't include Legacy modules and thus we don't need to exclude the non legacy JARs -->
+    <xwiki.war.legacy.excludes />
+
     <!-- XWiki Enterprise Manager embeds XWiki Enterprise -->
     <xwiki.extension.features>org.xwiki.enterprise:xwiki-enterprise-web</xwiki.extension.features>
   </properties>
@@ -92,18 +95,134 @@
           </webResources>
           <!-- - Exclude JCL and LOG4J since we want all logging to go through SLF4J. Note that we're excluding
                  log4j-<version>.jar but keeping log4j-over-slf4j-<version>.jar
-               - Exclude xwiki-platform-olcore because it's already included in xwiki-platform-legacy-oldcore
+               - Exclude legacy modules if the legacy profile is not enabled so that we don't have both aspectified JAR
+                 and non aspectified ones
                - Exclude batik-js to prevent conflict with the patched version of Rhino used by yuicompressor used for
                  JSX. See http://jira.xwiki.org/jira/browse/XWIKI-6151 for more details.
           -->
           <packagingExcludes>
-            WEB-INF/lib/xwiki-platform-oldcore-*.jar,
+            ${xwiki.war.legacy.excludes}
             WEB-INF/lib/batik-js-*.jar,
             WEB-INF/lib/commons-logging-*.jar,
             %regex[WEB-INF/lib/log4j-(?!over-slf4j).*.jar]
           </packagingExcludes>
         </configuration>
       </plugin>
+      <!-- Ensure that some modules are not added as dependencies. -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>enforce-banned-dependencies</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <bannedDependencies>
+                  <excludes>
+                    <exclude>org.jmock:*</exclude>
+                    <exclude>junit:*</exclude>
+                    <exclude>javax.servlet:servlet-api:*:*:compile</exclude>
+                  </excludes>
+                  <includes>
+                    <!-- Allow only JUnit and JMock with scope test because -->
+                    <include>org.jmock:*:*:*:test</include>
+                    <include>junit:*:*:*:test</include>
+                  </includes>
+                </bannedDependencies>
+              </rules>
+            </configuration>
+          </execution>
+          <!-- Override check from top level POM that prevents depending on a legacy module since we want to package
+               Legacy modules in the generated XEM product -->
+          <execution>
+            <id>enforce-no-legacy-dependencies</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <xwikiBannedDependencies implementation="org.xwiki.tool.enforcer.XWikiBannedDependencies">
+                  <searchTransitive>true</searchTransitive>
+                  <excludes>
+                    <!-- Override the value from the top level POM with a value that'll not ban any dependency -->
+                    <exclude>alwaysok</exclude>
+                  </excludes>
+                </xwikiBannedDependencies>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
     </plugins>
   </build>
+  <profiles>
+    <!-- TODO: Find way not to duplicate the build portion below which is taken from the XE build. -->
+    <!-- Add Legacy modules -->
+    <profile>
+      <id>legacy</id>
+      <properties>
+        <xwiki.war.legacy.excludes>
+          WEB-INF/lib/xwiki-commons-component-api-*.jar,
+          WEB-INF/lib/xwiki-commons-component-default-*.jar,
+          WEB-INF/lib/xwiki-rendering-api-*.jar,
+          WEB-INF/lib/xwiki-platform-oldcore-*.jar,
+          WEB-INF/lib/xwiki-platform-office-importer-*.jar,
+          <!-- Leave the ending comma because this list is concatenated with another one. -->
+        </xwiki.war.legacy.excludes>
+      </properties>
+      <dependencies>
+        <dependency>
+          <groupId>org.xwiki.commons</groupId>
+          <artifactId>xwiki-commons-legacy-component-default</artifactId>
+          <version>${commons.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.commons</groupId>
+          <artifactId>xwiki-commons-legacy-configuration</artifactId>
+          <version>${commons.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.rendering</groupId>
+          <artifactId>xwiki-rendering-legacy-api</artifactId>
+          <version>${rendering.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-legacy-oldcore</artifactId>
+          <version>${platform.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-legacy-observation</artifactId>
+          <version>${platform.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-legacy-annotation</artifactId>
+          <version>${platform.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-legacy-model</artifactId>
+          <version>${platform.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+        <dependency>
+          <groupId>org.xwiki.platform</groupId>
+          <artifactId>xwiki-platform-legacy-office-importer</artifactId>
+          <version>${platform.version}</version>
+          <scope>runtime</scope>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>
