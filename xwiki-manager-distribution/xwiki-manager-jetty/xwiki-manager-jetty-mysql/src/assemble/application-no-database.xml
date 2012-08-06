@@ -61,10 +61,12 @@
       <unpack>true</unpack>
       <!-- TODO: This shouldn't be needed but there's a bug see http://jira.codehaus.org/browse/MASSEMBLY-554 -->
       <outputFileNameMapping>/</outputFileNameMapping>
+      <fileMode>0755</fileMode>
       <unpackOptions>
         <filtered>true</filtered>
         <includes>
           <include>**/start_xwiki*.*</include>
+          <include>**/stop_xwiki*.*</include>
         </includes>
       </unpackOptions>
     </dependencySet>
@@ -80,6 +82,7 @@
         <filtered>false</filtered>
         <excludes>
           <exclude>**/start_xwiki*.*</exclude>
+          <exclude>**/stop_xwiki*.*</exclude>
         </excludes>
       </unpackOptions>
     </dependencySet>
