@@ -39,6 +39,9 @@
 
     <!-- XWiki Enterprise Manager embeds XWiki Enterprise -->
     <xwiki.extension.features>org.xwiki.enterprise:xwiki-enterprise-web</xwiki.extension.features>
+
+    <!-- The default UI associated to this WAR -->
+    <xwiki.extension.distribution.ui>org.xwiki.manager:xwiki-manager-ui</xwiki.extension.distribution.ui>
   </properties>
   <dependencies>
     <dependency>
