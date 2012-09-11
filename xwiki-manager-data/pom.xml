@@ -29,10 +29,10 @@
     <artifactId>xwiki-manager</artifactId>
     <version>4.2-SNAPSHOT</version>
   </parent>
-  <artifactId>xwiki-manager-database</artifactId>
-  <name>XWiki Enterprise Manager - Database - Parent POM</name>
+  <artifactId>xwiki-manager-data</artifactId>
+  <name>XWiki Enterprise Manager - Data - Parent POM</name>
   <packaging>pom</packaging>
-  <description>XWiki Enterprise Manager - Database - Parent POM</description>
+  <description>XWiki Enterprise Manager - Data - Parent POM</description>
   <properties>
     <!-- Disable plugins mappings -->
     <xwiki.db.common.extraMappings />
@@ -51,35 +51,14 @@
       <plugins>
         <!-- Step 1: Copy and filter the Hibernate config file which will be used by the packager
        plugin -->
-        <!-- Step 2: Expand the XAR file -->
-        <plugin>
-          <groupId>org.xwiki.commons</groupId>
-          <artifactId>xwiki-commons-tool-xar-plugin</artifactId>
-          <version>${commons.version}</version>
-          <configuration>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>xwiki-manager-ui-all</artifactId>
-            <outputDirectory>${project.build.directory}/xar</outputDirectory>
-          </configuration>
-          <executions>
-            <execution>
-              <!-- Right phase is prepare-package, but it is only in maven-2.1
-              <phase>prepare-package</phase>-->
-              <phase>package</phase>
-              <goals>
-                <goal>unxar</goal>
-              </goals>
-            </execution>
-          </executions>
-        </plugin>
-        <!-- Step 3: Import the XAR content into the Database -->
+        <!-- Step 2: Import the XAR dependencies into the database -->
         <plugin>
           <groupId>org.xwiki.platform</groupId>
           <artifactId>xwiki-platform-tool-packager-plugin</artifactId>
           <version>${platform.version}</version>
           <configuration>
-            <sourceDirectory>${project.build.directory}/xar</sourceDirectory>
-            <hibernateConfig>${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml
+            <hibernateConfig>
+              ${project.build.directory}/maven-shared-archive-resources/hibernate.cfg.xml
             </hibernateConfig>
           </configuration>
           <dependencies>
@@ -87,6 +66,25 @@
               <groupId>${xwiki.db.jdbc.groupId}</groupId>
               <artifactId>${xwiki.db.jdbc.artifactId}</artifactId>
               <version>${xwiki.db.jdbc.version}</version>
+            </dependency>
+            <!-- Since we're building XWiki Enterprise, we need to add the ActivityStream plugin as a dependency,
+                 which has its own mapping and migrators. -->
+            <dependency>
+              <groupId>org.xwiki.platform</groupId>
+              <artifactId>xwiki-platform-activitystream</artifactId>
+              <version>${platform.version}</version>
+            </dependency>
+            <!-- Annotation has it own migrator that we need to execute to set the rigth version to the DB. -->
+            <dependency>
+              <groupId>org.xwiki.platform</groupId>
+              <artifactId>xwiki-platform-annotation-io</artifactId>
+              <version>${platform.version}</version>
+            </dependency>
+            <!-- WikiMacro classes are automatically generated. -->
+            <dependency>
+              <groupId>org.xwiki.platform</groupId>
+              <artifactId>xwiki-platform-rendering-wikimacro-store</artifactId>
+              <version>${platform.version}</version>
             </dependency>
             <!-- We need the Servlet API dep since it's used by the Packager and since it has
                  a provided scope in XWiki core it's not inherited as part of transitive deps -->
@@ -98,22 +96,20 @@
           </dependencies>
           <executions>
             <execution>
-              <!-- Right phase is prepare-package, but it is only in maven-2.1
-              <phase>prepare-package</phase>-->
-              <phase>package</phase>
+              <phase>prepare-package</phase>
               <goals>
                 <goal>import</goal>
               </goals>
             </execution>
           </executions>
         </plugin>
-        <!-- Step 4: Zip the generated database (for embedded databases only) -->
+        <!-- Step 3: Zip the generated database (for embedded databases only) -->
         <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-assembly-plugin</artifactId>
           <configuration>
             <descriptors>
-              <descriptor>${basedir}/src/assemble/database.xml</descriptor>
+              <descriptor>${basedir}/src/assemble/data.xml</descriptor>
             </descriptors>
           </configuration>
           <executions>
@@ -137,13 +133,13 @@
         <activeByDefault>true</activeByDefault>
       </activation>
       <modules>
-        <module>xwiki-manager-database-hsqldb</module>
+        <module>xwiki-manager-data-hsqldb</module>
       </modules>
     </profile>
     <profile>
       <id>derby</id>
       <modules>
-        <module>xwiki-manager-database-derby</module>
+        <module>xwiki-manager-data-derby</module>
       </modules>
     </profile>
     <profile>

@@ -60,7 +60,7 @@
   </issueManagement>
   <modules>
     <!-- Sorted Alphabetically -->
-    <module>xwiki-manager-database</module>
+    <module>xwiki-manager-data</module>
     <module>xwiki-manager-distribution</module>
     <module>xwiki-manager-ui</module>
     <module>xwiki-manager-web</module>

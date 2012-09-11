@@ -36,7 +36,7 @@
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-database-hsqldb</artifactId>
+      <artifactId>xwiki-manager-data-hsqldb</artifactId>
       <version>${project.version}</version>
       <type>zip</type>
       <optional>true</optional>
