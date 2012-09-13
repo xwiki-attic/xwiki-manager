@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager</artifactId>
-    <version>4.2-SNAPSHOT</version>
+    <version>4.2-milestone-3</version>
   </parent>
   <artifactId>xwiki-manager-ui</artifactId>
   <name>XWiki Enterprise Manager - UI</name>
