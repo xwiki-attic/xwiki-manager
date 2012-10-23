@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xwikidoc>
-<web>Main</web>
-<name>WebHome</name>
-<language>lv</language>
-<defaultLanguage></defaultLanguage>
-<translation>1</translation>
-<parent></parent>
-<creator>xwiki:XWiki.Admin</creator>
-<author>xwiki:XWiki.Admin</author>
-<customClass></customClass>
-<contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-<creationDate>1322163332000</creationDate>
-<date>1322402877000</date>
-<contentUpdateDate>1322402877000</contentUpdateDate>
-<version>1.1</version>
-<title>$msg.get('manager.homepage.title')</title>
-<template></template>
-<defaultTemplate></defaultTemplate>
-<validationScript></validationScript>
-<comment></comment>
-<minorEdit>false</minorEdit>
-<syntaxId>xwiki/2.0</syntaxId>
-<hidden>false</hidden>
-<content>1 Sveicināti jūsu viki pārvaldniekā
+  <web>Main</web>
+  <name>WebHome</name>
+  <language>lv</language>
+  <defaultLanguage/>
+  <translation>1</translation>
+  <parent/>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1322163332000</creationDate>
+  <date>1322402877000</date>
+  <contentUpdateDate>1322402877000</contentUpdateDate>
+  <version>1.1</version>
+  <title>$msg.get('manager.homepage.title')</title>
+  <template/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>false</hidden>
+  <content>1 Sveicināti jūsu viki pārvaldniekā
 
 Sveicināti jūsu viki saimniecības pārvaldniekā! Tā ir vieta, kas jauj jums veidot tik daudzus viki, cik jus vēlaties un spējat pārvaldīt. Katrs viki ir atsevišķi izmantojama darba vieta, kurā jūs varat efektīvi sadarboties ar citiem. Jūs varēsiet to izmantot visdažādākajiem nolūkiem:
 
@@ -70,4 +71,5 @@ Lai gūtu papildu informāciju, dodieties uz [xwiki.org&gt;http://xwiki.org].
 
 Vēlam veiksmi!
 
-XWiki komanda</content></xwikidoc>
+XWiki komanda</content>
+</xwikidoc>

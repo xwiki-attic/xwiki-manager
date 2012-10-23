@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <xwikidoc>
-<web>Main</web>
-<name>WebHome</name>
-<language>fr</language>
-<defaultLanguage></defaultLanguage>
-<translation>1</translation>
-<parent></parent>
-<creator>xwiki:XWiki.Admin</creator>
-<author>xwiki:XWiki.Admin</author>
-<customClass></customClass>
-<contentAuthor>xwiki:XWiki.Admin</contentAuthor>
-<creationDate>1322163332000</creationDate>
-<date>1322402877000</date>
-<contentUpdateDate>1322402877000</contentUpdateDate>
-<version>1.1</version>
-<title>$msg.get('manager.homepage.title')</title>
-<template></template>
-<defaultTemplate></defaultTemplate>
-<validationScript></validationScript>
-<comment></comment>
-<minorEdit>false</minorEdit>
-<syntaxId>xwiki/2.0</syntaxId>
-<hidden>false</hidden>
-<content>1 Interface d'administration de XWiki Enterprise Manager
+  <web>Main</web>
+  <name>WebHome</name>
+  <language>fr</language>
+  <defaultLanguage/>
+  <translation>1</translation>
+  <parent/>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1322163332000</creationDate>
+  <date>1322402877000</date>
+  <contentUpdateDate>1322402877000</contentUpdateDate>
+  <version>1.1</version>
+  <title>$msg.get('manager.homepage.title')</title>
+  <template/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/2.0</syntaxId>
+  <hidden>false</hidden>
+  <content>1 Interface d'administration de XWiki Enterprise Manager
 
 Bienvenue sur le wiki d'administration de votre ferme de wikis. Il vous permet de créer de nouveaux wikis ainsi que de gérer les wikis existants. Chaque wiki vous offre un espace de travail partagé qui vous permettra de travailler de façon collaborative.
 
@@ -70,4 +71,5 @@ Pour plus d'informations, veuillez consulter la documentation sur le site [xwiki
 Ce wiki est le votre, nous espérons que vous l'utiliserez au mieux.
 
 Félicitations,
-L'équipe XWiki</content></xwikidoc>
+L'équipe XWiki</content>
+</xwikidoc>
