@@ -22,7 +22,7 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>## XWiki Translation for language uk generated from http://www.l10n.xwiki.org
 xem.answer.install.actions=Щоб завершити розгортання, XWiki Enterprise Manager збирається зробити наступне\:
 xem.answer.install.actions.template=* Додати шаблон за замовчуванням

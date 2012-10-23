@@ -22,7 +22,7 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>## XWiki Translation for language sv generated from http://www.l10n.xwiki.org
 xem.answer.install.actions=För att färdigställa installationen skall XWiki Enterprise Manager\:
 xem.answer.install.actions.template=* Lägg till standardmall

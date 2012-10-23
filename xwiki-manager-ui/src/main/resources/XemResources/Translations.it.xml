@@ -22,7 +22,7 @@
   <comment/>
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
-  <hidden>false</hidden>
+  <hidden>true</hidden>
   <content>## XWiki Translation for language it generated from http://www.l10n.xwiki.org
 xem.answer.install.actions=Per completare l'installazione XWiki Enterprise Manager deve\:
 xem.answer.install.actions.template=* Aggiungi modello di default
