@@ -59,11 +59,23 @@
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-wiki-manager-api</artifactId>
       <version>${platform.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>xwiki-platform-oldcore</artifactId>
+          <groupId>org.xwiki.platform</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.xwiki.platform</groupId>
       <artifactId>xwiki-platform-workspace-api</artifactId>
       <version>${platform.version}</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>xwiki-platform-oldcore</artifactId>
+          <groupId>org.xwiki.platform</groupId>
+        </exclusion>
+      </exclusions>
     </dependency>
   </dependencies>
   <build>
