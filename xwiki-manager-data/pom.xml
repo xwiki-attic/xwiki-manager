@@ -39,11 +39,11 @@
   </properties>
   <dependencies>
     <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>xwiki-manager-ui-all</artifactId>
+      <groupId>org.xwiki.manager</groupId>
+      <artifactId>xwiki-manager-ui</artifactId>
       <version>${project.version}</version>
       <type>xar</type>
-      <optional>true</optional>
+      <scope>provided</scope>
     </dependency>
   </dependencies>
   <build>
