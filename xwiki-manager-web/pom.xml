@@ -55,6 +55,9 @@
       <artifactId>xwiki-platform-application-manager-api</artifactId>
       <version>${platform.version}</version>
       <exclusions>
+        <!-- Already comes with XE WAR.
+             Avoid downloading and packaging it again and avoid duplicated when building snapshots.
+         -->
         <exclusion>
           <artifactId>xwiki-platform-oldcore</artifactId>
           <groupId>org.xwiki.platform</groupId>
@@ -66,6 +69,9 @@
       <artifactId>xwiki-platform-wiki-manager-api</artifactId>
       <version>${platform.version}</version>
       <exclusions>
+        <!-- Already comes with XE WAR.
+             Avoid downloading and packaging it again and avoid duplicated when building snapshots.
+         -->
         <exclusion>
           <artifactId>xwiki-platform-oldcore</artifactId>
           <groupId>org.xwiki.platform</groupId>
@@ -77,6 +83,9 @@
       <artifactId>xwiki-platform-workspace-api</artifactId>
       <version>${platform.version}</version>
       <exclusions>
+        <!-- Already comes with XE WAR.
+             Avoid downloading and packaging it again and avoid duplicated when building snapshots.
+         -->
         <exclusion>
           <artifactId>xwiki-platform-oldcore</artifactId>
           <groupId>org.xwiki.platform</groupId>
