@@ -78,20 +78,6 @@
         </exclusion>
       </exclusions>
     </dependency>
-    <dependency>
-      <groupId>org.xwiki.platform</groupId>
-      <artifactId>xwiki-platform-workspace-api</artifactId>
-      <version>${platform.version}</version>
-      <exclusions>
-        <!-- Already comes with XE WAR.
-             Avoid downloading and packaging it again and avoid duplicated when building snapshots.
-         -->
-        <exclusion>
-          <artifactId>xwiki-platform-oldcore</artifactId>
-          <groupId>org.xwiki.platform</groupId>
-        </exclusion>
-      </exclusions>
-    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -107,7 +93,11 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-war-plugin</artifactId>
+               <exclusion>
+          <artifactId>xwiki-commons-component-default</artifactId>
+          <groupId>org.xwiki.commons</groupId>
+        </exclusion>
+ <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <webResources>
             <!-- Include License resources -->
@@ -190,71 +180,4 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <!-- TODO: Find way not to duplicate the build portion below which is taken from the XE build. -->
-    <!-- Add Legacy modules -->
-    <profile>
-      <id>legacy</id>
-      <properties>
-        <xwiki.war.legacy.excludes>
-          WEB-INF/lib/xwiki-commons-component-api-*.jar,
-          WEB-INF/lib/xwiki-commons-component-default-*.jar,
-          WEB-INF/lib/xwiki-rendering-api-*.jar,
-          WEB-INF/lib/xwiki-platform-oldcore-*.jar,
-          WEB-INF/lib/xwiki-platform-office-importer-*.jar,
-          <!-- Leave the ending comma because this list is concatenated with another one. -->
-        </xwiki.war.legacy.excludes>
-      </properties>
-      <dependencies>
-        <dependency>
-          <groupId>org.xwiki.commons</groupId>
-          <artifactId>xwiki-commons-legacy-component-default</artifactId>
-          <version>${commons.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.commons</groupId>
-          <artifactId>xwiki-commons-legacy-configuration</artifactId>
-          <version>${commons.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.rendering</groupId>
-          <artifactId>xwiki-rendering-legacy-api</artifactId>
-          <version>${rendering.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-legacy-oldcore</artifactId>
-          <version>${platform.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-legacy-observation</artifactId>
-          <version>${platform.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-legacy-annotation</artifactId>
-          <version>${platform.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-legacy-model</artifactId>
-          <version>${platform.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.xwiki.platform</groupId>
-          <artifactId>xwiki-platform-legacy-office-importer</artifactId>
-          <version>${platform.version}</version>
-          <scope>runtime</scope>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 </project>
