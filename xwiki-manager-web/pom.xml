@@ -78,6 +78,28 @@
         </exclusion>
       </exclusions>
     </dependency>
+    <dependency>
+      <groupId>org.xwiki.platform</groupId>
+      <artifactId>xwiki-platform-workspace-api</artifactId>
+      <version>${platform.version}</version>
+      <!-- Already comes with XE WAR.
+           Avoid downloading and packaging it again and avoid duplicated when building snapshots.
+       -->
+      <exclusions>
+        <exclusion>
+          <artifactId>xwiki-platform-oldcore</artifactId>
+          <groupId>org.xwiki.platform</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xwiki-commons-component-default</artifactId>
+          <groupId>org.xwiki.commons</groupId>
+        </exclusion>
+        <exclusion>
+          <artifactId>xwiki-commons-script</artifactId>
+          <groupId>org.xwiki.commons</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
   </dependencies>
   <build>
     <plugins>
@@ -93,11 +115,7 @@
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-               <exclusion>
-          <artifactId>xwiki-commons-component-default</artifactId>
-          <groupId>org.xwiki.commons</groupId>
-        </exclusion>
- <artifactId>maven-war-plugin</artifactId>
+        <artifactId>maven-war-plugin</artifactId>
         <configuration>
           <webResources>
             <!-- Include License resources -->
