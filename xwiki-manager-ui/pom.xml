@@ -33,6 +33,14 @@
   <name>XWiki Enterprise Manager - UI</name>
   <packaging>xar</packaging>
   <description>Default UI for XWiki Enterprise Manager</description>
+  <properties>
+    <!-- Old names of this module used for retro compatibility when resolving dependencies of old extensions -->
+    <xwiki.extension.features>
+        com.xpn.xwiki.products:xwiki-enterprise-manager-wiki-administrator,
+        org.xwiki.manager:xwiki-enterprise-manager-wiki-administrator,
+        org.xwiki.manager:xwiki-manager-wiki-administrator
+    </xwiki.extension.features>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.enterprise</groupId>

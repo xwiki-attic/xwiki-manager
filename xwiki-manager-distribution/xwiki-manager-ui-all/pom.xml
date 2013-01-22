@@ -9,6 +9,49 @@
   <name>XWiki Enterprise Manager - UI All</name>
   <packaging>xar</packaging>
   <description>All in one XWiki Enterprise Manager XAR package</description>
+    <properties>
+    <xwiki.extension.features>
+      <!-- Embedded extensions -->
+      org.xwiki.manager:xwiki-manager-ui,
+      org.xwiki.platform:xwiki-platform-wiki-manager-ui,
+      org.xwiki.platform:xwiki-platform-application-manager-ui,
+      org.xwiki.platform:xwiki-platform-workspace-ui,
+      <!-- XE -->
+      org.xwiki.enterprise:xwiki-enterprise-ui,
+      org.xwiki.platform:xwiki-platform-livetable-ui,
+      org.xwiki.platform:xwiki-platform-index-ui,
+      org.xwiki.platform:xwiki-platform-panels-ui,
+      org.xwiki.platform:xwiki-platform-administration-ui,
+      org.xwiki.platform:xwiki-platform-scheduler-ui,
+      org.xwiki.platform:xwiki-platform-watchlist-ui,
+      org.xwiki.platform:xwiki-platform-statistics-ui,
+      org.xwiki.platform:xwiki-platform-search-ui,
+      org.xwiki.platform:xwiki-platform-search-solr-ui,
+      org.xwiki.platform:xwiki-platform-blog-ui,
+      org.xwiki.platform:xwiki-platform-office-ui,
+      org.xwiki.platform:xwiki-platform-webdav-ui,
+      org.xwiki.platform:xwiki-platform-tag-ui,
+      org.xwiki.platform:xwiki-platform-rendering-wikimacro-ui,
+      org.xwiki.platform:xwiki-platform-annotation-ui,
+      org.xwiki.platform:xwiki-platform-invitation-ui,
+      org.xwiki.platform:xwiki-platform-extension-ui,
+      org.xwiki.platform:xwiki-platform-sheet-ui,
+      org.xwiki.platform:xwiki-platform-appwithinminutes-ui,
+      org.xwiki.platform:xwiki-platform-linkchecker-ui,
+      org.xwiki.platform:xwiki-platform-dashboard-ui,
+      org.xwiki.platform:xwiki-platform-user-ui,
+      org.xwiki.platform:xwiki-platform-logging-ui,
+
+      <!-- Old names of this module used for retro compatibility when resolving dependencies of old extensions -->
+      com.xpn.xwiki.products:xwiki-enterprise-manager-wiki-administrator,
+      org.xwiki.manager:xwiki-enterprise-manager-wiki-administrator,
+      org.xwiki.manager:xwiki-manager-wiki-administrator,
+      <!-- XE -->
+      com.xpn.xwiki.products:xwiki-enterprise-wiki,
+      org.xwiki.enterprise:xwiki-enterprise-wiki,
+      org.xwiki.enterprise:xwiki-enterprise-ui
+    </xwiki.extension.features>
+  </properties>
   <dependencies>
     <dependency>
       <groupId>org.xwiki.manager</groupId>
