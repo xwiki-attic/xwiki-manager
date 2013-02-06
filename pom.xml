@@ -53,7 +53,7 @@
     <connection>scm:git:git://github.com/xwiki/xwiki-manager.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki/xwiki-manager.git</developerConnection>
     <url>https://github.com/xwiki/xwiki-manager</url>
-    <tag>HEAD</tag>
+    <tag>stable-4.5.x</tag>
   </scm>
   <issueManagement>
     <system>jira</system>
