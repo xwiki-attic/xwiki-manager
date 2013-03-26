@@ -23,18 +23,19 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/1.0</syntaxId>
   <hidden>false</hidden>
-  <content>1 Velkommen til din Wiki-styring
+  <content>1 Velkommen til Wiki-centerkontrol
 
-Velkommen til administration af din wiki-farm. Det er et område hvorfra du kan oprette lige så mange wikier som du ønsker og kontrolere dem. Hver wiki er det delt område til effektivt samarbejde med andre. Du vil kunne bruge det til mange forskellige ting.* Project 
+Velkommen til administration af dit wiki-center. Det er et område hvorfra du kan oprette lige så mange wikier som du ønsker og kontrolere dem. Hver wiki er det delt område til effektivt samarbejde med andre. Du vil kunne bruge det til mange forskellige ting.
 
+* Project 
 * Projektledelse
 * Skrive-samarbejde
 * Effektiv dokument-deling
 * Videnshåndtering
 
-1 Én farm, 3 slags XWiki
+1 Ét center, 3 slags XWiki'er
 
-* Wiki-administrator: Det er denne wiki og den bruge til at administrere dine wikier.
+* Wiki-administration: Det er denne wiki og den bruges til at administrere dine wikier.
 * Wiki-skemaer: Prototyper på wikier, der bruges ved oprettelse af nye wiki-instanser.
 * Wiki-instanser: En wiki skabt af et skema og hvori brugere kan arbejde.
 
@@ -62,7 +63,7 @@ Fordi du er wiki-administrator, kan du gøre følgende:
 * Gå til  [Installation&gt;XemManager.Install] side for at se om installation er korrekt.
 * Opret en ny wiki ved at trykke [Opret ny wiki&gt;WikiManager.CreateNewWiki]
 * Håndter en eksisterende wiki ved at klikke på [Wiki Farm&gt;WikiManager.WebHome]
-* Ændre de generelle wiki-farm indstillinger ved at klikke på  "Administration"-henvisning
+* Ændre de generelle wiki-center indstillinger ved at klikke på  "Administration".
 
 For mere information gå til  [xwiki.org&gt;http://xwiki.org].
 
