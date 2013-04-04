@@ -15,7 +15,7 @@
   <date>1322402374000</date>
   <contentUpdateDate>1322402374000</contentUpdateDate>
   <version>1.1</version>
-  <title>$msg.get("platform.dashboard.wiki")</title>
+  <title>$services.localization.render('platform.dashboard.wiki')</title>
   <template/>
   <defaultTemplate/>
   <validationScript/>
@@ -111,7 +111,7 @@
       <position>2, 1</position>
     </property>
     <property>
-      <title>$msg.get('platform.dashboard.wiki.activity')</title>
+      <title>$services.localization.render('platform.dashboard.wiki.activity')</title>
     </property>
   </object>
   <object>
@@ -174,7 +174,7 @@
       <position>1, 1</position>
     </property>
     <property>
-      <title>$msg.get('manager.dashboard.welcome')</title>
+      <title>$services.localization.render('manager.dashboard.welcome')</title>
     </property>
   </object>
   <object>
@@ -237,7 +237,7 @@
       <position>1, 2</position>
     </property>
     <property>
-      <title>$msg.get('manager.dashboard.workspaces')</title>
+      <title>$services.localization.render('manager.dashboard.workspaces')</title>
     </property>
   </object>
   <content>{{velocity}}
@@ -260,9 +260,9 @@
       {{dashboard source = "$context.user" /}}
       #set($displayDashboard = false)
     #else
-      #set($editDashboardLabel = $msg.get('platform.dashboard.wiki.personal.empty.edit'))
+      #set($editDashboardLabel = $services.localization.render('platform.dashboard.wiki.personal.empty.edit'))
       #set($editDashboardUrl = $xwiki.getURL($context.user, 'inline', "category=dashboard"))
-      {{info}}{{html}}$msg.get('platform.dashboard.wiki.personal.empty', ["&lt;a href='${editDashboardUrl}'&gt;$editDashboardLabel&lt;/a&gt;"]){{/html}}{{/info}}
+      {{info}}{{html}}$services.localization.render('platform.dashboard.wiki.personal.empty', ["&lt;a href='${editDashboardUrl}'&gt;$editDashboardLabel&lt;/a&gt;"]){{/html}}{{/info}}
       #set($displayDashboard = true)
     #end
   #end

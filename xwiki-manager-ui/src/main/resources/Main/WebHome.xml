@@ -15,7 +15,7 @@
   <date>1322402877000</date>
   <contentUpdateDate>1322402877000</contentUpdateDate>
   <version>1.1</version>
-  <title>$msg.get('manager.homepage.title')</title>
+  <title>$services.localization.render('manager.homepage.title')</title>
   <template/>
   <defaultTemplate/>
   <validationScript/>
@@ -28,7 +28,7 @@
 ## Check if the installation is properly finished.
 ##
 #if ($services.workspace.getWorkspaceTemplates().size() == 0)
-  {{warning}}$msg.get('manager.homepage.installCheck.notYetComplete', ['WorkspaceManager.Install']){{/warning}}
+  {{warning}}{{translation key="manager.homepage.installCheck.notYetComplete" parameters="WorkspaceManager.Install"/}}{{/warning}}
 #end
 {{/velocity}}
 
