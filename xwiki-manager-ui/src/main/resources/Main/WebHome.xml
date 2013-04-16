@@ -28,7 +28,8 @@
 ## Check if the installation is properly finished.
 ##
 #if ($services.workspace.getWorkspaceTemplates().size() == 0)
-  {{warning}}{{translation key="manager.homepage.installCheck.notYetComplete" parameters="WorkspaceManager.Install"/}}{{/warning}}
+  ## Note: We cannot use the {{translation/}} macro right now because the key contains wiki markup and the translation macro will not interpet it, see http://jira.xwiki.org/browse/XWIKI-9037
+  {{warning}}$services.localization.render('workspacemanager.template.install.notYetComplete', ['WorkspaceManager.Install']){{/warning}}
 #end
 {{/velocity}}
 
