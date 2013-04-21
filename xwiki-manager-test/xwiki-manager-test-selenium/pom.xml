@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-test</artifactId>
-    <version>5.0-SNAPSHOT</version>
+    <version>5.0-rc-1</version>
   </parent>
   <artifactId>xwiki-manager-test-selenium</artifactId>
   <name>XWiki Enterprise Manager - Functional Tests - Selenium</name>
