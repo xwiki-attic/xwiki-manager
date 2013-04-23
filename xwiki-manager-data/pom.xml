@@ -152,5 +152,25 @@
            when building for PostgreSQL -->
       <id>pgsql</id>
     </profile>
+    <profile>
+      <id>clover</id>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>org.xwiki.platform</groupId>
+              <artifactId>xwiki-platform-tool-packager-plugin</artifactId>
+              <dependencies>
+                <dependency>
+                  <groupId>com.cenqua.clover</groupId>
+                  <artifactId>clover</artifactId>
+                  <version>3.1.6</version>
+                </dependency>
+              </dependencies>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
   </profiles>
 </project>
