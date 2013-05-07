@@ -27,7 +27,7 @@
   <parent>
     <groupId>org.xwiki.manager</groupId>
     <artifactId>xwiki-manager-test</artifactId>
-    <version>5.0-SNAPSHOT</version>
+    <version>5.0.1</version>
   </parent>
   <artifactId>xwiki-manager-test-webstandards</artifactId>
   <name>XWiki Enterprise Manager - Functional Tests - Web Standards</name>
