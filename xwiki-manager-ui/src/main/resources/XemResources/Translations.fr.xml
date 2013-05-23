@@ -26,9 +26,9 @@
   <content>## XWiki Translation for language fr generated from http://www.l10n.xwiki.org
 manager.dashboard.welcome=Qu'est-ce qu'un espace de travail?
 manager.dashboard.workspaces=Espaces de travail
-manager.homepage.installCheck.notYetComplete=L'installation n'est pas complète.\n\nPour finir l'installation connectez vous en tant qu'Administrateur et visitez [[{0}&gt;&gt;{0}]].
+manager.homepage.installCheck.notYetComplete=L'installation est presque terminée.\n\nPour terminer l'installation, connectez-vous en tant qu'Administrateur puis accédez à la page [[{0}&gt;&gt;{0}]].
 manager.homepage.title=Wiki Principal
-xem.answer.install.actions=Afin de finir l'installation, XWiki Enterprise Manager va effectuer les actions suivantes \\\:
+xem.answer.install.actions=Afin de terminer l'installation, XWiki Enterprise Manager va réaliser les opérations suivantes \:
 xem.answer.install.actions.template=* Ajouter un template par défaut
 xem.answer.install.title=Installation de XWiki Enterprise Manager
 xem.install.error=L''installation de XWiki Enterprise Manager a échoué ({0}).
