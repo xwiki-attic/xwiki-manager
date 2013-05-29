@@ -51,8 +51,6 @@ public class WikiManagementCreateTest extends AbstractXWikiTestCase
     /**
      * Validate empty wiki creation and all automated actions around it.
      */
-    // "@Ignored" because of http://jira.xwiki.org/jira/browse/XEM-189
-    /*
     public void ignoredTestCreateEmptyWiki()
     {
         setWikiNameFieldValue();
@@ -71,7 +69,6 @@ public class WikiManagementCreateTest extends AbstractXWikiTestCase
         // Validate the correct domain is printed in the list
         assertTextPresent("newemptywiki.localdomain.com");
     }
-    */
 
     /**
      * Validate the ajax based wiki name validation.
