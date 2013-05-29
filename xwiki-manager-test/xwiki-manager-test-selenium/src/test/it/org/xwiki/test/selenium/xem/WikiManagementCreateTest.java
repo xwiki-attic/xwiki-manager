@@ -51,7 +51,7 @@ public class WikiManagementCreateTest extends AbstractXWikiTestCase
     /**
      * Validate empty wiki creation and all automated actions around it.
      */
-    public void ignoredTestCreateEmptyWiki()
+    public void testCreateEmptyWiki()
     {
         setWikiNameFieldValue();
         setFieldValue("XWiki.XWikiServerClass_0_description", "A new empty wiki");
