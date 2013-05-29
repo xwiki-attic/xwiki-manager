@@ -78,16 +78,16 @@ public class WikiManagementCreateTest extends AbstractXWikiTestCase
         // Validate that an existing wiki name is invalid as wiki name
         setFieldValue("wikiname", "xwiki");
         getSelenium().keyUp("wikiname", "\\40");
-        waitForCondition("selenium.page().bodyText().indexOf('A wiki with this identifier already exists') != -1;");
+        waitForBodyContains("A wiki with this identifier already exists");
 
         // Validate that "" is invalid as wiki name
         setFieldValue("wikiname", "");
         getSelenium().keyUp("wikiname", "\\40");
-        waitForCondition("selenium.page().bodyText().indexOf('Identifier can\\'t be empty') != -1;");
+        waitForBodyContains("Identifier can't be empty");
 
         // Validate that a not existing wiki name is valid as wiki name
         setFieldValue("wikiname", "newemptywiki");
         getSelenium().keyUp("wikiname", "\\40");
-        waitForCondition("selenium.page().bodyText().indexOf('You can use this name as new wiki identifier') != -1;");
+        waitForBodyContains("You can use this name as new wiki identifier");
     }
 }
