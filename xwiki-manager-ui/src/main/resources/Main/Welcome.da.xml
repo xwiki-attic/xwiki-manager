@@ -23,12 +23,12 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>Et arbejdsfelt er noget, som du kan skabe for at samarbejde med andre brugere for:
+  <content>Du kan oprettet et arbejdsfelt ("workspace") for at bedre samarbejde med andre brugere ved:
 * at få en bedres struktur af indholdet ud over blot sider og områder.
 * at komme igang med nye projekter og ideer hurtigere.
-* at samarbejde mere effektivt om et bestemt med værktøj som du har brug for og kan lide, uden at kollidere med andre projekter.
+* at samarbejde mere effektivt om et bestemt med værktøj som du har brug for og kan lide, uden at det kollidere med andre projekter.
 
-Alle registrerede brugere kan oprette et arbejdsfelt og invitere andre brugere med.
+Alle registrerede brugere kan oprette et arbejdsfelt og invitere andre brugere med i det.
 
-Bemærk: Den gamle XEM hjemmeside kan stadig ses under [[Wiki Kontrolpanenl&gt;&gt;WikiManager.Dashboard]].  </content>
+Bemærk: Den gamle XEM-hjemmeside kan stadig ses på [[Wikikontrol siden&gt;&gt;WikiManager.Dashboard]].  </content>
 </xwikidoc>
