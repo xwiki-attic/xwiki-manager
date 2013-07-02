@@ -87,7 +87,7 @@
     #elseif ($result == $Exception.ERROR_XWIKI_ACCESS_DENIED)
       #error($services.localization.render('notallowed'))
     #else
-      #error($services.localization.render('xem.install.error', [$context.lastexception]))
+      #error($services.localization.render('xem.install.error', [$xcontext.lastexception]))
     #end
   #else
     #set($urlyes = $doc.getURL("view", "confirm=1"))
