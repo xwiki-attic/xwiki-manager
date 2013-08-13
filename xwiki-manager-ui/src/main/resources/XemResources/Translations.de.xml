@@ -24,11 +24,13 @@
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>true</hidden>
   <content>## XWiki Translation for language de generated from http://www.l10n.xwiki.org
+manager.dashboard.welcome=Was ist ein Arbeitsgebiet
+manager.dashboard.workspaces=Arbeitsgebiete
 xem.answer.install.actions=XWiki Enterprise Manager wird um die Installation zu beenden\:
 xem.answer.install.actions.template=* Standard Template hinzufügen
 xem.answer.install.title=XWiki Enterprise Manager-Installation
 xem.install.error=Installation des XWiki Enterprise Manager fehlgeschlagen {{0}}.
-xem.install.noneed=Keine Eingriff notwendig.
+xem.install.noneed=Kein Eingriff notwendig.
 xem.install.success=Installation des XWiki Enterprise Manager erfolgreich.
 xem.xem=XWiki Enterprise Manager
 </content>

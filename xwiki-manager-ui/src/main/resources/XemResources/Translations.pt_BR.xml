@@ -24,5 +24,15 @@
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>true</hidden>
   <content>## XWiki Translation for language pt_BR generated from http://www.l10n.xwiki.org
+manager.dashboard.welcome=O que é um espaço de trabalho?
+manager.dashboard.workspaces=Espaços de Trabalho
+manager.homepage.installCheck.notYetComplete=O processo de instalação não está completo ainda. No intuito de finalizar o processo de instalação, por favor, entre como administrador e vá para a página [[{0}&gt;&gt;{0}]].
+manager.homepage.title=Wiki principal
+xem.answer.install.actions=Para completar instalação XWiki Enterprise Manager irá\:
+xem.answer.install.actions.template=* Adicionar modelo padrão
+xem.answer.install.title=Instalação do XWiki Enterprise Manager
+xem.install.error=A instalação do XWiki Enterprise Manager falhou ({0}). 
+xem.install.noneed=Nenhuma ação necessária.
+xem.install.success=Sucesso na instalação do  XWiki Enterprise Manager
 </content>
 </xwikidoc>
