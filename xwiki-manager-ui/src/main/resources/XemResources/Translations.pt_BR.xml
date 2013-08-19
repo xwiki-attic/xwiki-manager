@@ -23,24 +23,17 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>true</hidden>
-  <content># XWiki Enterprise Manager translation page
-xem.xem=XWiki Enterprise Manager
-
-# MESSAGES
-xem.install.success=XWiki Enterprise Manager instalado com sucesso.
-xem.install.error=Instalação do XWiki Enterprise Manager falhou ({0}).
-xem.install.noneed=Nenhuma ação necessária.
-
-# ANSWERS
-xem.answer.install.title=Instalação do XWiki Enterprise Manager
-xem.answer.install.actions=Para completar a instalação o XWiki Enterprise Manager vá para :\n
-xem.answer.install.actions.template=* Adicionar um modelo padrão
-
-# Homepage
+  <content>## XWiki Translation for language pt_BR generated from http://www.l10n.xwiki.org
 manager.dashboard.welcome=O que é uma Divisão?
 manager.dashboard.workspaces=Divisões
+manager.homepage.installCheck.notYetComplete=O processo de instalação não está completo ainda.\n\nPara terminar a instalação por favor inicie uma sessão como Admin e vá para a página [[{0}&gt;&gt;{0}]].
 manager.homepage.title=Wiki Principal
-manager.homepage.installCheck.notYetComplete=O processo de instalação não está completo ainda.\n\
-\n\
-Para terminar a instalação por favor inicie uma sessão como Admin e vá para a página [[{0}&gt;&gt;{0}]].</content>
+xem.answer.install.actions=Para completar a instalação o XWiki Enterprise Manager vá para \:\n
+xem.answer.install.actions.template=* Adicionar um modelo padrão
+xem.answer.install.title=Instalação do XWiki Enterprise Manager
+xem.install.error=Instalação do XWiki Enterprise Manager falhou ({0}).
+xem.install.noneed=Nenhuma ação necessária.
+xem.install.success=XWiki Enterprise Manager instalado com sucesso.
+xem.xem=XWiki Enterprise Manager
+</content>
 </xwikidoc>
