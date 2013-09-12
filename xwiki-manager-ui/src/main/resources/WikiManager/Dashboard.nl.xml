@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xwikidoc>
+  <web>WikiManager</web>
+  <name>Dashboard</name>
+  <language>nl</language>
+  <defaultLanguage/>
+  <translation>1</translation>
+  <parent>Main.WebHome</parent>
+  <creator>xwiki:XWiki.Admin</creator>
+  <author>xwiki:XWiki.Admin</author>
+  <customClass/>
+  <contentAuthor>xwiki:XWiki.Admin</contentAuthor>
+  <creationDate>1166007764000</creationDate>
+  <date>1204110875000</date>
+  <contentUpdateDate>1204211840000</contentUpdateDate>
+  <version>1.1</version>
+  <title/>
+  <template/>
+  <defaultTemplate/>
+  <validationScript/>
+  <comment/>
+  <minorEdit>false</minorEdit>
+  <syntaxId>xwiki/1.0</syntaxId>
+  <hidden>false</hidden>
+  <content>1 Welkom bij uw wiki beheeromgeving
+
+Welkom bij de wiki beheeromgeving van uw wiki farm! In deze omgeving kunt u zoveel wiki's maken als u wilt en deze beheren. Elke wiki is een gedeelde werkruimte die u in staat stelt effectief met andere gebruikers samen te werken. U kunt deze gebruiken voor vele doeleinden:
+
+* Projectmanagement
+* Samen schrijven
+* Efficiënt documenten delen
+* Kennismanagement
+
+1 Eén farm, 3 soorten XWiki's
+
+* Wiki beheerder: dit is de huidige wiki en deze wordt gebruikt om uw wiki farm te beheren
+* Wiki sjablonen: sjablonen die kunnen worden gebruikt voor de creatie van een nieuwe wiki
+* Wiki instanties: een wiki, gemaakt van een wiki sjabloon, waarin gebruikers werken
+
+1 Nieuws en informatie van uw wiki's
+
+
+#############################################################################
+
+#includeMacros("WikiCode.Macros")
+#set($WikiManager = $services.wikimanager)
+
+#set($nb = 5)
+#set($wikilist = $WikiManager.getAllWikis())
+#set ($creationsortedwikilist = $sorttool.sort($wikilist, 'creationDate:desc'))
+
+#############################################################################
+
+#displayPanelLayout(2, ["WikiCode.UserWikisIsAdminWidget", "WikiCode.UserWikisIsUserWidget", "WikiCode.UserWikisIsOwnerWidget", "WikiCode.MyLastWikiModificationsWidget", "WikiCode.LastWikiModificationsWidget", "WikiCode.LastCreatedWikisWidget"])
+
+#############################################################################
+
+
+1 Hoe beginnen
+
+Omdat u zich bevindt in de wiki beheeromgeving, wilt u wellicht de volgende stappen volgen:
+
+* Ga naar de [Installation&gt;XemManager.Install] pagina om te controleren of de installatie correct is uitgevoerd.
+* Maak een nieuwe wiki binnen uw farm door te klikken op de [Create a new wiki&gt;WikiManager.CreateNewWiki] koppeling.
+* Beheer de bestaande wiki's binnen uw farms door te klikken op de [Wiki Farm&gt;WikiManager.WebHome] koppeling.
+* Pas de algemene instellingen van uw farm aan door te klikken op de "Administration" koppeling.
+
+Voor meer informatie kunt u de documentatie raadplegen op [xwiki.org&gt;http://xwiki.org].
+
+De Xwiki is van u, we hopen dat u er plezier aan beleeft ...
+
+Gefeliciteerd,
+Het XWiki Team</content>
+</xwikidoc>

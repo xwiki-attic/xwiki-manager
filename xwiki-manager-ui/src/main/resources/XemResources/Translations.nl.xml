@@ -24,5 +24,16 @@
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>true</hidden>
   <content>## XWiki Translation for language nl generated from http://www.l10n.xwiki.org
+manager.dashboard.welcome=Wat is een werkruimte?
+manager.dashboard.workspaces=Werkruimten
+manager.homepage.installCheck.notYetComplete=Het installatieproces is nog niet voltooid.\n\nVoor het voltooien van het installatieproces, logt u in als Admin en gaat u naar de pagina [[{0}&gt;&gt;{0}]].
+manager.homepage.title=Hoofdwiki
+xem.answer.install.actions=Om de installatie te voltooien, zal XWiki Enterprise Manager\:
+xem.answer.install.actions.template=* Voeg standaard sjabloon toe
+xem.answer.install.title=XWiki Enterprise Manager installatie
+xem.install.error=XWiki Enterprise Manager installatie is mislukt ({0}).
+xem.install.noneed=Geen actie nodig.
+xem.install.success=XWiki Enterprise Manager installatie geslaagd.
+xem.xem=XWiki Enterprise Manager
 </content>
 </xwikidoc>

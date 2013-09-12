@@ -3,7 +3,7 @@
 <xwikidoc>
   <web>Main</web>
   <name>Welcome</name>
-  <language>pt_BR</language>
+  <language>nl</language>
   <defaultLanguage/>
   <translation>1</translation>
   <parent>Main.WebHome</parent>
@@ -23,12 +23,12 @@
   <minorEdit>false</minorEdit>
   <syntaxId>xwiki/2.0</syntaxId>
   <hidden>false</hidden>
-  <content>Uma divisão é um lugar que você pode criar para colaborar com outros usuários para:
-* estruturar melhor seu conteúdo além de apenas páginas e espaços
-* começar a trabalhar rapidamente em um projeto ou ideia
-* colaborar de forma mais eficiente e focada em um tópico usando aplicações que você precisa e gosta sem colidir com outros projetos
+  <content>Een werkruimte is een plaats die u kunt maken om samen te werken met andere gebruikers en zo:
+* uw inhoud beter te structureren, naast pagina's en paginaruimten
+* snel aan de slag te gaan met een nieuw project of idee
+* efficiënter samen te werken aan een specifiek onderwerp met de toepassingen die u daarvoor nodig heeft en prettig vindt, zonder hinder van andere projecten.
 
-Qualquer usuário registrado pode criar uma Divisão e convidar outros usuários a entrar.
+Elke geregistreerde gebruiker kan een werkruimte maken en andere gebruikers uitnodigen daaraan deel te nemen.
 
- Nota: A página antiga do XEM ainda pode ser acessada em [[Página Principal da Wiki&gt;&gt;WikiManager.Dashboard]].</content>
+Noot: De oude XEM homepage kan nog steeds worden benaderd via [[Wiki Dashboard&gt;&gt;WikiManager.Dashboard]].</content>
 </xwikidoc>
